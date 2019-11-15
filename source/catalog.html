@@ -25,7 +25,7 @@
             <a class="menu-list__link">Каталог продукции</a>
           </li>
           <li class="menu-list__item">
-            <a class="menu-list__link" href="programms.html">Подбор программы</a>
+            <a class="menu-list__link" href="selection.html">Подбор программы</a>
           </li>
         </ul>
       </nav>
@@ -36,8 +36,8 @@
       <section class="products">
         <h2 class="products__header">Каталог продукции</h2>
 
-        <div class="products__pro" id="catalog-pro">
-          <article class="product-card product">
+        <ul class="products__list">
+          <li class="product-card product" id="catalog-pro">
             <a class="product__link" href="#">
               <img class="product__img" src="source/img/*.png" width="140" height="144" alt="Банка с питанием Cat Energy PRO 500 г">
             </a>
@@ -59,9 +59,9 @@
               </tr>
             </table>
             <a class="product__order" href="#">Заказать</a>
-          </article>
+          </li>
 
-          <article class="product-card product">
+          <li class="product-card product">
             <a class="product__link" href="#">
               <img class="product__img" src="source/img/*.png" width="140" height="144" alt="Банка с питанием Cat Energy PRO 1000 г">
             </a>
@@ -83,9 +83,9 @@
               </tr>
             </table>
             <a class="product__order" href="#">Заказать</a>
-          </article>
+          </li>
 
-          <article class="product-card product">
+          <li class="product-card product">
             <a class="product__link" href="#">
               <img class="product__img" src="source/img/*.png" width="140" height="144" alt="Банка с питанием Cat Energy PRO 500 г">
             </a>
@@ -107,9 +107,9 @@
               </tr>
             </table>
             <a class="product__order" href="#">Заказать</a>
-          </article>
+          </li>
 
-          <article class="product-card product">
+          <li class="product-card product">
             <a class="product__link" href="#">
               <img class="product__img" src="source/img/*.png" width="140" height="144" alt="Банка с питанием Cat Energy PRO 1000 г">
             </a>
@@ -131,11 +131,9 @@
               </tr>
             </table>
             <a class="product__order" href="#">Заказать</a>
-          </article>
-        </div>
+          </li>
 
-        <div class="products__slim" id="catalog-slim">
-          <article class="product-card product">
+          <li class="product-card product" id="catalog-slim">
             <a class="product__link" href="#">
               <img class="product__img" src="source/img/*.png" width="140" height="144" alt="Банка с питанием Cat Energy Slim 500 г">
             </a>
@@ -157,9 +155,9 @@
               </tr>
             </table>
             <a class="product__order" href="#">Заказать</a>
-          </article>
+          </li>
 
-          <article class="product-card product">
+          <li class="product-card product">
             <a class="product__link" href="#">
               <img class="product__img" src="source/img/*.png" width="140" height="144" alt="Банка с питанием Cat Energy Slim 1000 г">
             </a>
@@ -181,9 +179,9 @@
               </tr>
             </table>
             <a class="product__order" href="#">Заказать</a>
-          </article>
+          </li>
 
-          <article class="product-card product">
+          <li class="product-card product">
             <a class="product__link" href="#">
               <img class="product__img" src="source/img/*.png" width="140" height="144" alt="Банка с питанием Cat Energy Slim 500 г">
             </a>
@@ -205,14 +203,14 @@
               </tr>
             </table>
             <a class="product__order" href="#">Заказать</a>
-          </article>
-        </div>
+          </li>
 
-        <div class="show-more">
-          <strong class="show-more__header">Показать еще 100500 товаров</strong>
-          <p class="show-more__text">На самом деле вкусов гораздо больше!</p>
-          <a class="show-more__link" href="#">Показать все</a>
-        </div>
+          <li class="show-more">
+            <strong class="show-more__header">Показать еще 100500 товаров</strong>
+            <p class="show-more__text">На самом деле вкусов гораздо больше!</p>
+            <a class="show-more__link" href="#">Показать все</a>
+          </li>
+        </ul>
 
       </section>
 
@@ -220,7 +218,7 @@
 
         <h2 class="extra-products__header">Дополнительные товары</h2>
 
-        <article class="product-card product">
+        <li class="product-card product">
           <a class="product__link" href="#">
             <h3 class="product__header">Сахарозаменитель</h3>
           </a>
@@ -231,9 +229,9 @@
             </tr>
           </table>
           <a class="product__order" href="#">Заказать</a>
-        </article>
+        </li>
 
-        <article class="product-card product">
+        <li class="product-card product">
           <a class="product__link" href="#">
             <h3 class="product__header">Питьевая вода</h3>
           </a>
@@ -244,9 +242,9 @@
             </tr>
           </table>
           <a class="product__order" href="#">Заказать</a>
-        </article>
+        </li>
 
-        <article class="product-card product">
+        <li class="product-card product">
           <a class="product__link" href="#">
             <h3 class="product__header">Молоко</h3>
           </a>
@@ -257,9 +255,9 @@
             </tr>
           </table>
           <a class="product__order" href="#">Заказать</a>
-        </article>
+        </li>
 
-        <article class="product-card product">
+        <li class="product-card product">
           <a class="product__link" href="#">
             <h3 class="product__header">Витамины</h3>
           </a>
@@ -270,7 +268,7 @@
             </tr>
           </table>
           <a class="product__order" href="#">Заказать</a>
-        </article>
+        </li>
 
       </section>
 
@@ -307,13 +305,13 @@
         </li>
       </ul>
 
-      <section class="copyright">
+      <div class="copyright">
         <h2 class="visually-hidden">Разработано</h2>
         <a class="copyright__link" href="https://htmlacademy.ru/intensive/adaptive" aria-label="Сайт HTML Academy">HTML Academy</a>
         <a class="copyright__link" href="https://htmlacademy.ru/intensive/adaptive" aria-label="Сайт HTML Academy">
           <img class="copyright__img" src="source/img/*.svg" width="27" height="34" alt="Логотип HTML Academy">
         </a>
-      </section>
+      </div>
     </footer>
 
   </body>
