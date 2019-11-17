@@ -1,0 +1,9 @@
+.toggle {}
+
+.toggle__after,
+.toggle__before {
+  text-transform: uppercase;
+  font-size: 12px;
+  line-height: 20px;
+  color: $color-text;
+}
