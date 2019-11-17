@@ -1,0 +1,24 @@
+.before-after {
+  background-color: $color-bg--alt;
+  padding: 33px 34px 38px 20px;
+}
+
+.before-after__header {
+  margin: 0 0 33px 0;
+  color: $color-text-header;
+  font-size: 36px;
+  line-height: 60px;
+}
+
+.before-after__text {
+  margin: 0 0 27px 0;
+  font-family: $font-family--alt;
+  color: $color-text;
+}
+
+.before-after__costs {
+  text-transform: uppercase;
+  font-size: 14px;
+  line-height: 20px;
+  color: $color-text;
+}

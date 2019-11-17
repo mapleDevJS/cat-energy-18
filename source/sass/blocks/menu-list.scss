@@ -1,0 +1,24 @@
+.menu-list {
+  list-style: none;
+}
+
+.menu-list__item {
+  display: block;
+  padding: 24px 0;
+
+  text-align: center;
+
+  border-bottom: 1px solid $color-border;
+
+  &:first-child {
+    border-top: 1px solid $color-border;
+  }
+}
+
+.menu-list__link {
+  font-size: 20px;
+  line-height: 20px;
+  color: $color-text-link;
+  text-transform: uppercase;
+  text-decoration: none;
+}

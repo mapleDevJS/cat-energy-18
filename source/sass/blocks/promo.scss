@@ -1,0 +1,19 @@
+.promo {
+  min-height: 289px;
+  background-image: url("../../img/gift-photo-mobile@1x.jpg");
+  background-repeat: no-repeat;
+  background-color: $color-brand;
+  padding-top: 190px;
+  padding-bottom: 43px;
+}
+
+.promo__text {
+  display: block;
+  margin: 0 auto;
+  width: 160px;
+  font-family: $font-family--alt;
+  font-size: 16px;
+  line-height: 20px;
+  text-align: center;
+  color: $color-text--rev;
+}
