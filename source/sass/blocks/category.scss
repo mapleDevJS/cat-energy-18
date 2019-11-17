@@ -1,0 +1,30 @@
+.category {
+  background-color: $color-bg--alt;
+  padding: 39px 36px 22px 21px;
+}
+
+.categories__item {
+  margin-bottom: 20px;
+}
+
+.category__header {
+  text-transform: uppercase;
+  margin: 0 0 36px 92px;
+  font-size: 24px;
+  line-height: 37px;
+  color: $color-text-header;
+}
+
+.category__text {
+  margin-bottom: 44px;
+  font-family: $font-family--alt;
+  color: $color-text;
+}
+
+.category__link {
+  text-transform: uppercase;
+  text-decoration: none;
+  font-size: 16px;
+  line-height: 16px;
+  color: $color-text-header;
+}

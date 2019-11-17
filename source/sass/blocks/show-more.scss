@@ -1,0 +1,37 @@
+.show-more {
+  padding-top: 80px;
+  padding-left: 20px;
+  padding-right: 20px;
+  border-bottom: 1px solid $color-border;
+}
+
+.show-more__header {
+  margin-bottom: 10px;
+  display: block;
+  text-align: center;
+  text-transform: uppercase;
+  font-size: 16px;
+  line-height: 20px;
+  color: $color-text-header;
+}
+
+.show-more__text {
+  margin: 0 0 22px 0;
+  font-family: $font-family--alt;
+  font-size: 12px;
+  line-height: 16px;
+  color: $color-text;
+  text-align: center;
+}
+
+.show-more__link {
+  display: block;
+  margin: 0 auto 35px;
+  text-align: center;
+  text-decoration: none;
+  text-transform: uppercase;
+  padding-top: 13px;
+  padding-bottom: 12px;
+  color: $color-text;
+  background-color: $color-bg--alt;
+}
