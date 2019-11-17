@@ -1,10 +1,8 @@
-.contacts {}
-
 .contacts__text {
-  text-transform: uppercase;
   font-size: 16px;
   line-height: 20px;
   color: $color-text-header;
+  text-transform: uppercase;
 }
 
 .contacts__address {
