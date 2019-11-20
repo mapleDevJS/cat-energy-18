@@ -9,28 +9,26 @@
 
 .main-product__header {
   margin: 0 0 19px;
+
   text-align: center;
-  font-size: 36px;
-  line-height: 36px;
-  color: $color-text-header--rev;
+
+  @include font(400, 36px, 36px, $font-family, $color-text-header--rev);
 }
 
 .main-product__text {
   text-align: center;
-  padding-bottom: 316px;
-  font-size: 14px;
-  line-height: 14px;
-  color: $color-text-header--rev;
+
+  @include font(400, 14px, 14px, $font-family, $color-text-header--rev);
 }
 
 .main-product__link {
   display: block;
+
   text-align: center;
   text-transform: uppercase;
   text-decoration: none;
+
   background-color: $color-brand;
-  font-size: 14px;
-  line-height: 14px;
-  color: $color-text-header--rev;
-  padding: 14px 74px 11px 73px;
+
+  @include font(400, 14px, 14px, $font-family, $color-text-header--rev);
 }
