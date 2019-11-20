@@ -16,9 +16,8 @@
 }
 
 .menu-list__link {
-  font-size: 20px;
-  line-height: 20px;
-  color: $color-text-link;
   text-transform: uppercase;
   text-decoration: none;
+
+  @include font(400, 20px, 20px, $font-family, $color-text-link);
 }
