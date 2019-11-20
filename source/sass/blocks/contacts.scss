@@ -1,14 +1,11 @@
 .contacts__text {
-  font-size: 16px;
-  line-height: 20px;
-  color: $color-text-header;
   text-transform: uppercase;
+
+  @include font(400, 16px, 20px, $font-family, $color-text-header);
 }
 
 .contacts__address {
   font-style: normal;
-  font-size: 14px;
-  line-height: 20px;
-  font-family: $font-family--alt;
-  color: $color-text;
+
+  @include font(400, 14px, 20px, $font-family--alt, $color-text);
 }
