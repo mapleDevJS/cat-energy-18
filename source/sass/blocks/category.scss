@@ -1,15 +1,15 @@
 .category {
   background-color: $color-bg--alt;
+  margin-bottom: 20px;
   padding: 39px 36px 22px 21px;
-}
 
 .categories__item {
-  margin-bottom: 20px;
 }
 
 .category__header {
+  margin: 0 0 36px 72px;
+
   text-transform: uppercase;
-  margin: 0 0 36px 92px;
 
   @include font(400, 24px, 37px, $font-family, $color-text-header);
 }
