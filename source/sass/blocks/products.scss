@@ -5,13 +5,13 @@
 .products__header {
   margin: 0;
   padding-top: 15px;
-  padding-left: 25px;
   padding-bottom: 28px;
-  font-size: 36px;
-  line-height: 60px;
-  color: $color-text-header;
+
   letter-spacing: -1.8px;
+
   border-bottom: 1px solid $color-border;
+
+  @include font(400, 36px, 60px, $font-family, $color-text-header);
 }
 
 .products__list {
