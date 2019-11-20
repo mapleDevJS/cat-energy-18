@@ -1,3 +1,7 @@
+.extra-products__wrapper {
+  @include wrapper;
+}
+
 .extra-products__list {
   @include list-reset;
 }
