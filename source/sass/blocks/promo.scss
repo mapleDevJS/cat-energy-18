@@ -1,19 +1,19 @@
 .promo {
   min-height: 289px;
-  background-image: url("../../img/gift-photo-mobile@1x.jpg");
-  background-repeat: no-repeat;
-  background-color: $color-brand;
   padding-top: 190px;
   padding-bottom: 43px;
+
+  background-color: $color-brand;
+  background-image: url("../../img/gift-photo-mobile@1x.jpg");
+  background-repeat: no-repeat;
 }
 
 .promo__text {
   display: block;
-  margin: 0 auto;
   width: 160px;
-  font-family: $font-family--alt;
-  font-size: 16px;
-  line-height: 20px;
+  margin: 0 auto;
+
   text-align: center;
-  color: $color-text--rev;
+
+  @include font(400, 16px, 20px, $font-family--alt, $color-text--rev);
 }
