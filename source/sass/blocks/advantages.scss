@@ -7,9 +7,7 @@
 .advantages__header {
   margin: 0 0 35px;
 
-  font-size: 36px;
-  line-height: 60px;
-  color: $color-text-header;
+  @include font(400, 36px, 60px, $font-family, $color-text-header);
 }
 
 .advantages__list {
@@ -31,6 +29,5 @@
 .advantages__description {
   margin: 0;
 
-  font-family: $font-family--alt;
-  color: $color-text;
+  @include font(400, 14px, 18px, $font-family--alt, $color-text);
 }
