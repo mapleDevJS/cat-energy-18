@@ -12,4 +12,10 @@
   border: none;
 }
 
+@mixin placeholder {
+  text-transform: uppercase;
+
+  @include font(400, 16px, 18px, $font-family, $color-text);
+}
+
 }
