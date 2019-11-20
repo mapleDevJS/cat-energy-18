@@ -1,5 +1,7 @@
+/*Fonts*/
 $font-family: "Oswald", "Arial", sans-serif;
 $font-family--alt: "Arial", "Helvetica", sans-serif;
+/*Colors*/
 $color-bg: #ffffff;
 $color-bg--alt: #f2f2f2;
 $color-text: #444444;
@@ -10,3 +12,11 @@ $color-text-link: #111111;
 $color-text-label: #222222;
 $color-brand: #68b738;
 $color-border: #ededed;
+/*Widths*/
+$desktop-width: 1300px;
+$tablet-width: 768px;
+$mobile-width: 320px;
+/*Paddings*/
+$desktop-padding: 40px;
+$tablet-padding: 30px;
+$mobile-padding: 20px;
