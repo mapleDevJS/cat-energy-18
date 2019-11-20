@@ -2,6 +2,10 @@
   padding: 0;
 }
 
+.products__wrapper {
+  @include wrapper;
+}
+
 .products__header {
   margin: 0;
   padding-top: 15px;
