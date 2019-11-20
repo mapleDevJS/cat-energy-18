@@ -34,4 +34,10 @@
   @include font(400, 16px, 20px, $font-family, $color-text--rev);
 }
 
+@mixin wrapper {
+  min-width: 320px;
+  margin: 0 auto;
+  padding-right: $mobile-padding;
+  padding-left: $mobile-padding;
+}
 }
