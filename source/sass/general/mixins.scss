@@ -18,4 +18,20 @@
   @include font(400, 16px, 18px, $font-family, $color-text);
 }
 
+@mixin button {
+  display: block;
+  width: 100%;
+  padding-top: 13px;
+  padding-bottom: 12px;
+
+  text-align: center;
+  text-transform: uppercase;
+  text-decoration: none;
+
+  background-color: $color-brand;
+  border: none;
+
+  @include font(400, 16px, 20px, $font-family, $color-text--rev);
+}
+
 }
