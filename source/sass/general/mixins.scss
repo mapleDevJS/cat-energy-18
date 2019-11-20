@@ -40,4 +40,11 @@
   padding-right: $mobile-padding;
   padding-left: $mobile-padding;
 }
+
+@mixin font($f-weight, $f-size, $l-height, $f-family, $color) {
+  font-weight: $f-weight;
+  font-size: $f-size;
+  line-height: $l-height;
+  font-family: $f-family;
+  color: $color;
 }
