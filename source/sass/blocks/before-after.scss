@@ -1,6 +1,8 @@
 .before-after {
   background-color: $color-bg--alt;
   padding: 33px 34px 38px 20px;
+.before-after__wrapper {
+  @include wrapper;
 }
 
 .before-after__header {
