@@ -7,20 +7,18 @@
 
 .before-after__header {
   margin: 0 0 33px 0;
-  color: $color-text-header;
-  font-size: 36px;
-  line-height: 60px;
+
+  @include font(400, 36px, 60px, $font-family, $color-text-header);
 }
 
 .before-after__text {
   margin: 0 0 27px 0;
-  font-family: $font-family--alt;
-  color: $color-text;
+
+  @include font(400, 14px, 18px, $font-family--alt, $color-text);
 }
 
 .before-after__costs {
   text-transform: uppercase;
-  font-size: 14px;
-  line-height: 20px;
-  color: $color-text;
+
+  @include font(400, 14px, 20px, $font-family, $color-text);
 }
