@@ -1,36 +1,46 @@
 .main-product {
-  background-image: url("../../img/index-can-mobile@1x.png"), url("../../img/index-background-mobile@1x.jpg");
-  background-repeat: no-repeat, no-repeat;
-  background-position: 0 167px, left top;
+  min-height: 305px;
   padding-top: 29px;
   padding-bottom: 22px;
-  background-color: $color-brand;
+
+  background-image: url("../../img/index-background-mobile@1x.jpg");
+  background-repeat: no-repeat;
+}
+
+.main-product__wrapper {
+  padding-top: 273px;
+
+  background-image: url("../../img/index-can-mobile@1x.png");
+  background-repeat: no-repeat;
+
+  @include wrapper;
 }
 
 .main-product__header {
   margin: 0 0 19px;
+
   text-align: center;
-  font-size: 36px;
-  line-height: 36px;
-  color: $color-text-header--rev;
+
+  @include font(400, 36px, 36px, $font-family, $color-text-header--rev);
 }
 
 .main-product__text {
+  margin-bottom: 29px;
+
   text-align: center;
-  padding-bottom: 316px;
-  font-size: 14px;
-  line-height: 14px;
-  color: $color-text-header--rev;
+
+  @include font(400, 14px, 14px, $font-family, $color-text-header--rev);
 }
 
 .main-product__link {
   display: block;
+  padding: 14px 11px;
+
   text-align: center;
   text-transform: uppercase;
   text-decoration: none;
+
   background-color: $color-brand;
-  font-size: 14px;
-  line-height: 14px;
-  color: $color-text-header--rev;
-  padding: 14px 74px 11px 73px;
+
+  @include font(400, 14px, 14px, $font-family, $color-text-header--rev);
 }

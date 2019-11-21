@@ -1,25 +1,23 @@
 .advantages {
-  padding: 12px 27px 42px 20px;
-
   background-color: $color-bg;
+
+  @include wrapper;
 }
 
 .advantages__header {
   margin: 0 0 35px;
 
-  font-size: 36px;
-  line-height: 60px;
-  color: $color-text-header;
+  @include font(400, 36px, 60px, $font-family, $color-text-header);
 }
 
 .advantages__list {
-  margin: 0;
+  margin: 0 0 32px 0;
   padding: 0;
 }
 
 .advantages__item {
   margin-bottom: 20px;
-  padding-left: 80px;
+  padding-left: 60px;
 
   list-style: none;
 
@@ -31,6 +29,5 @@
 .advantages__description {
   margin: 0;
 
-  font-family: $font-family--alt;
-  color: $color-text;
+  @include font(400, 14px, 18px, $font-family--alt, $color-text);
 }

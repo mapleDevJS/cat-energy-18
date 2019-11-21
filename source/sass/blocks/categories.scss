@@ -1,3 +1,7 @@
 .categories {
   background-color: $color-bg;
 }
+
+.categories__wrapper {
+  @include wrapper;
+}

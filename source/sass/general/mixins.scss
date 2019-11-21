@@ -1,10 +1,50 @@
-@mixin visually-hidden() {
-  position: absolute;
-  width: 1px;
-  height: 1px;
-  margin: -1px;
+@mixin list-reset {
+  margin: 0;
   padding: 0;
-  overflow: hidden;
-  border: 0;
-  clip: rect(0 0 0 0);
+
+  list-style: none;
+}
+
+@mixin fieldset-reset {
+  margin: 0;
+  padding: 0;
+
+  border: none;
+}
+
+@mixin placeholder {
+  text-transform: uppercase;
+
+  @include font(400, 16px, 18px, $font-family, $color-text);
+}
+
+@mixin button {
+  display: block;
+  width: 100%;
+  padding-top: 13px;
+  padding-bottom: 12px;
+
+  text-align: center;
+  text-transform: uppercase;
+  text-decoration: none;
+
+  background-color: $color-brand;
+  border: none;
+
+  @include font(400, 16px, 20px, $font-family, $color-text--rev);
+}
+
+@mixin wrapper {
+  min-width: 320px;
+  margin: 0 auto;
+  padding-right: $mobile-padding;
+  padding-left: $mobile-padding;
+}
+
+@mixin font($f-weight, $f-size, $l-height, $f-family, $color) {
+  font-weight: $f-weight;
+  font-size: $f-size;
+  line-height: $l-height;
+  font-family: $f-family;
+  color: $color;
 }

@@ -1,13 +1,15 @@
 body {
   margin: 0;
   padding: 0;
-  background-color: $color-bg;
-  font-family: $font-family;
+
+  font-weight: 400;
   font-size: 14px;
   line-height: 18px;
-  font-weight: 400;
+  font-family: $font-family;
   color: $color-text;
   word-break: break-word;
+
+  background-color: $color-bg;
 }
 
 html {
@@ -23,4 +25,18 @@ html {
 img {
   max-width: 100%;
   height: auto;
+}
+
+.visually-hidden {
+  position: absolute;
+
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  overflow: hidden;
+
+  border: 0;
+
+  clip: rect(0 0 0 0);
 }
