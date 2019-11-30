@@ -291,36 +291,42 @@
     <footer class="page-footer">
       <section class="page-footer__contacts contacts">
         <h2 class="visually-hidden">Контакты</h2>
-        <p class="contacts__text">приглашаем к сотрудничеству дилеров!</p>
-        <address class="contacts__address">
-          ул. Большая Конюшенная, д. 19/8 Санкт-Петербург
-        </address>
-        <div id="map" class="contacts__map"></div>
+        <div class="contacts__wrapper">
+            <p class="contacts__text">приглашаем к сотрудничеству дилеров!</p>
+            <address class="contacts__address">
+              ул. Большая Конюшенная, д. 19/8 Санкт-Петербург
+            </address>
+          </div>
       </section>
 
-      <div class="page-footer__brand brand">
-        <img class="brand__img" src="source/img/*.svg" width="128" height="24" alt="CAT ENERGY">
+      <div id="map" class="page-footer__map"></div>
+
+      <div class="page-footer__wrapper">
+        <div class="page-footer__logo page-footer-logo">
+          <img class="page-footer-logo__img" src="source/img/*.svg" width="128" height="24" alt="CAT ENERGY">
+        </div>
+
+        <ul class="page-footer__social social-list">
+          <li class="social-list__item">
+            <a class="social-list__link social-icon social-icon--vk" href="#" aria-label="Cat Energy во ВКонтакте">ВКонтакте</a>
+          </li>
+          <li class="social-list__item">
+            <a class="social-list__link social-icon social-icon--ig" href="#" aria-label="Cat Energy в Инстаграм">Инстаграм</a>
+          </li>
+          <li class="social-list__item">
+            <a class="social-list__link social-icon social-icon--fb" href="#" aria-label="Cat Energy в Фейсбуке">Фейсбук</a>
+          </li>
+        </ul>
+
+        <div class="page-footer__copyright copyright">
+          <h2 class="visually-hidden">Разработано</h2>
+          <a class="copyright__text" href="https://htmlacademy.ru/intensive/adaptive" aria-label="Сайт HTML Academy">HTML Academy</a>
+          <a class="copyright__logo copyright-logo" href="https://htmlacademy.ru/intensive/adaptive" aria-label="Сайт HTML Academy">
+            <img class="copyright-logo__img" src="source/img/*.svg" width="27" height="34" alt="Логотип HTML Academy">
+          </a>
+        </div>
       </div>
 
-      <ul class="page-footer__social social-list">
-        <li class="social-list__item">
-          <a class="social-list__link social-icon social-icon--vk" href="#" aria-label="Cat Energy во ВКонтакте">ВКонтакте</a>
-        </li>
-        <li class="social-list__item">
-          <a class="social-list__link social-icon social-icon--ig" href="#" aria-label="Cat Energy в Инстаграм">Инстаграм</a>
-        </li>
-        <li class="social-list__item">
-          <a class="social-list__link social-icon social-icon--fb" href="#" aria-label="Cat Energy в Фейсбуке">Фейсбук</a>
-        </li>
-      </ul>
-
-      <div class="copyright">
-        <h2 class="visually-hidden">Разработано</h2>
-        <a class="copyright__link" href="https://htmlacademy.ru/intensive/adaptive" aria-label="Сайт HTML Academy">HTML Academy</a>
-        <a class="copyright__link" href="https://htmlacademy.ru/intensive/adaptive" aria-label="Сайт HTML Academy">
-          <img class="copyright__img" src="source/img/*.svg" width="27" height="34" alt="Логотип HTML Academy">
-        </a>
-      </div>
     </footer>
 
   </body>
