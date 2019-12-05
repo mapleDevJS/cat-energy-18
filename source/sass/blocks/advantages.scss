@@ -1,33 +1,131 @@
 .advantages {
+  padding-top: 17px;
+  padding-bottom: 47px;
+
   background-color: $color-bg;
+  border-bottom: 1px solid $color-border;
 
   @include wrapper;
 }
 
 .advantages__header {
-  margin: 0 0 35px;
+  margin: 0 0 30px 0;
 
   @include font(400, 36px, 60px, $font-family, $color-text-header);
 }
 
 .advantages__list {
-  margin: 0 0 32px 0;
+  margin: 0;
   padding: 0;
+
+  @include list-reset;
 }
 
 .advantages__item {
-  margin-bottom: 20px;
-  padding-left: 60px;
+  position: relative;
 
-  list-style: none;
+  margin-bottom: 26px;
 
   &:last-child {
     margin-bottom: 0;
   }
+
+  &::before {
+    content: "";
+    position: absolute;
+
+    display: block;
+    width: 60px;
+    height: 60px;
+
+    @include outline($color-brand);
+  }
 }
 
 .advantages__description {
-  margin: 0;
+  margin: 0 0 0 80px;
 
   @include font(400, 14px, 18px, $font-family--alt, $color-text);
+}
+
+@media (min-width: $tablet-width) {
+  .advantages {
+    padding-top: 46px;
+    padding-bottom: 0;
+  }
+
+  .advantages__header {
+    margin: 0 0 71px 0;
+
+    @include font(400, 60px, 60px, $font-family, $color-text-header);
+  }
+
+  .advantages__list {
+    display: flex;
+    flex-wrap: wrap;
+    align-content: space-between;
+    align-items: flex-start;
+  }
+
+  .advantages__item {
+    position: relative;
+
+    min-height: 286px;
+    margin-bottom: 31px;
+    padding-top: 112px;
+
+
+    &::before {
+      position: absolute;
+      top: 0;
+
+      width: 80px;
+      height: 80px;
+    }
+
+    &:nth-last-child(-n+2) {
+      margin-bottom: 0;
+    }
+  }
+
+  .advantages__item--nutrition {
+    width: 201px;
+    margin-right: 183px;
+  }
+
+  .advantages__item--powder {
+    width: 222px;
+  }
+
+  .advantages__item--diet {
+    width: 205px;
+    margin-right: 179px;
+  }
+
+  .advantages__item--changes {
+    width: 245px;
+  }
+
+  .advantages__description {
+    margin-left: 0;
+
+    @include font(400, 16px, 24px, $font-family--alt, $color-text);
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .advantages {
+    padding-top: 73px;
+
+    border-bottom: none;
+  }
+
+  .advantages__header {
+    margin-bottom: 73px;
+  }
+
+  .advantages__item {
+    width: 305px;
+    margin: 0;
+  }
 }

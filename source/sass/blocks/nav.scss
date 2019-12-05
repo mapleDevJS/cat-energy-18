@@ -1,0 +1,18 @@
+.nav {
+  display: flex;
+  justify-content: space-between;
+}
+
+.nav__list {
+  display: none;
+}
+
+@media (min-width: $tablet-width) {
+  .nav__toggle {
+    display: none;
+  }
+
+  .nav__list {
+    display: flex;
+  }
+}

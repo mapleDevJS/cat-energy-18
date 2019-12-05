@@ -1,0 +1,21 @@
+.nav-logo {
+  display: block;
+  width: 191px;
+  height: 39px;
+
+  @include outline(red);
+}
+
+@media (min-width: $tablet-width) {
+  .nav-logo {
+    width: 174px;
+    height: 59px;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .nav-logo {
+    width: 203px;
+    height: 60px;
+  }
+}

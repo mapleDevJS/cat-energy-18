@@ -1,19 +1,66 @@
 .promo {
-  min-height: 289px;
-  padding-top: 190px;
-  padding-bottom: 43px;
+  padding-top: 35px;
+  padding-bottom: 35px;
+}
 
-  background-color: $color-brand;
+.promo__wrapper {
+  min-height: 289px;
+
   background-image: url("../../img/gift-photo-mobile@1x.jpg");
   background-repeat: no-repeat;
+  background-origin: content-box;
+
+  @include wrapper;
 }
 
 .promo__text {
-  display: block;
-  width: 160px;
-  margin: 0 auto;
+  margin: 0;
+  padding-top: 185px;
+  padding-right: 60px;
+  padding-left: 58px;
 
   text-align: center;
 
   @include font(400, 16px, 20px, $font-family--alt, $color-text--rev);
+}
+
+@media (min-width: $tablet-width) {
+  .promo {
+    padding-top: 69px;
+    padding-bottom: 74px;
+  }
+
+  .promo__wrapper {
+    min-height: 200px;
+
+    background-image: url("../../img/gift-photo-tablet@1x.jpg");
+  }
+
+  .promo__text {
+    padding: 70px 91px 0 423px;
+
+    text-align: left;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .promo {
+    width: 245px;
+    padding-top: 195px;
+    padding-bottom: 85px;
+  }
+
+  .promo__wrapper {
+    min-width: 245px;
+    min-height: 289px;
+    padding: 0;
+
+    background-image: url("../../img/gift-photo-desktop@1x.jpg");
+  }
+
+  .promo__text {
+    padding: 186px 40px 40px 40px;
+
+    text-align: center;
+  }
 }

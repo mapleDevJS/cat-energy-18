@@ -1,6 +1,6 @@
 .main-product {
   min-height: 305px;
-  padding-top: 29px;
+  padding-top: 28px;
   padding-bottom: 22px;
 
   background-image: url("../../img/index-background-mobile@1x.jpg");
@@ -12,12 +12,13 @@
 
   background-image: url("../../img/index-can-mobile@1x.png");
   background-repeat: no-repeat;
+  background-position-x: 20px;
 
   @include wrapper;
 }
 
 .main-product__header {
-  margin: 0 0 19px;
+  margin: 0 0 24px 0;
 
   text-align: center;
 
@@ -25,22 +26,88 @@
 }
 
 .main-product__text {
-  margin-bottom: 29px;
+  margin: 0 0 29px 0;
 
   text-align: center;
+  text-transform: uppercase;
 
   @include font(400, 14px, 14px, $font-family, $color-text-header--rev);
 }
 
 .main-product__link {
-  display: block;
-  padding: 14px 11px;
-
-  text-align: center;
-  text-transform: uppercase;
-  text-decoration: none;
-
-  background-color: $color-brand;
-
+  @include button(100%, 13px, 13px, 13px, 13px, $color-brand);
   @include font(400, 14px, 14px, $font-family, $color-text-header--rev);
+}
+
+@media (min-width: $tablet-width) {
+  .main-product {
+    padding-top: 42px;
+
+    background-image: none;
+  }
+
+  .main-product__wrapper {
+    position: relative;
+
+    height: 607px;
+    padding-top: 0;
+
+    background-image: url("../../img/index-can-tablet@1x.jpg");
+    background-position: 30px 20px;
+  }
+
+  .main-product__header {
+    width: 415px;
+    margin: 0 0 41px 118px;
+
+    text-align: left;
+
+    @include font(400, 60px, 60px, $font-family, $color-text-header);
+  }
+
+  .main-product__text {
+    margin: 0 0 0 118px;
+
+    text-align: left;
+
+    @include font(400, 20px, 20px, $font-family, $color-text-header);
+  }
+
+  .main-product__link {
+    position: absolute;
+    top: 48px;
+    left: 119px;
+
+    @include button(245px, 15px, 16px, 16px, 14px, $color-brand);
+    @include font(400, 20px, 20px, $font-family, $color-text-header--rev);
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .main-product {
+    padding-top: 94px;
+    padding-bottom: 80px;
+    padding-left: 190px;
+
+    background-image: url("../../img/index-can-desktop@1x.png");
+    background-position: 560px 10px;
+  }
+
+  .main-product__wrapper {
+    height: 288px;
+
+    background-image: none;
+  }
+
+  .main-product__header {
+    margin: 0 0 41px 0;
+  }
+
+  .main-product__text {
+    margin: 0 0 5px 0;
+  }
+
+  .main-product__link {
+    left: 0;
+  }
 }

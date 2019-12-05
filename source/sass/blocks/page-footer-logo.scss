@@ -1,0 +1,10 @@
+.page-footer-logo__img {
+  display: block;
+  width: 128px;
+  height: 24px;
+  margin: 0 auto;
+
+  text-align: center;
+
+  @include outline(red);
+}
