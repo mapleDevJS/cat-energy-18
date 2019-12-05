@@ -1,0 +1,45 @@
+.extra-product-fact {
+  display: block;
+  margin-bottom: 14px;
+}
+
+.extra-product-fact tbody {
+  display: block;
+}
+
+.extra-product-fact__item {
+  display: flex;
+  justify-content: space-between;
+}
+
+.extra-product-fact__detail {
+  @include font(400,  14px, 14px, $font-family--alt, $color-text-header--alt);
+}
+
+.extra-product-fact__value {
+  @include font(400,  14px, 14px, $font-family--alt, $color-text-header--alt);
+}
+
+@media (min-width: $tablet-width) {
+  .extra-product-fact {
+    display: inline-block;
+    float: right;
+    margin-bottom: 23px;
+  }
+
+  .extra-product-fact__detail {
+    margin-right: 49px;
+
+    @include font(400,  16px, 20px, $font-family--alt, $color-text-header--alt);
+  }
+
+  .extra-product-fact__value {
+    @include font(400,  16px, 20px, $font-family--alt, $color-text-header--alt);
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .extra-product-fact {
+    margin-bottom: 0;
+  }
+}

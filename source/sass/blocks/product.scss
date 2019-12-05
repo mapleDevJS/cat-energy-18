@@ -1,4 +1,9 @@
 .product {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  padding-bottom: 24px;
+
   border-bottom: 1px solid $color-border;
 }
 
@@ -8,7 +13,22 @@
   @include font(400, 16px, 20px, $font-family, $color-text);
 }
 
+.product__img {
+  display: block;
+  width: 140px;
+  height: 144px;
+  padding-top: 2px;
+
+  @include outline($color-brand);
+}
+
+.product__description {
+  min-height: 144px;
+  padding-top: 19px;
+}
+
 .product__header {
+  width: 74px;
   margin: 0;
 
   text-transform: uppercase;
@@ -21,9 +41,90 @@
 }
 
 .product__order {
-  margin: 0 auto 31px;
+  margin: 0 auto;
 
-  background-color: $color-brand;
+  @include button(100%, 9px, 12px, 11px, 13px, $color-brand);
+}
 
-  @include button();
+@media (min-width: $tablet-width) {
+  .product {
+    position: relative;
+
+    flex-direction: column;
+    align-items: center;
+    width: 324px;
+    margin-bottom: 140px;
+    padding-top: 165px;
+    padding-right: 37px;
+    padding-bottom: 40px;
+    padding-left: 39px;
+
+    background-color: $color-bg--alt;
+
+    &:nth-last-child(-n+2) {
+      margin-bottom: 0;
+    }
+  }
+
+  .product__img {
+    position: absolute;
+    top: -45px;
+    left: 83px;
+
+    width: 161px;
+    height: 172px;
+
+    @include outline($color-brand);
+  }
+
+  .product:nth-child(2n) .product__img {
+    top: -81px;
+    left: 83px;
+
+    width: 195px;
+    height: 208px;
+  }
+
+  .product__description {
+    width: auto;
+    margin-bottom: 30px;
+    padding-top: 0;
+  }
+
+  .product__header {
+    width: auto;
+    padding-right: 55px;
+    padding-left: 55px;
+
+    text-align: center;
+
+    @include font(400, 20px, 20px, $font-family, $color-text-header);
+  }
+
+  .product__facts {
+    @include font(400, 16px, 16px, $font-family--alt, $color-text-header);
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .product {
+    width: 246px;
+
+    &:nth-last-child(-n+4) {
+      margin-bottom: 0;
+    }
+  }
+
+  .product__header {
+    padding-right: 12px;
+    padding-left: 11px;
+  }
+
+  .product__img {
+    left: 42px;
+  }
+
+  .product:nth-child(2n) .product__img {
+    left: 28px;
+  }
 }

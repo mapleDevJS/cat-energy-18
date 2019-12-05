@@ -21,7 +21,7 @@
 }
 
 .form__button {
-  @include button();
+  @include button(100%, 13px, 11px, 13px, 13px, $color-brand);
 }
 
 .form__text {

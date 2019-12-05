@@ -1,5 +1,5 @@
 .products {
-  padding: 0;
+  padding: 16px 0 0 0;
 }
 
 .products__wrapper {
@@ -8,10 +8,7 @@
 
 .products__header {
   margin: 0;
-  padding-top: 15px;
-  padding-bottom: 28px;
-
-  letter-spacing: -1.8px;
+  padding: 0 0 28px 0;
 
   border-bottom: 1px solid $color-border;
 
@@ -20,4 +17,27 @@
 
 .products__list {
   @include list-reset;
+}
+
+@media (min-width: $tablet-width) {
+  .products__header {
+    padding: 26px 0 28px 0;
+
+    border-bottom: none;
+
+    @include font(400, 60px, 60px, $font-family, $color-text-header);
+  }
+
+  .products__list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding-top: 136px;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .products {
+    padding: 34px 0 0 0;
+  }
 }

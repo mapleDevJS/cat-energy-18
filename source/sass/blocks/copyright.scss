@@ -1,4 +1,10 @@
-.copyright__link {
+.copyright {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.copyright__text {
   text-decoration: none;
 
   @include font(400, 16px, 16px, $font-family--alt, $color-text);

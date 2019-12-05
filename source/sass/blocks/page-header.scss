@@ -1,8 +1,26 @@
 .page-header {
+  padding: 11px 0 15px 0;
+
   background-color: $color-bg;
   border-bottom: 1px solid $color-border;
 }
 
 .page-header__wrapper {
   @include wrapper;
+}
+
+@media (min-width: $tablet-width) {
+  .page-header {
+    padding-top: 24px;
+
+    border-bottom: none;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .page-header {
+    padding-top: 53px;
+
+    background-color: transparent;
+  }
 }

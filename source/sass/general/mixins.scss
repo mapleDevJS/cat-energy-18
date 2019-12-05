@@ -18,17 +18,19 @@
   @include font(400, 16px, 18px, $font-family, $color-text);
 }
 
-@mixin button {
+@mixin button($width, $p-top, $p-right, $p-bottom, $p-left, $color) {
   display: block;
-  width: 100%;
-  padding-top: 13px;
-  padding-bottom: 12px;
+  width: $width;
+  padding-top: $p-top;
+  padding-right: $p-right;
+  padding-bottom: $p-bottom;
+  padding-left: $p-left;
 
   text-align: center;
   text-transform: uppercase;
   text-decoration: none;
 
-  background-color: $color-brand;
+  background-color: $color;
   border: none;
 
   @include font(400, 16px, 20px, $font-family, $color-text--rev);
@@ -39,6 +41,18 @@
   margin: 0 auto;
   padding-right: $mobile-padding;
   padding-left: $mobile-padding;
+
+  @media (min-width: $tablet-width) {
+    min-width: $tablet-width;
+    padding-right: $tablet-padding;
+    padding-left: $tablet-padding;
+  }
+
+  @media (min-width: $desktop-width) {
+    min-width: $desktop-width;
+    padding-right: $desktop-padding;
+    padding-left: $desktop-padding;
+  }
 }
 
 @mixin font($f-weight, $f-size, $l-height, $f-family, $color) {
@@ -47,4 +61,8 @@
   line-height: $l-height;
   font-family: $f-family;
   color: $color;
+}
+
+@mixin outline($color) {
+  outline: 1px solid $color;
 }

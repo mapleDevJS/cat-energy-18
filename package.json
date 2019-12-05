@@ -38,5 +38,7 @@
   "engines": {
     "node": "8.16"
   },
-  "dependencies": {}
+  "dependencies": {
+    "editorconfig-cli": "^0.3.0"
+  }
 }
