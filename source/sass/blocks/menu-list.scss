@@ -44,13 +44,13 @@
 
 
   .body-index .menu-list__link {
-    @include font(400, 18px, 25px, $font-family, $color-text-link--rev);
+    @include font(400, 18px, 25px, $font-family, $color-text-link--alt);
   }
 }
 
 @media (min-width: $desktop-width) {
   .menu-list__link {
-    @include font(400, 20px, 25px, $font-family, $color-text-link);
+    @include font(400, 20px, 25px, $font-family, $color-text-link--alt);
   }
 
   .body-index .menu-list__link {
