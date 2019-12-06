@@ -25,4 +25,12 @@
     display: flex;
     justify-content: space-between;
   }
+
+  .categories__item {
+    margin-right: 80px;
+
+    &:last-child {
+      margin-right: 0;
+    }
+  }
 }
