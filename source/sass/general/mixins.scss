@@ -7,7 +7,6 @@
 
 @mixin fieldset-reset {
   margin: 0;
-  padding: 0;
 
   border: none;
 }
@@ -32,8 +31,6 @@
 
   background-color: $color;
   border: none;
-
-  @include font(400, 16px, 20px, $font-family, $color-text--rev);
 }
 
 @mixin wrapper {
@@ -43,11 +40,13 @@
   padding-left: $mobile-padding;
 
   @media (min-width: $tablet-width) {
+    max-width: $tablet-width;
     padding-right: $tablet-padding;
     padding-left: $tablet-padding;
   }
 
   @media (min-width: $desktop-width) {
+    max-width: $desktop-width;
     padding-right: $desktop-padding;
     padding-left: $desktop-padding;
   }

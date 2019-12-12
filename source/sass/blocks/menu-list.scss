@@ -42,9 +42,12 @@
     }
   }
 
+  .menu-list__link {
+    @include font(400, 18px, 25px, $font-family, $color-text-link--alt);
+  }
 
   .body-index .menu-list__link {
-    @include font(400, 18px, 25px, $font-family, $color-text-link--alt);
+    color: $color-text-link;
   }
 }
 
