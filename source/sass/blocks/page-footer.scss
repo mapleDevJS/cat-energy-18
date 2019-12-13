@@ -75,10 +75,12 @@
 @media (min-width: $desktop-width) {
   .page-footer {
     position: relative;
+
+    background-color: $color-bg--alt;
   }
 
   .page-footer__wrapper {
-    background-color: $color-bg--alt;
+    max-width: $desktop-width;
   }
 
   .page-footer__contacts {

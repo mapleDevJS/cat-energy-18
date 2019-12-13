@@ -86,24 +86,24 @@
     &:nth-last-child(-n+2) {
       margin-bottom: 0;
     }
-  }
 
-  .advantages__item--nutrition {
-    width: 201px;
-    margin-right: 183px;
-  }
+    &--nutrition {
+      width: 201px;
+      margin-right: 183px;
+    }
 
-  .advantages__item--powder {
-    width: 222px;
-  }
+    &--powder {
+      width: 222px;
+    }
 
-  .advantages__item--diet {
-    width: 205px;
-    margin-right: 179px;
-  }
+    &--diet {
+      width: 205px;
+      margin-right: 179px;
+    }
 
-  .advantages__item--changes {
-    width: 245px;
+    &--changes {
+      width: 245px;
+    }
   }
 
   .advantages__description {

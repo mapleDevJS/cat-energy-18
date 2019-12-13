@@ -1,3 +1,10 @@
+.field {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  min-height: 45px;
+}
+
 .field__label {
   text-transform: uppercase;
 
@@ -5,7 +12,24 @@
 }
 
 .field__input {
+  flex-grow: 1;
+  width: auto;
+  min-height: 45px;
+  margin: 0 0 0 16px;
+  padding: 0;
+
   &::placeholder {
     @include placeholder();
+  }
+}
+
+@media (min-width: $tablet-width) {
+  .field__label {
+    @include font(400, 20px, 20px, $font-family, $color-text-label);
+  }
+
+  .field__input {
+    height: 52px;
+    margin: 0 0 0 18px;
   }
 }

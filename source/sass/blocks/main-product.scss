@@ -3,16 +3,16 @@
   padding-top: 28px;
   padding-bottom: 22px;
 
-  background-image: url("../../img/index-background-mobile@1x.jpg");
+  background: url("../../img/index-background-mobile@1x.jpg") #63a73a;
   background-repeat: no-repeat;
 }
 
 .main-product__wrapper {
-  padding-top: 273px;
+  min-height: 437px;
 
   background-image: url("../../img/index-can-mobile@1x.png");
   background-repeat: no-repeat;
-  background-position-x: 20px;
+  background-position: 20px 138px;
 
   @include wrapper;
 }
@@ -26,7 +26,7 @@
 }
 
 .main-product__text {
-  margin: 0 0 29px 0;
+  margin: 0 0 302px 0;
 
   text-align: center;
   text-transform: uppercase;
@@ -43,22 +43,22 @@
   .main-product {
     padding-top: 42px;
 
-    background-image: none;
+    background: none $color-bg;
   }
 
   .main-product__wrapper {
     position: relative;
 
-    height: 607px;
-    padding-top: 0;
+    min-height: 788px;
+    padding: 0 116px;
 
     background-image: url("../../img/index-can-tablet@1x.jpg");
-    background-position: 30px 20px;
+    background-position: 29px 201px;
   }
 
   .main-product__header {
     width: 415px;
-    margin: 0 0 41px 118px;
+    margin: 0 0 40px 0;
 
     text-align: left;
 
@@ -66,7 +66,7 @@
   }
 
   .main-product__text {
-    margin: 0 0 0 118px;
+    margin: 0 0 49px 0;
 
     text-align: left;
 
@@ -74,10 +74,6 @@
   }
 
   .main-product__link {
-    position: absolute;
-    top: 48px;
-    left: 119px;
-
     @include button(245px, 15px, 16px, 16px, 14px, $color-brand);
     @include font(400, 20px, 20px, $font-family, $color-text-header--rev);
   }
@@ -86,28 +82,21 @@
 @media (min-width: $desktop-width) {
   .main-product {
     padding-top: 94px;
-    padding-bottom: 80px;
-    padding-left: 190px;
 
-    background-image: url("../../img/index-can-desktop@1x.png");
-    background-position: 560px 10px;
+    background: url("../../img/index-can-desktop@1x.png");
+    background-color: transparent;
+    background-repeat: no-repeat;
+    background-position: 560px 13px;
   }
 
   .main-product__wrapper {
-    height: 288px;
+    min-height: 532px;
+    padding: 0 120px;
 
     background-image: none;
   }
 
-  .main-product__header {
-    margin: 0 0 41px 0;
-  }
-
   .main-product__text {
-    margin: 0 0 5px 0;
-  }
-
-  .main-product__link {
-    left: 0;
+    margin: 0 0 54px 0;
   }
 }

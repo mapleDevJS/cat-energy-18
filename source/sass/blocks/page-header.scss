@@ -6,6 +6,8 @@
 }
 
 .page-header__wrapper {
+  max-width: $desktop-width;
+
   @include wrapper;
 }
 
@@ -20,7 +22,5 @@
 @media (min-width: $desktop-width) {
   .page-header {
     padding-top: 53px;
-
-    background-color: transparent;
   }
 }

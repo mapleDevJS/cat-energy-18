@@ -1,5 +1,6 @@
 .before-after {
   min-height: 705px;
+  margin: 0 auto;
   padding-top: 17px;
 
   background-color: $color-bg--alt;
@@ -41,8 +42,6 @@
     padding-top: 43px;
 
     background-color: $color-bg;
-
-    @include outline($color-brand);
   }
 
   .before-after__header {
@@ -62,25 +61,34 @@
 
 @media (min-width: $desktop-width) {
   .before-after {
+    width: 100%;
     min-height: 590px;
-    padding-top: 25px;
-
-    @include outline(red);
-  }
-
-  .before-after__wrapper {
-    min-height: 462px;
-    padding-top: 70px;
+    padding-top: 0;
 
     background-color: $color-bg--alt;
   }
 
+  .before-after__wrapper {
+    width: 100%;
+    max-width: $desktop-width;
+    min-height: 462px;
+    padding-top: 70px;
+  }
+
   .before-after__header {
-    margin: 0 0 75px 0;
-    padding-right: $desktop-padding;
-    padding-left: $desktop-padding;
+    margin: 0;
+    padding-top: 25px;
+    padding-bottom: 75px;
 
     background-color: $color-bg;
+  }
+
+  .before-after__header span {
+    display: block;
+    max-width: $desktop-width;
+    margin: 0 auto;
+    padding-right: $desktop-padding;
+    padding-left: $desktop-padding;
   }
 
   .before-after__text {
