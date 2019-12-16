@@ -1,8 +1,39 @@
 .field {
+  position: relative;
+
   display: flex;
   justify-content: space-between;
   align-items: center;
-  min-height: 45px;
+
+  &--email {
+    &::after {
+      content: "";
+      position: absolute;
+      top: 14px;
+      right: 15px;
+
+      display: block;
+      width: 18px;
+      height: 14px;
+
+      background-image: url("data:image/svg+xml,%3C%3Fxml version=\"1.0\" encoding=\"utf-8\"%3F%3E%3C!-- Generator: Adobe Illustrator 21.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0) --%3E%3Csvg version=\"1.1\" id=\"Layer_1\" xmlns=\"http://www.w3.org/2000/svg\" xmlns:xlink=\"http://www.w3.org/1999/xlink\" x=\"0px\" y=\"0px\" viewBox=\"0 0 17 13\" style=\"enable-background:new 0 0 17 13;\" xml:space=\"preserve\"%3E%3Cpath d=\"M15.6,11.6H1.4V5.8H0V13h17V5.8h-1.4V11.6z M0,0v2.3l8.5,7.1L17,2.3V0H0z M15.6,1.6L8.5,7.5L1.4,1.6V1.4h14.2L15.6,1.6z\"/%3E%3C/svg%3E%0A");
+    }
+  }
+
+  &--tel {
+    &::after {
+      content: "";
+      position: absolute;
+      top: 12px;
+      right: 12px;
+
+      display: block;
+      width: 21px;
+      height: 21px;
+
+      background-image: url("data:image/svg+xml,%3C%3Fxml version=\"1.0\" encoding=\"utf-8\"%3F%3E%3C!-- Generator: Adobe Illustrator 21.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0) --%3E%3Csvg version=\"1.1\" id=\"Layer_1\" xmlns=\"http://www.w3.org/2000/svg\" xmlns:xlink=\"http://www.w3.org/1999/xlink\" x=\"0px\" y=\"0px\" viewBox=\"0 0 20 20\" style=\"enable-background:new 0 0 20 20;\" xml:space=\"preserve\"%3E%3Cpath d=\"M17.9,9.4H9.4v1.2h8.5l-2.1,2.1l0.9,0.9l3.1-3.1c0.2-0.2,0.2-0.6,0-0.9l-3.1-3.1l-0.9,0.9L17.9,9.4z\"/%3E%3Cpath d=\"M8.1,19.4v-6.2c0-0.3-0.3-0.6-0.6-0.6H4.4l0,0H3.1l0,0c0,0.7,0.6,1.2,1.2,1.2h2.5v5H3.1c-1,0.1-1.8-0.7-1.9-1.7 c0-0.1,0-0.1,0-0.2V3.1c0-1,0.8-1.8,1.7-1.8c0.1,0,0.1,0,0.2,0h3.7v5H4.4c-0.7,0-1.2,0.6-1.2,1.2h4.4c0.3,0,0.6-0.3,0.6-0.6V0.6 C8.1,0.3,7.8,0,7.5,0H3.1C1.5-0.1,0.1,1.2,0,2.9C0,3,0,3.1,0,3.1v13.7c-0.1,1.7,1.2,3.1,2.9,3.1c0.1,0,0.2,0,0.2,0h4.4 C7.8,20,8.1,19.7,8.1,19.4z\"/%3E%3C/svg%3E%0A");
+    }
+  }
 }
 
 .field__label {
@@ -13,13 +44,40 @@
 
 .field__input {
   flex-grow: 1;
-  width: auto;
-  min-height: 45px;
-  margin: 0 0 0 16px;
-  padding: 0;
+  width: 170px;
+  margin: 0 0 0 15px;
+  padding: 9px 13px 10px 13px;
 
-  &::placeholder {
-    @include placeholder();
+  text-transform: uppercase;
+
+  border: 1px solid rgba(205, 205, 205, 0.5);
+
+  @include font(400, 16px, 18px, $font-family, $color-text);
+
+  &::-moz-placeholder {
+    text-transform: uppercase;
+
+    @include font(400, 16px, 18px, $font-family, $color-text);
+  }
+
+  &[type="email"] {
+    padding-right: 43px;
+  }
+
+  &[type="tel"] {
+    padding-right: 43px;
+  }
+
+  &:hover {
+    border-color: rgba(205, 205, 205, 1);
+  }
+
+  &:focus {
+    border: 2px solid #444444;
+
+    &::-moz-placeholder {
+      opacity: 0;
+    }
   }
 }
 

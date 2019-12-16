@@ -15,7 +15,7 @@
 }
 
 .contacts__address {
-  width: 135px;
+  width: 139px;
 
   font-style: normal;
 
@@ -40,6 +40,11 @@
     text-align: right;
 
     @include font(400, 16px, 20px, $font-family--alt, $color-text);
+  }
+
+  .contacts__city {
+    display: block;
+    margin-top: 18px;
   }
 }
 

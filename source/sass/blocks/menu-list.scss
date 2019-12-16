@@ -4,30 +4,46 @@
 
 .menu-list__item {
   display: block;
-  margin-right: 34px;
+  padding-top: 18px;
+  padding-bottom: 18px;
 
   text-align: center;
 
-  border-bottom: 1px solid $color-border;
+  border-bottom: 2px solid $color-border;
 
   &:first-child {
-    border-top: 1px solid red;
+    border-top: 2px solid $color-border;
   }
 
   &:last-child {
-    margin-right: 0;
+    border-bottom: none;
   }
 }
 
 .menu-list__link {
+  padding-bottom: 7px;
+
   text-transform: uppercase;
   text-decoration: none;
   word-wrap: normal;
   word-break: keep-all;
 
   @include font(400, 20px, 20px, $font-family, $color-text-link);
+
+  &--active {
+    border-bottom: 2px solid $color-brand;
+  }
 }
 
+.menu-list__link[href] {
+  &:hover {
+    color: rgba(17, 17, 17, 0.6);
+  }
+
+  &:active {
+    color: rgba(17, 17, 17, 0.3);
+  }
+}
 
 @media (min-width: $tablet-width) {
   .menu-list {
@@ -35,10 +51,16 @@
   }
 
   .menu-list__item {
+    margin-right: 36px;
+
     border-bottom: none;
 
     &:first-child {
       border-top: none;
+    }
+
+    &:last-child {
+      margin-right: 0;
     }
   }
 
@@ -52,11 +74,29 @@
 }
 
 @media (min-width: $desktop-width) {
+  .menu-list__item {
+    margin-right: 34px;
+  }
+
   .menu-list__link {
-    @include font(400, 20px, 25px, $font-family, $color-text-link--alt);
+    @include font(400, 20px, 25px, $font-family, $color-text-link);
+  }
+
+  .menu-list__link[href] {
+    &:hover {
+      color: rgba(255, 255, 255, 0.6);
+    }
+
+    &:active {
+      color: rgba(255, 255, 255, 0.3);
+    }
   }
 
   .body-index .menu-list__link {
     @include font(400, 20px, 25px, $font-family, $color-text-link--rev);
+
+    &--active {
+      border-bottom: 2px solid #ffffff;
+    }
   }
 }

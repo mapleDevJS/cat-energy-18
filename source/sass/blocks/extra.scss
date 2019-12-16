@@ -1,16 +1,16 @@
-.extra-products {
+.extra {
   padding-top: 34px;
 }
 
-.extra-products__wrapper {
+.extra__wrapper {
   @include wrapper;
 }
 
-.extra-products__list {
+.extra__list {
   @include list-reset;
 }
 
-.extra-products__header {
+.extra__header {
   margin: 0;
   padding-top: 20px;
   padding-bottom: 34px;
@@ -22,11 +22,11 @@
 
 
 @media (min-width: $tablet-width) {
-  .extra-products {
+  .extra {
     padding-top: 48px;
   }
 
-  .extra-products__header {
+  .extra__header {
     padding-bottom: 80px;
     padding-left: 38px;
 
@@ -35,16 +35,24 @@
 }
 
 @media (min-width: $desktop-width) {
-  .extra-products {
-    padding-top: 60px;
+  .extra {
+    padding-top: 58px;
   }
 
-  .extra-products__wrapper {
+  .extra__wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-start;
     min-width: 895px;
-    padding-right: 80px;
   }
 
-  .extra-products__header {
+  .extra__header {
     padding-left: 0;
+
+    border: none;
+  }
+
+  .extra__list {
+    width: 895px;
   }
 }

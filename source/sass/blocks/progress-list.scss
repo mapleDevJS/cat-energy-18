@@ -1,11 +1,70 @@
 .progress-list {
+  display: flex;
+  justify-content: space-between;
+  padding: 0;
+
   list-style: none;
 }
 
+.progress-list__item {
+  position: relative;
+
+  display: block;
+  width: 125px;
+  padding: 15px;
+
+  text-align: center;
+
+  border: 1px solid #cdcdcd;
+}
+
 .progress-list__measure {
+  display: block;
+
+  text-transform: uppercase;
+
   @include font(400, 24px, 24px, $font-family, $color-text-header);
 }
 
 .progress-list__description {
-  @include font(400, 12px, 12px, $font-family, $color-text);
+  position: absolute;
+  top: 46px;
+
+  display: block;
+  width: 87px;
+  padding: 0 10px 0 10px;
+
+  text-transform: lowercase;
+
+  background-color: $color-bg--alt;
+
+  @include font(400, 12px, 12px, $font-family--alt, $color-text);
+}
+
+@media (min-width: $tablet-width) {
+  .progress-list {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .progress-list__item {
+    width: 162px;
+    margin-right: 42px;
+    padding: 15px 15px 18px 15px;
+  }
+
+  .progress-list__measure {
+    @include font(400, 30px, 37px, $font-family, $color-text-header);
+  }
+
+  .progress-list__description {
+    top: 62px;
+
+    width: 137px;
+    padding: 0;
+
+    background-color: $color-bg;
+
+    @include font(400, 14px, 14px, $font-family--alt, $color-text);
+  }
 }

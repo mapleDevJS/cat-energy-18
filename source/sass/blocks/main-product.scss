@@ -1,18 +1,13 @@
 .main-product {
-  min-height: 305px;
-  padding-top: 28px;
   padding-bottom: 22px;
-
-  background: url("../../img/index-background-mobile@1x.jpg") #63a73a;
-  background-repeat: no-repeat;
 }
 
 .main-product__wrapper {
-  min-height: 437px;
+  padding-top: 28px;
 
-  background-image: url("../../img/index-can-mobile@1x.png");
-  background-repeat: no-repeat;
-  background-position: 20px 138px;
+  background-image: url("../../img/index-can-mobile@1x.png"), url("../../img/index-background-mobile@1x.jpg");
+  background-repeat: no-repeat, no-repeat;
+  background-position: 20px 166px, 0 0;
 
   @include wrapper;
 }
@@ -37,6 +32,14 @@
 .main-product__link {
   @include button(100%, 13px, 13px, 13px, 13px, $color-brand);
   @include font(400, 14px, 14px, $font-family, $color-text-header--rev);
+
+  &:hover {
+    background-color: #5eaa2f;
+  }
+
+  &:active {
+    color: rgba(255, 255, 255, 0.3);
+  }
 }
 
 @media (min-width: $tablet-width) {
@@ -50,7 +53,7 @@
     position: relative;
 
     min-height: 788px;
-    padding: 0 116px;
+    padding: 0 118px;
 
     background-image: url("../../img/index-can-tablet@1x.jpg");
     background-position: 29px 201px;

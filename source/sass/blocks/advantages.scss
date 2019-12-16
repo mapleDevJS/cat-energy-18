@@ -1,6 +1,6 @@
 .advantages {
   padding-top: 17px;
-  padding-bottom: 47px;
+  padding-bottom: 42px;
 
   background-color: $color-bg;
   border-bottom: 1px solid $color-border;
@@ -18,31 +18,66 @@
   margin: 0;
   padding: 0;
 
-  @include list-reset;
+  list-style: none;
+
+  counter-reset: my-awesome-counter;
 }
 
 .advantages__item {
   position: relative;
 
-  margin-bottom: 26px;
+  margin-bottom: 20px;
+
+  counter-increment: my-awesome-counter;
 
   &:last-child {
     margin-bottom: 0;
   }
 
-  &::before {
+  &::after {
     content: "";
     position: absolute;
 
     display: block;
     width: 60px;
     height: 60px;
+  }
 
-    @include outline($color-brand);
+  &--nutrition {
+    &::after {
+      background: url("../img/advantage-leaf@1x.png") $color-brand;
+      background-repeat: no-repeat;
+      background-position: 5px;
+    }
+  }
+
+  &--powder {
+    &::after {
+      background: url("../img/advantage-powder@1x.png") $color-brand;
+      background-repeat: no-repeat;
+      background-position: 5px;
+    }
+  }
+
+  &--dining {
+    &::after {
+      background: url("../img/advantage-dining@1x.png") $color-brand;
+      background-repeat: no-repeat;
+      background-position: 5px;
+    }
+  }
+
+  &--clock {
+    &::after {
+      background: url("../img/advantage-clock@1x.png") $color-brand;
+      background-repeat: no-repeat;
+      background-position: 5px;
+    }
   }
 }
 
 .advantages__description {
+  min-height: 60px;
   margin: 0 0 0 80px;
 
   @include font(400, 14px, 18px, $font-family--alt, $color-text);
@@ -63,46 +98,89 @@
   .advantages__list {
     display: flex;
     flex-wrap: wrap;
-    align-content: space-between;
+    justify-content: space-between;
     align-items: flex-start;
   }
 
   .advantages__item {
     position: relative;
+    z-index: 0;
 
     min-height: 286px;
     margin-bottom: 31px;
     padding-top: 112px;
-
+    padding-right: 1%;
 
     &::before {
+      content: "" counter(my-awesome-counter);
+      position: absolute;
+      top: -40px;
+      z-index: -1;
+
+      display: block;
+
+      @include font(400, 281px, 1, $font-family, #f2f2f2);
+    }
+
+
+    &::after {
+      content: "";
       position: absolute;
       top: 0;
+      left: 0;
 
       width: 80px;
       height: 80px;
+
+      background-position: 15px;
     }
 
     &:nth-last-child(-n+2) {
       margin-bottom: 0;
     }
 
+    &:nth-child(4n+1) {
+      &::before {
+        right: 40.18%;
+      }
+    }
+
+    &:nth-child(4n+2) {
+      &::before {
+        right: 24.18%;
+      }
+    }
+
+    &:nth-child(4n+3) {
+      &::before {
+        right: 36.18%;
+      }
+    }
+
+    &:nth-child(4n) {
+      &::before {
+        right: 23.18%;
+      }
+    }
+
     &--nutrition {
-      width: 201px;
-      margin-right: 183px;
+      width: 54.24%;
+      padding-right: 17%;
     }
 
     &--powder {
-      width: 222px;
+      width: 45.76%;
+      padding-right: 14%;
     }
 
-    &--diet {
-      width: 205px;
-      margin-right: 179px;
+    &--dining {
+      width: 54.24%;
+      padding-right: 17%;
     }
 
-    &--changes {
-      width: 245px;
+    &--clock {
+      width: 45.76%;
+      padding-right: 11%;
     }
   }
 
@@ -125,7 +203,30 @@
   }
 
   .advantages__item {
-    width: 305px;
+    width: 26.64%;
+    min-height: 230px;
     margin: 0;
+    padding-right: 60px;
+
+    &:nth-child(4n) {
+      width: 20.08%;
+      padding-right: 0;
+
+      &::before {
+        right: 0;
+      }
+    }
+
+    &:nth-child(4n+1) {
+      &::before {
+        right: 29.18%;
+      }
+    }
+
+    &:nth-child(4n+3) {
+      &::before {
+        right: 24.18%;
+      }
+    }
   }
 }
