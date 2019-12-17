@@ -11,12 +11,6 @@
   border: none;
 }
 
-@mixin placeholder {
-  text-transform: uppercase;
-
-  @include font(400, 16px, 18px, $font-family, $color-text);
-}
-
 @mixin button($width, $p-top, $p-right, $p-bottom, $p-left, $color) {
   display: block;
   width: $width;

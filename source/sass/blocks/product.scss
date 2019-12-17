@@ -44,6 +44,15 @@
   margin: 0 auto;
 
   @include button(100%, 9px, 12px, 11px, 13px, $color-brand);
+  @include font(400, 16px, 20px, $font-family, $color-text--rev);
+
+  &:hover {
+    background-color: #5eaa2f;
+  }
+
+  &:active {
+    color: rgba(255, 255, 255, 0.3);
+  }
 }
 
 @media (min-width: $tablet-width) {
@@ -109,6 +118,7 @@
 @media (min-width: $desktop-width) {
   .product {
     width: 246px;
+    margin-bottom: 143px;
 
     &:nth-last-child(-n+4) {
       margin-bottom: 0;

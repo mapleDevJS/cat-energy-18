@@ -1,10 +1,49 @@
 .checkbox__label {
+  position: relative;
+
   display: block;
   padding-top: 1px;
+  padding-left: 46px;
 
   text-transform: uppercase;
 
+  cursor: pointer;
+
   @include font(400, 16px, 18px, $font-family, $color-text-label);
+
+  &:hover > .checkbox__button {
+    border-color: #bababa;
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
+}
+
+.checkbox__button {
+  position: absolute;
+
+  width: 30px;
+  height: 30px;
+  margin-top: -4px;
+  margin-left: -46px;
+
+  border: 1px solid #cdcdcd;
+}
+
+.checkbox__input:checked + .checkbox__button {
+  &::before {
+    content: "";
+    position: absolute;
+    top: 6px;
+    left: 3px;
+
+    display: block;
+    width: 22px;
+    height: 17px;
+
+    background-image: url("data:image/svg+xml,%3C%3Fxml version=\"1.0\" encoding=\"utf-8\"%3F%3E%3C!-- Generator: Adobe Illustrator 21.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0) --%3E%3Csvg version=\"1.1\" id=\"Layer_1\" xmlns=\"http://www.w3.org/2000/svg\" xmlns:xlink=\"http://www.w3.org/1999/xlink\" x=\"0px\" y=\"0px\" viewBox=\"0 0 21.1 15.5\" fill=\"%2368b738\" style=\"enable-background:new 0 0 21.1 15.5;\" xml:space=\"preserve\"%3E%3Cpolygon points=\"20.1,0 7.7,13.3 1,6.1 0,7.2 7.6,15.4 7.7,15.5 21,1.2 21.1,1.1 \"/%3E%3C/svg%3E%0A");
+  }
 }
 
 @media (min-width: $tablet-width) {

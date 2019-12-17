@@ -34,6 +34,10 @@
   }
 
   .extra-product-fact__value {
+    width: 46px;
+
+    text-align: left;
+
     @include font(400,  16px, 20px, $font-family--alt, $color-text-header--alt);
   }
 }
@@ -41,5 +45,6 @@
 @media (min-width: $desktop-width) {
   .extra-product-fact {
     margin-bottom: 0;
+    padding: 13px 0 0 0;
   }
 }

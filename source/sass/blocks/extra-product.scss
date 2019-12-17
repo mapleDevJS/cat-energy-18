@@ -21,6 +21,15 @@
   margin: 0 auto;
 
   @include button(100%, 9px, 12px, 11px, 13px, $color-brand);
+  @include font(400, 16px, 20px, $font-family, $color-text--rev);
+
+  &:hover {
+    background-color: #5eaa2f;
+  }
+
+  &:active {
+    color: rgba(255, 255, 255, 0.3);
+  }
 }
 
 @media (min-width: $tablet-width) {
@@ -46,16 +55,23 @@
 @media (min-width: $desktop-width) {
   .extra-product {
     display: flex;
+    align-items: flex-start;
     width: 895px;
-    padding: 23px 0 2px 0;
+    padding: 14px 0 17px 0;
 
+    border-top: none;
     border-right: none;
     border-bottom: 1px solid $color-border;
     border-left: none;
   }
 
+  .extra-product__header {
+    margin: 0;
+  }
+
   .extra-product__link {
     width: 323px;
+    padding-top: 11px;
   }
 
   .extra-product__facts {

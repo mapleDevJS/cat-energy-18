@@ -3,7 +3,19 @@
   width: 191px;
   height: 39px;
 
-  @include outline(red);
+  &:hover {
+    cursor: pointer;
+
+    .nav-logo__img {
+      opacity: 0.8;
+    }
+  }
+
+  &:active {
+    .nav-logo__img {
+      opacity: 0.6;
+    }
+  }
 }
 
 @media (min-width: $tablet-width) {

@@ -1,7 +1,7 @@
 .before-after {
   min-height: 705px;
   margin: 0 auto;
-  padding-top: 17px;
+  padding-top: 14px;
 
   background-color: $color-bg--alt;
 }
@@ -11,7 +11,7 @@
 }
 
 .before-after__header {
-  margin: 0 0 22px 0;
+  margin: 0 0 24px 0;
   padding-right: $mobile-padding;
   padding-left: $mobile-padding;
 
@@ -19,21 +19,33 @@
 }
 
 .before-after__text {
-  margin: 0 0 27px 0;
+  margin: 0 0 25px 0;
+  padding-right: 1px;
 
   @include font(400, 14px, 18px, $font-family--alt, $color-text);
 }
 
 .before-after__list {
-  margin: 0;
+  margin: 0 0 34px 0;
 }
 
 .before-after__costs {
-  margin: 0;
+  margin: 0 0 44px 0;
 
+  text-align: center;
   text-transform: uppercase;
 
   @include font(400, 14px, 20px, $font-family, $color-text);
+
+  & > br {
+    display: none;
+  }
+}
+
+.before-after__img {
+  display: block;
+  width: 311px;
+  height: 232px;
 }
 
 @media (min-width: $tablet-width) {
@@ -42,6 +54,11 @@
     padding-top: 43px;
 
     background-color: $color-bg;
+  }
+
+  .before-after__wrapper {
+    display: flex;
+    flex-wrap: wrap;
   }
 
   .before-after__header {
@@ -53,9 +70,28 @@
   }
 
   .before-after__text {
-    margin: 0 0 64px 0;
+    margin: 0 0 54px 0;
 
     @include font(400, 16px, 24px, $font-family--alt, $color-text);
+  }
+
+  .before-after__costs {
+    flex-grow: 1;
+    margin: 0;
+    padding-top: 6px;
+
+    text-align: right;
+
+    @include font(400, 20px, 29px, $font-family, $color-text);
+
+    & > br {
+      display: block;
+    }
+  }
+
+  .before-after__img {
+    width: auto;
+    height: 517px;
   }
 }
 
@@ -63,12 +99,13 @@
   .before-after {
     width: 100%;
     min-height: 590px;
-    padding-top: 0;
+    padding-top: 56px;
 
-    background-color: $color-bg--alt;
+    background-color: $color-bg;
   }
 
   .before-after__wrapper {
+    flex-direction: column;
     width: 100%;
     max-width: $desktop-width;
     min-height: 462px;
@@ -93,5 +130,19 @@
 
   .before-after__text {
     width: 435px;
+    margin-bottom: 68px;
+  }
+
+  .before-after__list {
+    width: 29.9%;
+    margin-bottom: 48px;
+  }
+
+  .before-after__costs {
+    text-align: left;
+
+    & > br {
+      display: none;
+    }
   }
 }
