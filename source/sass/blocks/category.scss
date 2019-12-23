@@ -58,7 +58,10 @@
 }
 
 .category__text {
-  margin: 0 0 41px 0;
+  margin: 0 0 18px 0;
+  padding-bottom: 23px;
+
+  border-bottom: 1px solid $color-border;
 
   @include font(400, 14px, 18px, $font-family--alt, $color-text);
 }
@@ -112,7 +115,8 @@
 
     &::before {
       top: 92px;
-      left: 446px;
+      right: 62px;
+      left: auto;
 
       width: 200px;
       height: 200px;
@@ -152,7 +156,7 @@
 
   .category__text {
     width: 340px;
-    margin: 0 0 56px 0;
+    margin: 0 0 32px 0;
 
     @include font(400, 16px, 24px, $font-family--alt, $color-text);
   }

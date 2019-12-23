@@ -13,7 +13,7 @@
     <header class="page-header">
       <div class="page-header__wrapper">
         <nav class="page-header__nav nav nav--opened" aria-label="Меню сайта">
-          <a class="nav__logo nav-logo" href="index.html">
+          <a class="nav__logo nav-logo">
             <img class="nav-logo__img" src="../img/logo-mobile.svg" width="191px" height="39" alt="Логотип CAT ENERGY">
           </a>
           <button class="nav__toggle" type="button">
@@ -21,7 +21,7 @@
           </button>
           <ul class="nav__list menu-list">
             <li class="menu-list__item">
-              <a class="menu-list__link" href="catalog.html">Главная</a>
+              <a class="menu-list__link" href="index.html">Главная</a>
             </li>
             <li class="menu-list__item">
               <a class="menu-list__link menu-list__link--active">Каталог продукции</a>
@@ -43,7 +43,7 @@
           <ul class="products__list">
             <li class="product" id="catalog-pro">
               <a class="product__link" href="#">
-                <img class="product__img" src="source/img/*.png" width="140" height="144" alt="Банка с питанием Cat Energy PRO 500 г">
+                <img class="product__img" src="img/chicken-small-mobile@1x.jpg" width="140" height="144" alt="Банка с питанием Cat Energy PRO 500 г">
               </a>
               <div class="product__description">
                 <a class="product__link " href="#">
@@ -315,26 +315,26 @@
         </div>
 
       </section>
+      <section class="contacts">
+        <div class="contacts__wrapper">
+          <h2 class="visually-hidden">Контакты</h2>
+          <div class="contacts__address">
+            <p class="contacts__text">приглашаем &nbsp; к сотрудничеству дилеров!</p>
+            <address class="contacts__street">
+              ул. Большая Конюшенная, д. 19/8
+              <span class="contacts__city">
+                Санкт-Петербург
+              </span>
+            </address>
+          </div>
+        </div>
+
+        <div id="map" class="page-footer__map"></div>
+      </section>
 
     </main>
 
     <footer class="page-footer">
-      <section class="page-footer__contacts contacts">
-        <h2 class="visually-hidden">Контакты</h2>
-        <div class="contacts__wrapper">
-          <p class="contacts__text">приглашаем
-            <br>
-            к сотрудничеству дилеров!</p>
-          <address class="contacts__address">
-            ул. Большая Конюшенная, д. 19/8
-            <span class="contacts__city">
-              Санкт-Петербург
-            </span>
-          </address>
-        </div>
-      </section>
-
-      <div id="map" class="page-footer__map"></div>
 
       <div class="page-footer__wrapper">
         <div class="page-footer__logo page-footer-logo">
@@ -362,7 +362,7 @@
 
     </footer>
 
-    <script src="js/nav__toggle.js"></script>
+    <script src="js/common.js"></script>
 
   </body>
 

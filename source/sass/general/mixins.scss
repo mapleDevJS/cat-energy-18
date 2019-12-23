@@ -28,13 +28,12 @@
 }
 
 @mixin wrapper {
-  min-width: 320px;
+  min-width: $mobile-width;
   margin: 0 auto;
   padding-right: $mobile-padding;
   padding-left: $mobile-padding;
 
   @media (min-width: $tablet-width) {
-    max-width: $tablet-width;
     padding-right: $tablet-padding;
     padding-left: $tablet-padding;
   }
