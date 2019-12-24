@@ -77,18 +77,14 @@
   .product__img {
     position: absolute;
     top: -45px;
-    left: 83px;
+    left: 0;
 
-    width: 161px;
-    height: 172px;
+    width: 100%;
+    height: auto;
   }
 
   .product:nth-child(2n) .product__img {
     top: -81px;
-    left: 83px;
-
-    width: 195px;
-    height: 208px;
   }
 
   .product__description {
@@ -128,10 +124,6 @@
   }
 
   .product__img {
-    left: 42px;
-  }
-
-  .product:nth-child(2n) .product__img {
-    left: 28px;
+    left: 0;
   }
 }
