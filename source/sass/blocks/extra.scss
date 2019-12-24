@@ -7,7 +7,10 @@
 }
 
 .extra__list {
-  @include list-reset;
+  margin: 0 0 35px 0;
+  padding: 0;
+
+  list-style: none;
 }
 
 .extra__header {
@@ -24,6 +27,7 @@
 @media (min-width: $tablet-width) {
   .extra {
     padding-top: 48px;
+    padding-bottom: 75px;
   }
 
   .extra__header {

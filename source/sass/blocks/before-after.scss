@@ -2,6 +2,7 @@
   min-height: 705px;
   margin: 0 auto;
   padding-top: 14px;
+  padding-bottom: 35px;
 
   background-color: $color-bg--alt;
 }
@@ -12,8 +13,6 @@
 
 .before-after__header {
   margin: 0 0 24px 0;
-  padding-right: $mobile-padding;
-  padding-left: $mobile-padding;
 
   @include font(400, 36px, 60px, $font-family, $color-text-header);
 }
@@ -26,11 +25,11 @@
 }
 
 .before-after__list {
-  margin: 0 0 34px 0;
+  margin: 0 0 7px 0;
 }
 
 .before-after__costs {
-  margin: 0 0 44px 0;
+  margin: 0 0 37px 0;
 
   text-align: center;
   text-transform: uppercase;
@@ -63,22 +62,22 @@
 
   .before-after__header {
     margin: 0 0 63px 0;
-    padding-right: $tablet-padding;
-    padding-left: $tablet-padding;
+    padding: 0;
 
     @include font(400, 60px, 60px, $font-family, $color-text-header);
   }
 
   .before-after__text {
-    margin: 0 0 54px 0;
+    margin: 0 0 40px 0;
+    padding-right: 6px;
 
     @include font(400, 16px, 24px, $font-family--alt, $color-text);
   }
 
   .before-after__costs {
-    flex-grow: 1;
-    margin: 0;
-    padding-top: 6px;
+    width: 195px;
+    margin: 0 0 0 auto;
+    padding-top: 21px;
 
     text-align: right;
 
@@ -97,6 +96,7 @@
 
 @media (min-width: $desktop-width) {
   .before-after {
+    display: flex;
     width: 100%;
     min-height: 590px;
     padding-top: 56px;
@@ -104,41 +104,46 @@
     background-color: $color-bg;
   }
 
+
   .before-after__wrapper {
     flex-direction: column;
     width: 100%;
     max-width: $desktop-width;
-    min-height: 462px;
     padding-top: 70px;
+  }
+
+  .before-after__info {
+    position: relative;
+
+    flex-shrink: 0;
+    width: 610px;
+    min-width: 570px;
+    margin: 0;
+    padding: 55px 135px 74px 40px;
   }
 
   .before-after__header {
     margin: 0;
-    padding-top: 25px;
-    padding-bottom: 75px;
+    padding: 25px 0 75px 0;
 
     background-color: $color-bg;
-  }
-
-  .before-after__header span {
-    display: block;
-    max-width: $desktop-width;
-    margin: 0 auto;
-    padding-right: $desktop-padding;
-    padding-left: $desktop-padding;
   }
 
   .before-after__text {
     width: 435px;
     margin-bottom: 68px;
+    padding-right: 4px;
   }
 
   .before-after__list {
-    width: 29.9%;
+    width: auto;
     margin-bottom: 48px;
   }
 
   .before-after__costs {
+    width: 300px;
+    margin: 0;
+
     text-align: left;
 
     & > br {

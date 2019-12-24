@@ -39,7 +39,8 @@
     padding-bottom: 27px;
     padding-left: 38px;
 
-    border: 1px solid $color-border;
+    border-right: 1px solid $color-border;
+    border-left: 1px solid $color-border;
   }
 
   .extra-product__header {

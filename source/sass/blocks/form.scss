@@ -163,6 +163,7 @@
   }
 
   .form__button {
+    margin-right: 60px;
     margin-bottom: 0;
 
     @include button(45%, 15px, 9px, 16px, 6px, $color-brand);
