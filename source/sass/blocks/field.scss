@@ -50,7 +50,8 @@
 
   text-transform: uppercase;
 
-  border: 1px solid rgba(205, 205, 205, 0.5);
+  border: none;
+  outline: 1px solid rgba(205, 205, 205, 0.5);
 
   @include font(400, 16px, 18px, $font-family, $color-text);
 
@@ -69,15 +70,20 @@
   }
 
   &:hover {
-    border-color: rgba(205, 205, 205, 1);
+    outline: 1px solid #cdcdcd;
   }
 
   &:focus {
-    border: 2px solid #444444;
+    outline: 2px solid #444444;
+
 
     &::-moz-placeholder {
       opacity: 0;
     }
+  }
+
+  &[required]:invalid {
+    outline: 2px solid #ff8282;
   }
 }
 

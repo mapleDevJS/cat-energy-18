@@ -30,13 +30,18 @@
 }
 
 @media (min-width: $tablet-width) {
-  .contacts__address {
-    padding: 65px 40px 62px 40px;
+  .contacts {
+    background-color: #f2f2f2;
   }
 
-  .contacts__wrapper {
-    background-color: $color-bg;
+  .contacts__address {
+    z-index: 1;
+
+    padding: 65px 40px 62px 40px;
+
+    background-color: transparent;
   }
+
 
   .contacts__text {
     width: 154px;
@@ -63,16 +68,16 @@
     position: relative;
   }
 
-  .contacts__wrapper {
+  .contacts__address {
     position: absolute;
     top: 95px;
     left: 110px;
-  }
 
-  .contacts__address {
     min-width: 570px;
     padding-right: 55px;
     padding-left: 76px;
+
+    background-color: $color-bg;
   }
 
   .contacts__street {

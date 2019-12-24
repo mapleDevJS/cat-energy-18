@@ -1,14 +1,11 @@
 .copyright {
-  padding: 20px 0 20px 0;
-}
-
-.copyright__wrapper {
   display: flex;
   justify-content: space-between;
   align-items: center;
-
-  @include wrapper;
+  padding: 20px 0 20px 0;
 }
+
+
 
 .copyright__text {
   text-decoration: none;

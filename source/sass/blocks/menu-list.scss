@@ -92,7 +92,7 @@
     @include font(400, 20px, 25px, $font-family, $color-text-link);
   }
 
-  .menu-list__link[href] {
+  .page-header--index .menu-list__link[href] {
     &:hover {
       color: rgba(255, 255, 255, 0.6);
     }

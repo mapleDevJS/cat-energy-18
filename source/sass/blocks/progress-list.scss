@@ -68,3 +68,9 @@
     @include font(400, 14px, 14px, $font-family--alt, $color-text);
   }
 }
+
+@media (min-width: $desktop-width) {
+  .progress-list {
+    justify-content: flex-start;
+  }
+}
