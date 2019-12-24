@@ -1,7 +1,6 @@
 .nav-logo {
   display: block;
-  width: 191px;
-  height: 39px;
+
 
   &:hover {
     cursor: pointer;
@@ -18,15 +17,20 @@
   }
 }
 
+.nav-logo__img {
+  width: 191px;
+  height: 39px;
+}
+
 @media (min-width: $tablet-width) {
-  .nav-logo {
+  .nav-logo__img {
     width: 174px;
     height: 59px;
   }
 }
 
 @media (min-width: $desktop-width) {
-  .nav-logo {
+  .nav-logo__img {
     width: 203px;
     height: 60px;
   }

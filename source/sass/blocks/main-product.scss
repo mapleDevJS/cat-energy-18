@@ -1,27 +1,17 @@
-.main-product__bottom {
-  min-height: 313px;
-  margin-top: -139px;
-
-  background: url("../../img/index-can-mobile@1x.png") transparent;
-  background-repeat: no-repeat;
-  background-position: center 0;
-}
-
-.main-product__top {
-  background: url("../../img/index-background-mobile@1x.jpg") #65a93c;
-  background-repeat: no-repeat;
-  background-position: center 0;
-}
-
 .main-product {
   margin: 0 auto;
+  padding-top: 27px;
   padding-bottom: 22px;
+
+  background-color: #68b738;
+  background-image: url("../img/index-background-mobile@1x.jpg"), linear-gradient(to top, #ffffff 165px, #64a83b 165px);
+  background-repeat: no-repeat, no-repeat;
+  background-position: center top, center top;
+  background-size: 320px 305px, auto auto;
 }
 
 .main-product__wrapper {
   position: relative;
-
-  padding-top: 28px;
 
   @include wrapper;
 }
@@ -36,8 +26,7 @@
 }
 
 .main-product__text {
-  margin: 0;
-  padding-bottom: 168px;
+  margin: 0 0 30px 0;
 
   text-align: center;
   text-transform: uppercase;
@@ -45,11 +34,15 @@
   @include font(400, 14px, 14px, $font-family, $color-text-header--rev);
 }
 
-.main-product__link {
-  position: absolute;
-  top: 440px;
+.main-product__img {
+  display: block;
+  width: 280px;
+  height: 271px;
+  margin: -27px auto 0 auto;
+}
 
-  @include button(calc(100% - 40px), 13px, 13px, 13px, 13px, $color-brand);
+.main-product__link {
+  @include button(100%, 13px, 13px, 13px, 13px, $color-brand);
   @include font(400, 14px, 14px, $font-family, $color-text-header--rev);
 
   &:hover {
@@ -63,21 +56,13 @@
 
 @media (min-width: $tablet-width) {
   .main-product {
+    position: relative;
+
     padding-top: 42px;
+    padding-bottom: 0;
 
     background: none $color-bg;
-  }
-
-  .main-product__top {
-    min-height: 788px;
-
-    background: url("../../img/index-can-tablet@1x.jpg") white;
-    background-repeat: no-repeat;
-    background-position: center 200px;
-  }
-
-  .main-product__bottom {
-    display: none;
+    background-color: #ffffff;
   }
 
   .main-product__wrapper {
@@ -102,10 +87,15 @@
     @include font(400, 20px, 20px, $font-family, $color-text-header);
   }
 
-  .main-product__link {
-    position: static;
+  .main-product__img {
+    width: 709px;
+    height: 609px;
+  }
 
-    margin-left: 88px;
+  .main-product__link {
+    position: absolute;
+    top: 230px;
+    left: 118px;
 
     @include button(245px, 15px, 16px, 16px, 14px, $color-brand);
     @include font(400, 20px, 20px, $font-family, $color-text-header--rev);
@@ -114,12 +104,12 @@
 
 @media (min-width: $desktop-width) {
   .main-product {
-    padding-top: 94px;
+    position: relative;
 
-    background: url("../../img/index-can-desktop@1x.png");
+    padding-top: 92px;
+    padding-bottom: 23px;
+
     background-color: transparent;
-    background-repeat: no-repeat;
-    background-position: 63% 9%;
   }
 
   .main-product__top {
@@ -143,7 +133,19 @@
     margin: 0 0 54px 0;
   }
 
+  .main-product__img {
+    position: absolute;
+    top: -53px;
+    left: 491px;
+
+    width: 552px;
+    height: 499px;
+  }
+
   .main-product__link {
+    top: 234px;
+    left: 120px;
+
     margin-left: 0;
   }
 }
