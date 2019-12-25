@@ -56,3 +56,32 @@
 @mixin outline($color) {
   outline: 1px solid $color;
 }
+
+@mixin header-decor {
+  &::before,
+  &::after {
+    content: "";
+    position: absolute;
+    top: 12px;
+    left: 0;
+    z-index: -1;
+
+    display: block;
+    width: 100vw;
+    height: 3px;
+
+    background-color: #68b738;
+  }
+
+  @media (min-width: $tablet-width) {
+    &::before {
+      top: 22px;
+    }
+
+    &::after {
+      top: 22px;
+      right: 0;
+      left: auto;
+    }
+  }
+}
