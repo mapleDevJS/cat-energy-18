@@ -1,5 +1,5 @@
 .extra {
-  padding-top: 34px;
+  padding-top: 54px;
 }
 
 .extra__wrapper {
@@ -14,13 +14,18 @@
 }
 
 .extra__header {
-  margin: 0;
-  padding-top: 20px;
-  padding-bottom: 34px;
+  position: relative;
 
-  border-bottom: 1px solid $color-border;
+  display: inline-block;
+  margin: 0 0 34px 0;
+  padding: 0 20px 0 0;
+
+  vertical-align: baseline;
+
+  background-color: $color-bg;
 
   @include font(400, 24px, 24px, $font-family, $color-text-header);
+  @include header-decor;
 }
 
 
@@ -51,7 +56,7 @@
   }
 
   .extra__header {
-    padding-left: 0;
+    margin-left: -40px;
 
     border: none;
   }

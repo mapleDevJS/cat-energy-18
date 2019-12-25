@@ -6,19 +6,29 @@
     <title>HTML Academy: Кэт энерджи</title>
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <link rel="stylesheet" href="css/style.css">
+    <script src="https://api-maps.yandex.ru/2.1/?apikey=a953ea8e-e7af-4178-b11c-1dd8a12cc718&lang=ru_RU"></script>
   </head>
 
   <body>
 
     <header class="page-header">
+
       <div class="page-header__wrapper">
+
         <nav class="page-header__nav nav nav--opened" aria-label="Меню сайта">
+
           <a class="nav__logo nav-logo" href="index.html">
-            <img class="nav-logo__img" src="../img/logo-mobile.svg" width="191px" height="39" alt="Логотип CAT ENERGY">
+            <picture>
+              <source media="(min-width: 1300px)" srcset="img/logo-desktop.svg">
+              <source media="(min-width: 768px)" srcset="img/logo-tablet.svg">
+              <img class="nav-logo__img" src="img/logo-mobile.svg" alt="Логотип 'Кэт энерджи'.">
+            </picture>
           </a>
+
           <button class="nav__toggle" type="button">
             <span class="visually-hidden">Открыть меню</span>
           </button>
+
           <ul class="nav__list menu-list">
             <li class="menu-list__item">
               <a class="menu-list__link" href="index.html">Главная</a>
@@ -30,8 +40,11 @@
               <a class="menu-list__link menu-list__link--active">Подбор программы</a>
             </li>
           </ul>
+
         </nav>
+
       </div>
+
     </header>
 
     <main class="page-main">
@@ -45,27 +58,27 @@
         <form class="selection__form form" action="https://echo.htmlacademy.ru" method="get">
           <fieldset class="form__fieldset">
             <div class="form__wrapper">
-              <legend class="visually-hidden">Имя, вес, возраст</legend>
+              <span class="visually-hidden">Имя, вес, возраст</span>
               <ul class="form__list">
                 <li class="form__field field">
                   <label class="field__label" for="name">
                     Имя:<sup>*</sup>
                   </label>
-                  <input class="field__input" type="text" name="name" placeholder="Барсик" required="required">
+                  <input class="field__input" type="text" id="name" name="name" placeholder="Барсик" required="required">
                 </li>
                 <li class="form__field field">
                   <label class="field__label" for="weight">
                     Вес (кг):<sup>*</sup>
 
                   </label>
-                  <input class="field__input" type="text" name="weight" placeholder="7" required="required">
+                  <input class="field__input" type="text" id="weight"  name="weight" placeholder="7" required="required">
                 </li>
                 <li class="form__field field">
                   <label class="field__label" for="age">
                     Возраст (лет):
 
                   </label>
-                  <input class="field__input" type="text" name="age" placeholder="7">
+                  <input class="field__input" type="text" id="age" name="age" placeholder="7">
                 </li>
               </ul>
             </div>
@@ -73,7 +86,7 @@
           </fieldset>
           <fieldset class="form__fieldset">
             <div class="form__wrapper">
-              <legend class="visually-hidden">Программа</legend>
+              <span class="visually-hidden">Программа</span>
               <ul class="form__list radio-list">
                 <li class="radio-list__item radio">
                   <label class="radio__label">
@@ -102,7 +115,7 @@
           </fieldset>
           <fieldset class="form__fieldset">
             <div class="form__wrapper">
-              <legend class="form__header">Контактные данные (владельца кота)</legend>
+              <span class="form__header">Контактные данные (владельца кота)</span>
               <ul class="form__list">
                 <li class="form__field field field--email">
                   <label class="field__label" for="email">
@@ -121,13 +134,13 @@
           </fieldset>
           <fieldset class="form__fieldset">
             <div class="form__wrapper">
-              <legend class="form__header">Комментарий</legend>
+              <span class="form__header">Комментарий</span>
               <textarea class="form__textarea" name="comment" placeholder="Расскажите обо всех повадках кота"></textarea>
             </div>
           </fieldset>
           <fieldset class="form__fieldset">
             <div class="form__wrapper">
-              <legend class="form__header">Дополнительно</legend>
+              <span class="form__header">Дополнительно</span>
               <ul class="form__list checkbox-list">
                 <li class="checkbox-list__item checkbox">
                   <label class="checkbox__label">
@@ -190,7 +203,7 @@
         <div id="map" class="map">
 
           <div class="map__wrapper">
-            <img class="map__img" src="img/bg-map-mobile@1x.png" width="320px" height="362" alt="ул. Большая Конюшенная, д. 19/8б г. Санкт-Петербург">
+
           </div>
 
         </div>
@@ -278,6 +291,7 @@
     </footer>
 
     <script src="js/common.js"></script>
+    <script src="js/map.js"></script>
 
   </body>
 

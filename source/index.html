@@ -6,6 +6,7 @@
     <title>HTML Academy: Кэт энерджи</title>
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <link rel="stylesheet" href="css/style.css">
+    <script src="https://api-maps.yandex.ru/2.1/?apikey=a953ea8e-e7af-4178-b11c-1dd8a12cc718&lang=ru_RU"></script>
   </head>
 
   <body class="body-index">
@@ -17,7 +18,11 @@
         <nav class="page-header__nav nav nav--opened" aria-label="Меню сайта">
 
           <a class="nav__logo nav-logo" href="index.html">
-            <img class="nav-logo__img" src="img/logo-mobile.svg" width="191px" height="39" alt="Логотип CAT ENERGY">
+            <picture>
+              <source media="(min-width: 1300px)" srcset="img/logo-desktop.svg">
+              <source media="(min-width: 768px)" srcset="img/logo-tablet.svg">
+              <img class="nav-logo__img" src="img/logo-mobile.svg" alt="Логотип 'Кэт энерджи'.">
+            </picture>
           </a>
 
           <button class="nav__toggle" type="button">
@@ -50,16 +55,15 @@
 
       <section class="main-product">
 
-        <div class="main-product__top">
-          <div class="main-product__wrapper">
-            <h1 class="main-product__header">Функциональное питание для котов</h1>
-            <p class="main-product__text">Занялся собой? Займись котом!</p>
-            <a href="#" class="main-product__link">Подобрать программу</a>
-          </div>
-        </div>
-
-        <div class="main-product__bottom">
-          <div class="main-product__wrapper"></div>
+        <div class="main-product__wrapper">
+          <h1 class="main-product__header">Функциональное питание для котов</h1>
+          <p class="main-product__text">Занялся собой? Займись котом!</p>
+          <picture>
+            <source media="(min-width: 1300px)" srcset="img/index-can-desktop@1x.png 1x, img/index-can-desktop@2x.png 2x">
+            <source media="(min-width: 768px)" srcset="img/index-can-tablet@1x.jpg 1x, img/index-can-tablet@2x.jpg 2x">
+            <img class="main-product__img" src="img/index-can-mobile@1x.png" srcset="img/index-can-mobile@2x.png 2x" width="280" height="271" alt="Банка с функциональным питанием для котов.">
+          </picture>
+          <a href="selection.html" class="main-product__link">Подобрать программу</a>
         </div>
 
       </section>
@@ -120,8 +124,7 @@
             <h2 class="before-after__header">Живой пример</h2>
 
             <p class="before-after__text">
-              Борис сбросил 5 кг за 2 месяца, просто заменив свой обычный корм на Cat Energy Slim.
-              Отличный результат без изнуряющих тренировок! При этом он не менял своих привычек и по-прежнему спит по 16 часов в день.
+              Борис сбросил 5 кг за 2 месяца, просто заменив свой обычный корм на Cat Energy Slim. Отличный результат без изнуряющих тренировок! При этом он не менял своих привычек и по-прежнему спит по 16 часов в день.
             </p>
 
             <ul class="before-after__list progress-list">
@@ -150,10 +153,20 @@
 
             <div class="slider__list">
               <div class="slider__box slider__box--before">
-                <img class="slider__img slider__img--before" src="img/before-mobile@1x.png" width="311" height="232" alt="Толстый кот до начала питания">
+                <picture>
+                  <source media="(min-width: 1300px)" srcset="img/before-desktop@1x.png 1x, img/before-desktop@2x.png 2x">
+                  <source media="(min-width: 768px)" srcset="img/before-tablet@1x.png 1x, img/before-tablet@2x.png 2x">
+                  <img class="slider__img slider__img--before" src="img/before-mobile@1x.png" srcset="img/before-mobile@2x.png 2x" width="320" height="240"
+                    alt="Толстый кот до начала применения программы функционального питания.">
+                </picture>
               </div>
               <div class="slider__box slider__box--after">
-                <img class="slider__img slider__img--after" src="img/after-mobile@1x.png" width="311" height="232" alt="Толстый кот до начала питания">
+                <picture>
+                  <source media="(min-width: 1300px)" srcset="img/after-desktop@1x.png 1x, img/after-desktop@2x.png 2x">
+                  <source media="(min-width: 768px)" srcset="img/after-tablet@1x.png 1x, img/after-tablet@2x.png 2x">
+                  <img class="slider__img slider__img--after" src="img/after-mobile@1x.png" srcset="img/after-mobile@2x.png 2x" width="320" height="240"
+                    alt="Стройный кот после применения программы функцинального питания.">
+                </picture>
               </div>
             </div>
 
@@ -183,7 +196,7 @@
 
           <div class="contacts__wrapper">
 
-            <p class="contacts__text">приглашаем &nbsp; к сотрудничеству дилеров!</p>
+            <p class="contacts__text">приглашаем к &nbsp; сотрудничеству дилеров!</p>
             <address class="contacts__street">
               ул. Большая Конюшенная, д. 19/8
               <span class="contacts__city">
@@ -198,7 +211,7 @@
         <div id="map" class="map">
 
           <div class="map__wrapper">
-            <img class="map__img" src="img/bg-map-mobile@1x.png" width="320px" height="362" alt="ул. Большая Конюшенная, д. 19/8б г. Санкт-Петербург">
+
           </div>
 
         </div>
@@ -286,6 +299,7 @@
     </footer>
 
     <script src="js/common.js"></script>
+    <script src="js/map.js"></script>
 
   </body>
 

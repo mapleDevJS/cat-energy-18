@@ -51,6 +51,7 @@
   .before-after {
     min-height: 1080px;
     padding-top: 43px;
+    padding-bottom: 0;
 
     background-color: $color-bg;
   }
@@ -99,7 +100,8 @@
     display: flex;
     width: 100%;
     min-height: 590px;
-    padding-top: 56px;
+    padding-top: 0;
+    padding-bottom: 84px;
 
     background-color: $color-bg;
   }
@@ -109,7 +111,6 @@
     flex-direction: column;
     width: 100%;
     max-width: $desktop-width;
-    padding-top: 70px;
   }
 
   .before-after__info {
@@ -119,7 +120,7 @@
     width: 610px;
     min-width: 570px;
     margin: 0;
-    padding: 55px 135px 74px 40px;
+    padding: 52px 70px 0 70px;
   }
 
   .before-after__header {

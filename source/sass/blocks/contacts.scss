@@ -39,7 +39,7 @@
 
     padding: 65px 40px 62px 40px;
 
-    background-color: transparent;
+    background-color: $color-bg;
   }
 
 
@@ -66,6 +66,10 @@
 @media (min-width: $desktop-width) {
   .contacts {
     position: relative;
+  }
+
+  .contacts__wrapper {
+    padding: 0;
   }
 
   .contacts__address {
