@@ -1,8 +1,6 @@
 .before-after {
-  min-height: 705px;
   margin: 0 auto;
-  padding-top: 14px;
-  padding-bottom: 35px;
+  padding: 16px 0 32px 0;
 
   background-color: $color-bg--alt;
 }
@@ -62,7 +60,7 @@
   }
 
   .before-after__header {
-    margin: 0 0 63px 0;
+    margin: 0 0 65px 0;
     padding: 0;
 
     @include font(400, 60px, 60px, $font-family, $color-text-header);
@@ -101,9 +99,9 @@
     width: 100%;
     min-height: 590px;
     padding-top: 0;
-    padding-bottom: 84px;
+    padding-bottom: 27px;
 
-    background-color: $color-bg;
+    background-image: linear-gradient(to bottom, #ffffff 215px, rgba (255,255,255,0) 215px), linear-gradient (to right, #f2f2f2 50%, #eaeaea 50%);
   }
 
 
@@ -124,7 +122,7 @@
   }
 
   .before-after__header {
-    margin: 0;
+    margin: 0 0 72px 0;
     padding: 25px 0 75px 0;
 
     background-color: $color-bg;
@@ -132,17 +130,17 @@
 
   .before-after__text {
     width: 435px;
-    margin-bottom: 68px;
+    margin-bottom: 54px;
     padding-right: 4px;
   }
 
   .before-after__list {
     width: auto;
-    margin-bottom: 48px;
+    margin-bottom: 4px;
   }
 
   .before-after__costs {
-    width: 300px;
+    width: auto;
     margin: 0;
 
     text-align: left;
@@ -150,5 +148,12 @@
     & > br {
       display: none;
     }
+  }
+
+  .before-after__amount {
+    display: inline-block;
+    margin-left: 60px;
+
+    vertical-align: top;
   }
 }

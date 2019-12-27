@@ -24,7 +24,7 @@
 
 @media (min-width: $tablet-width) {
   .selection {
-    padding-top: 42px;
+    padding-top: 38px;
   }
 
   .selection__header {
@@ -48,6 +48,7 @@
 
   .selection__text {
     width: 325px;
+    margin-bottom: 42px;
     padding: 0;
   }
 }

@@ -1,11 +1,6 @@
-.slider__wrapper {
-  @include wrapper;
-}
-
 .slider__list {
-  width: 311px;
-  margin: 0 auto;
-  margin-bottom: 37px;
+  max-width: $mobile-width;
+  margin: 0 auto 30px auto;
 }
 
 .slider__box {
@@ -90,6 +85,8 @@
 
 .slider__img {
   display: none;
+  width: 320px;
+  height: 240px;
 }
 
 .slider__input--before:checked ~ .slider__list .slider__img--before {
@@ -107,14 +104,10 @@
     background-image: linear-gradient(to bottom, #ffffff 170px, rgba(255, 255, 255, 0) 170px), linear-gradient(to right, #f2f2f2 50%, #eaeaea 50%);
   }
 
-  .slider__wrapper {
-    max-width: $tablet-width;
-  }
-
   .slider__list {
     position: relative;
 
-    width: 100%;
+    max-width: $tablet-width;
     margin-bottom: 0;
   }
 
@@ -133,7 +126,6 @@
     display: block;
     width: 100%;
     max-width: none;
-    overflow: hidden;
 
     &--before {
       width: 200%;
@@ -213,7 +205,6 @@
     }
   }
 }
-
 
 @media (min-width: $desktop-width) {
   .slider__input--before:checked ~ .slider__controls .slider__button--before,

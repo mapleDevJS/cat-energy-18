@@ -1,5 +1,6 @@
 .extra {
   padding-top: 54px;
+  padding-bottom: 35px;
 }
 
 .extra__wrapper {
@@ -7,7 +8,7 @@
 }
 
 .extra__list {
-  margin: 0 0 35px 0;
+  margin: 0 0 39px 0;
   padding: 0;
 
   list-style: none;
@@ -18,7 +19,7 @@
 
   display: inline-block;
   margin: 0 0 34px 0;
-  padding: 0 20px 0 0;
+  padding: 0 35px 0 0;
 
   vertical-align: baseline;
 
@@ -31,12 +32,16 @@
 
 @media (min-width: $tablet-width) {
   .extra {
-    padding-top: 48px;
+    padding-top: 68px;
     padding-bottom: 75px;
   }
 
+  .extra__list {
+    margin-bottom: 68px;
+  }
+
   .extra__header {
-    padding-bottom: 80px;
+    margin-bottom: 81px;
     padding-left: 38px;
 
     @include font(400,  36px, 36px, $font-family, $color-text-header--alt);
@@ -45,7 +50,9 @@
 
 @media (min-width: $desktop-width) {
   .extra {
-    padding-top: 58px;
+    margin-left: 0;
+    padding-top: 76px;
+    padding-bottom: 86px;
   }
 
   .extra__wrapper {
@@ -53,6 +60,10 @@
     flex-wrap: wrap;
     align-items: flex-start;
     min-width: 895px;
+  }
+
+  .extra-product {
+    justify-content: space-between;
   }
 
   .extra__header {
@@ -63,5 +74,6 @@
 
   .extra__list {
     width: 895px;
+    margin-bottom: 0;
   }
 }

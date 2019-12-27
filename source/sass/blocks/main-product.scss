@@ -1,16 +1,14 @@
 .main-product {
   margin: 0 auto;
-  padding-top: 27px;
-  padding-bottom: 22px;
+  padding: 27px 0 21px 0;
 
-  background-color: #68b738;
-  background-image: url("../img/index-background-mobile@1x.jpg"), linear-gradient(to top, #ffffff 165px, #64a83b 165px);
+  background-image: url("../img/index-background-mobile@1x.jpg"), linear-gradient(to top, #ffffff 0, #64a83b 0);
   background-repeat: no-repeat, no-repeat;
   background-position: center top, center top;
-  background-size: 320px 305px, auto auto;
+  background-size: 320px 305px, auto 305px;
 
   @media (min-resolution: $retina-dppx) {
-    background-image: url("../img/index-background-mobile@2x.jpg"), linear-gradient(to top, #ffffff 165px, #64a83b 165px);
+    background-image: url("../img/index-background-mobile@2x.jpg"), linear-gradient(to top, #ffffff 0, #64a83b 0);
   }
 }
 
@@ -30,7 +28,7 @@
 }
 
 .main-product__text {
-  margin: 0 0 30px 0;
+  margin: 0 0 28px 0;
 
   text-align: center;
   text-transform: uppercase;
@@ -40,37 +38,21 @@
 
 .main-product__img {
   display: block;
+  box-sizing: content-box;
   width: 280px;
-  height: 271px;
-  margin: -27px auto 0 auto;
-}
-
-.main-product__link {
-  @include button(100%, 13px, 13px, 13px, 13px, $color-brand);
-  @include font(400, 14px, 14px, $font-family, $color-text-header--rev);
-
-  &:hover {
-    background-color: #5eaa2f;
-  }
-
-  &:active {
-    color: rgba(255, 255, 255, 0.3);
-  }
+  height: 270px;
+  margin: 0 auto 5px auto;
 }
 
 @media (min-width: $tablet-width) {
   .main-product {
     position: relative;
 
-    padding-top: 42px;
+    padding-top: 38px;
     padding-bottom: 0;
 
     background: none $color-bg;
     background-color: #ffffff;
-  }
-
-  .main-product__wrapper {
-    padding-top: 0;
   }
 
   .main-product__header {
@@ -83,8 +65,7 @@
   }
 
   .main-product__text {
-    margin: 0 0 49px 88px;
-    padding-bottom: 0;
+    margin: 0 0 20px 88px;
 
     text-align: left;
 
@@ -94,6 +75,7 @@
   .main-product__img {
     width: 709px;
     height: 609px;
+    margin-bottom: 0;
   }
 
   .main-product__link {
@@ -110,7 +92,7 @@
   .main-product {
     position: relative;
 
-    padding-top: 92px;
+    padding-top: 90px;
     padding-bottom: 23px;
 
     background-color: transparent;
@@ -139,7 +121,7 @@
 
   .main-product__img {
     position: absolute;
-    top: -53px;
+    top: -80px;
     left: 491px;
 
     width: 552px;
