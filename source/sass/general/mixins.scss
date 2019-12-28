@@ -91,4 +91,11 @@
       left: auto;
     }
   }
+
+  @media (min-width: $desktop-width) {
+    &::before,
+    &::after {
+      top: 21px;
+    }
+  }
 }

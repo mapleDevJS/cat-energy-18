@@ -1,16 +1,20 @@
 <!DOCTYPE html>
 <html lang="ru">
 
-  <head>
-    <meta charset="utf-8">
-    <title>HTML Academy: Кэт энерджи</title>
-    <meta name="viewport" content="width=device-width,initial-scale=1">
-    <link rel="stylesheet" href="css/style.css">
-    <script src="https://api-maps.yandex.ru/2.1/?apikey=a953ea8e-e7af-4178-b11c-1dd8a12cc718&lang=ru_RU"></script>
-
-  </head>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>HTML Academy: Кэт энерджи</title>
+  <script src="js/picturefill.min.js" async></script>
+  <script src="https://api-maps.yandex.ru/2.1/?apikey=a953ea8e-e7af-4178-b11c-1dd8a12cc718&lang=ru_RU"></script>
+  <link rel="stylesheet" href="css/style.min.css">
+</head>
 
   <body>
+
+    <div style="display: none">
+      <include src="build/img/sprite.svg"></include>
+    </div>
 
     <header class="page-header">
 
@@ -65,11 +69,11 @@
             <li class="product" id="catalog-pro">
 
               <a class="product__link" href="#" aria-label="Перейти на страницу товара.">
-                <source type="image/webp" media="(min-width: 1300px)" srcset="img/chicken-small-desktop@1x.webp 1x, img/chicken-small-desktop@2x.webp 2x">
-                <source type="image/webp" media="(min-width: 768px)" srcset="img/chicken-small-tablet@1x.webp 1x, img/chicken-small-tablet@2x.webp 2x">
-                <source type="image/webp" srcset="img/chicken-small-mobile@1x.webp 1x, img/chicken-small-mobile@2x.webp 2x">
-
                 <picture>
+                  <source type="image/webp" media="(min-width: 1300px)" srcset="img/chicken-small-desktop@1x.webp 1x, img/chicken-small-desktop@2x.webp 2x">
+                  <source type="image/webp" media="(min-width: 768px)" srcset="img/chicken-small-tablet@1x.webp 1x, img/chicken-small-tablet@2x.webp 2x">
+                  <source type="image/webp" srcset="img/chicken-small-mobile@1x.webp 1x, img/chicken-small-mobile@2x.webp 2x">
+
                   <source media="(min-width: 1300px)" srcset="img/chicken-small-desktop@1x.png 1x, img/chicken-small-desktop@2x.png 2x">
                   <source media="(min-width: 768px)" srcset="img/chicken-small-tablet@1x.png 1x, img/chicken-small-tablet@2x.png 2x">
                   <img class="product__img" src="img/chicken-small-mobile@1x.jpg" srcset="img/chicken-small-mobile@2x.jpg 2x" width="140" height="144"
@@ -486,10 +490,7 @@
 
         <div class="page-footer__logo page-footer-logo">
           <a href="index.html">
-            <!--<img class="page-footer-logo__img" src="../img/logo-footer.svg" width="128" height="24" alt="CAT ENERGY">-->
-            <svg class="page-footer-logo__img" width="128" height="24">
-              <use xlink:href="img/sprite.svg#page-footer-logo"></use>
-            </svg>
+            <img class="page-footer-logo__img" src="../img/logo-footer.svg" width="128" height="24" alt="CAT ENERGY">
           </a>
         </div>
 
@@ -497,7 +498,7 @@
           <li class="social__item">
             <a class="social__icon social__icon--vk" href="#" aria-label="Cat Energy во ВКонтакте">
               <svg class="social__img  social__img--vk" width="22" height="12">
-                <use xlink:href="img/sprite.svg#icon-vk"></use>
+                <use xlink:href="#icon-vk"></use>
               </svg>
             </a>
           </li>
@@ -505,7 +506,7 @@
           <li class="social__item">
             <a class="social__icon social__icon--insta" href="#" aria-label="Cat Energy в Инстаграм">
               <svg class="social__img  social__img--insta" width="17" height="17">
-                <use xlink:href="img/sprite.svg#icon-insta"></use>
+                <use xlink:href="#icon-insta"></use>
               </svg>
             </a>
           </li>
@@ -513,7 +514,7 @@
           <li class="social__item">
             <a class="social__icon social__icon--fb" href="#" aria-label="Cat Energy в Фейсбуке">
               <svg class="social__img  social__img--fb" width="10" height="19">
-                <use xlink:href="img/sprite.svg#icon-fb"></use>
+                <use xlink:href="#icon-fb"></use>
               </svg>
             </a>
           </li>
@@ -525,7 +526,7 @@
           <a class="copyright__text" href="https://htmlacademy.ru/intensive/adaptive" aria-label="Сайт HTML Academy">HTML Academy</a>
           <a class="copyright__logo copyright-logo" href="https://htmlacademy.ru/intensive/adaptive" aria-label="Сайт HTML Academy">
             <svg class="copyright__img  copyright__img--htmlacademy" width="27" height="34">
-              <use xlink:href="img/sprite.svg#icon-htmlacademy"></use>
+              <use xlink:href="#htmlacademy"></use>
             </svg>
           </a>
         </div>
@@ -534,8 +535,8 @@
 
     </footer>
 
-    <script src="js/common.js"></script>
-    <script src="js/map.js"></script>
+    <script src="js/common.min.js"></script>
+    <script src="js/map.min.js"></script>
 
   </body>
 
