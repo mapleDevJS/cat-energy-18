@@ -46,7 +46,7 @@
   flex-grow: 1;
   width: 170px;
   margin: 0 0 0 15px;
-  padding: 9px 13px 10px 13px;
+  padding: 11px 15px 14px 15px;
 
   text-transform: uppercase;
 
@@ -56,6 +56,8 @@
   @include font(400, 16px, 18px, $font-family, $color-text);
 
   &::-moz-placeholder {
+    padding-top: 2px;
+
     text-transform: uppercase;
 
     @include font(400, 16px, 18px, $font-family, $color-text);
@@ -95,6 +97,11 @@
   .field__input {
     height: 52px;
     margin: 0 0 0 18px;
+    padding: 15px 15px 14px 22px;
+
+    &::-moz-placeholder {
+      @include font(400, 20px, 20px, $font-family, $color-text);
+    }
   }
 }
 

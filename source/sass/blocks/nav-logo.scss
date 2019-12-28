@@ -32,6 +32,7 @@
 @media (min-width: $desktop-width) {
   .nav-logo__img {
     width: 203px;
+    max-width: none;
     height: 60px;
   }
 }

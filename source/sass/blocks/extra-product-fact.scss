@@ -1,42 +1,55 @@
 .extra-product-fact {
   display: block;
   margin-bottom: 14px;
-}
 
-.extra-product-fact tbody {
-  display: block;
-}
-
-.extra-product-fact__item {
-  display: flex;
-  justify-content: space-between;
+  border-collapse: collapse;
 }
 
 .extra-product-fact__detail {
-  @include font(400,  14px, 14px, $font-family--alt, $color-text-header--alt);
+  @include font(400, 14px, 14px, $font-family--alt, $color-text-header--alt);
 }
 
 .extra-product-fact__value {
-  @include font(400,  14px, 14px, $font-family--alt, $color-text-header--alt);
+  @include font(400, 14px, 14px, $font-family--alt, $color-text-header--alt);
 }
 
 @media (min-width: $tablet-width) {
+  .extra-product__link {
+    display: block;
+    width: 170px;
+  }
+
   .extra-product-fact {
-    display: inline-block;
-    float: right;
     margin-bottom: 23px;
   }
 
+  .extra-product-fact tbody {
+    display: block;
+  }
+
+  .extra-product-fact__item {
+    display: block;
+    padding-top: 3px;
+  }
+
   .extra-product-fact__detail {
-    margin-right: 49px;
+    display: inline-block;
+    margin: 0 46px 0 0;
+    padding: 0;
+
+    vertical-align: top;
+    text-align: right;
 
     @include font(400,  16px, 20px, $font-family--alt, $color-text-header--alt);
   }
 
   .extra-product-fact__value {
-    width: 46px;
+    display: inline-block;
+    width: 45px;
+    padding: 0;
 
-    text-align: left;
+    vertical-align: top;
+    text-align: right;
 
     @include font(400,  16px, 20px, $font-family--alt, $color-text-header--alt);
   }
@@ -46,5 +59,18 @@
   .extra-product-fact {
     margin-bottom: 0;
     padding: 13px 0 0 0;
+  }
+
+  .extra-product-fact__detail {
+    margin-right: 0;
+  }
+
+  .extra-product-fact__value {
+    text-align: left;
+  }
+
+  .extra-product-fact__item {
+    display: flex;
+    justify-content: space-between;
   }
 }

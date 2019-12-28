@@ -1,36 +1,41 @@
+.form__wrapper {
+  @include wrapper;
+}
+
 .form__fieldset {
   padding: 0;
 
   @include fieldset-reset();
 
-  &:nth-child(2) {
+  &--programm {
     border-top: 1px solid $color-border;
     border-bottom: 1px solid $color-border;
   }
 
-  &:nth-child(3) {
-    padding-top: 29px;
+  &--contacts {
+    padding-top: 28px;
 
     .form__list {
       padding-bottom: 30px;
     }
-  }
-
-  &:nth-child(5) {
-    padding-top: 28px;
 
     .form__header {
-      margin-bottom: 38px;
+      width: 221px;
+      margin: 28px 0 6px -20px;
+    }
+  }
+
+  &--extra {
+    padding-top: 30px;
+
+    .form__header {
+      margin: 28px 0 10px -20px;
     }
 
     .form__list {
-      padding-bottom: 40px;
+      padding-bottom: 42px;
     }
   }
-}
-
-.form__wrapper {
-  @include wrapper;
 }
 
 .form__header {
@@ -117,36 +122,40 @@
 @media (min-width: $tablet-width) {
   .form {
     padding-bottom: 72px;
-
-    & > .form__wrapper {
-      display: flex;
-    }
   }
 
-  .form__field {
-    margin-bottom: 20px;
+  .form__wrapper {
+    padding-right: 70px;
+    padding-left: 70px;
   }
 
   .form__fieldset {
-    &:nth-child(2) {
+    display: flex;
+
+    &--programm {
       padding: 48px 0 52px 0;
 
       border: none;
     }
 
-    &:nth-child(3) {
+    &--contacts {
       padding-top: 23px;
 
       .form__list {
         padding-bottom: 65px;
       }
-    }
-
-    &:nth-child(5) {
-      padding-top: 65px;
 
       .form__header {
-        margin-bottom: 57px;
+        width: auto;
+        margin: 23px 0 52px -40px;
+      }
+    }
+
+    &--extra {
+      padding-top: 48px;
+
+      .form__header {
+        margin: 65px 0 10px -40px;
       }
 
       .form__list {
@@ -155,19 +164,20 @@
     }
   }
 
-  .form__wrapper {
-    padding-right: 70px;
-    padding-left: 70px;
+  .form__list {
+    width: 100%;
   }
 
+
   .form__header {
-    margin: 0 0 76px -30px;
+    margin: 0 0 76px -40px;
+    padding: 0 42px 0 39px;
 
     @include font(400, 36px, 36px, $font-family, $color-text-header);
   }
 
-  .form__textarea {
-    min-height: 174px;
+  .form__field {
+    margin-bottom: 20px;
   }
 
   .form__button {
@@ -183,6 +193,19 @@
     margin-bottom: 0;
 
     @include font(400, 16px, 16px, $font-family--alt,$color-text);
+  }
+
+  .form__textarea {
+    min-height: 174px;
+    padding-left: 18px;
+
+    @include font(400, 20px, 30px, $font-family, $color-text);
+
+    &::-moz-placeholder {
+      text-transform: uppercase;
+
+      @include font(400, 20px, 30px, $font-family, $color-text);
+    }
   }
 }
 

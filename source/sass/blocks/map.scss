@@ -6,9 +6,14 @@
   height: 362px;
 
   background-color: $color-bg--alt;
-  background-image: url("../img/bg-map-mobile@1x.png");
-  background-repeat: no-repeat;
-  background-position: center;
+}
+
+.map__wrapper {
+  position: absolute;
+  top: 0;
+  left: 0;
+
+  margin: 0 auto;
 
   &::before {
     content: "";
@@ -24,10 +29,6 @@
     background-repeat: no-repeat;
     background-size: cover;
   }
-}
-
-.map__wrapper {
-  margin: 0 auto;
 }
 
 

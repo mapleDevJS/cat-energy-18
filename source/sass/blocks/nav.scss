@@ -6,74 +6,56 @@
   background-color: transparent;
 }
 
-.nav__logo {
-  margin-bottom: 15px;
+.nav-logo {
+  width: 191px;
+  height: 39px;
+  margin: 12px 0 14px 0;
 }
 
 .nav__toggle {
   position: absolute;
-  top: 11px;
+  top: 12px;
   right: 0;
   z-index: 2;
 
   display: block;
-  width: 25px;
-  height: 19px;
+  width: auto;
+  height: auto;
+  padding: 0;
 
   background-color: $color-bg;
   border: none;
   cursor: pointer;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+  }
+
+  &:hover {
+    &::before {
+      opacity: 0.3;
+    }
+  }
 }
 
-.nav__list {
-  display: block;
-}
+.nav--closed .nav__toggle {
+  &::before {
+    width: 25px;
+    height: 19px;
 
-.nav--closed .nav__toggle::before {
-  content: "";
-  position: absolute;
-  top: 1px;
-  right: 1px;
-
-  width: 25px;
-  height: 2px;
-
-  background-color: #222222;
-  box-shadow: 0 8px 0 0 #222222, 0 16px 0 0 #222222;
-}
-
-.nav--closed .nav__toggle:active::before {
-  background-color: rgba(255, 255, 255, 0.3);
-  box-shadow: 0 8px 0 0 rgba(255, 255, 255, 0.3), 0 16px 0 0 rgba(255, 255, 255, 0.3);
+    background-image: url("../img/icon-mobile-menu.svg");
+  }
 }
 
 .nav--opened .nav__toggle {
-  left: auto;
-
-  &::before,
-  &::after {
-    content: "";
-    position: absolute;
-    top: 9px;
-    left: -2px;
-
-    width: 24px;
-    height: 2px;
-
-    background-color: #222222;
-  }
-
   &::before {
-    transform: rotate(45deg);
-  }
+    width: 19px;
+    height: 19px;
 
-  &::after {
-    transform: rotate(-45deg);
-  }
-
-  &:active::before,
-  &:active::after {
-    background-color: rgba(255, 255, 255, 0.3);
+    background-image: url("../img/icon-close.svg");
   }
 }
 
@@ -81,10 +63,12 @@
   display: none;
 }
 
-@media (max-width: $tablet-width) {
-  .nav--closed .menu-list__item {
-    display: none;
-  }
+.nav--closed .menu-list__item {
+  display: none;
+}
+
+.nav__list {
+  display: block;
 }
 
 @media (min-width: $tablet-width) {
@@ -92,14 +76,19 @@
     display: flex;
     justify-content: space-between;
     align-items: flex-start;
+    margin: 12px 0 14px 0;
   }
 
   .nav__list {
     display: flex;
-    padding-top: 0;
+    padding-top: 8px;
   }
 
   .nav__toggle {
     display: none;
+  }
+
+  .nav--closed .menu-list__item {
+    display: block;
   }
 }

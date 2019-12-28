@@ -1,6 +1,6 @@
 .extra-product {
-  padding-top: 11px;
-  padding-bottom: 18px;
+  padding-top: 12px;
+  padding-bottom: 16px;
 
   border-bottom: 1px solid $color-border;
 
@@ -24,7 +24,7 @@
 .extra-product__order {
   margin: 0 auto;
 
-  @include button(100%, 9px, 12px, 11px, 13px, $color-brand);
+  @include button(100%, 9px, 12px, 11px, 10px, $color-brand);
   @include font(400, 16px, 20px, $font-family, $color-text--rev);
 
   &:hover {
@@ -38,10 +38,10 @@
 
 @media (min-width: $tablet-width) {
   .extra-product {
-    padding-top: 25px;
-    padding-right: 38px;
-    padding-bottom: 27px;
-    padding-left: 38px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 25px 36px 27px 38px;
 
     border-right: 1px solid $color-border;
     border-left: 1px solid $color-border;
@@ -76,18 +76,17 @@
 
   .extra-product__link {
     width: 323px;
-    padding-top: 11px;
+    margin-right: 122px;
+    padding-top: 10px;
   }
 
   .extra-product__facts {
     width: 290px;
-    margin-right: 35px;
   }
 
   .extra-product__order {
-    display: inline-block;
+    justify-content: space-between;
     width: 245px;
-
-    vertical-align: center;
+    margin: 0;
   }
 }

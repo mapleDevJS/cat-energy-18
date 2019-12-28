@@ -15,7 +15,7 @@
   &::before {
     content: "";
     position: absolute;
-    top: calc(34% - 61px / 2);
+    top: calc(34% - 68px / 2);
     left: calc(50% - 56px / 2);
 
     display: block;
@@ -49,7 +49,7 @@
     }
 
     &::before {
-      top: 60px;
+      top: 64px;
       left: 90px;
     }
   }
