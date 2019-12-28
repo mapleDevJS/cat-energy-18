@@ -10,17 +10,18 @@
   .checkbox-list {
     display: flex;
     flex-wrap: wrap;
+    justify-content: space-between;
     align-items: flex-start;
   }
 
   .checkbox-list__item {
-    width: 54.78%;
+    width: 50%;
     min-height: 40px;
     margin: 0 0 32px 0;
-    padding: 8px 0 0 12px;
+    padding: 0;
 
     &:nth-child(2n) {
-      width: calc(100% - 54.78%);
+      width: 45.4%;
     }
 
     &:nth-last-child(-n+2) {
@@ -30,11 +31,17 @@
 }
 
 @media (min-width: $desktop-width) {
+  .checkbox-list {
+    justify-content: space-between;
+  }
+
   .checkbox-list__item {
-    width: 25%;
+    width: 20%;
+    margin: 0;
+    padding: 0;
 
     &:nth-child(2n) {
-      width: 25%;
+      width: 20%;
     }
   }
 }

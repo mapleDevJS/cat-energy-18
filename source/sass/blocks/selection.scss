@@ -15,7 +15,6 @@
 .selection__text {
   display: block;
   margin: 0 0 40px 0;
-  padding-right: 54px;
 
   text-transform: uppercase;
 
@@ -43,12 +42,12 @@
 
 @media (min-width: $desktop-width) {
   .selection {
-    padding-top: 61px;
+    padding-top: 56px;
   }
 
   .selection__text {
     width: 325px;
-    margin-bottom: 42px;
+    margin-bottom: 65px;
     padding: 0;
   }
 }
