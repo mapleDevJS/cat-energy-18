@@ -25,6 +25,7 @@ gulp.task("css", function () {
     .pipe(sass())
     .pipe(postcss([ autoprefixer() ]))
     .pipe(csso())
+    .pipe(gulp.dest("build/css"))
     .pipe(rename("style.min.css"))
     .pipe(sourcemap.write("."))
     .pipe(gulp.dest("build/css"))
@@ -36,6 +37,7 @@ gulp.task("js", function () {
     .pipe(plumber())
     .pipe(sourcemap.init())
     .pipe(uglify())
+    .pipe(gulp.dest("build/js"))
     .pipe(rename(function (path) {
       path.extname = ".min.js";
     }))
@@ -67,7 +69,7 @@ gulp.task("refresh", function (done) {
 gulp.task("raster images", function () {
   return gulp.src("build/img/**/*.{png,jpg,jpeg}")
     .pipe(imagemin([
-      imagemin.optipng({optimizationLevel: 3}),
+      imagemin.optipng({optimizationLevel: 2}),
       imagemin.jpegtran({progressive: true})
     ]))
     .pipe(gulp.dest("build/img"));

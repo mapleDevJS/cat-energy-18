@@ -54,7 +54,7 @@
     background-color: $color-bg;
   }
 
-  .before-after__wrapper {
+  .before-after__info {
     display: flex;
     flex-wrap: wrap;
   }
@@ -96,38 +96,35 @@
 @media (min-width: $desktop-width) {
   .before-after {
     display: flex;
-    width: 100%;
-    max-width: 1300px;
-    min-height: 590px;
+    justify-content: center;
+    align-items: flex-start;
+    min-height: auto;
+    margin: 0;
     padding-top: 0;
-    padding-bottom: 27px;
 
-    background-image: linear-gradient(to bottom, #ffffff 215px, rgba (255,255,255,0) 215px), linear-gradient (to right, #f2f2f2 50%, #eaeaea 50%);
+    background-image: linear-gradient(to bottom, #ffffff 215px, rgba(255, 255, 255, 0) 215px), linear-gradient(to right, #f2f2f2 50%, #eaeaea 50%);
   }
 
-
   .before-after__wrapper {
-    flex-direction: column;
-    width: 100%;
-    max-width: $desktop-width;
+    width: 610px;
+    margin: 0;
+    padding-left: 40px;
   }
 
   .before-after__info {
     position: relative;
 
-    flex-shrink: 0;
-    width: 610px;
-    min-width: 570px;
+    display: block;
+    width: 100%;
     margin: 0;
-    padding: 52px 70px 0 70px;
+    padding: 0;
   }
 
   .before-after__header {
     margin: 0 0 72px 0;
-    padding: 25px 0 75px 0;
-
-    background-color: $color-bg;
+    padding: 80px 0 72px;
   }
+
 
   .before-after__text {
     width: 435px;
@@ -143,13 +140,11 @@
   .before-after__costs {
     width: auto;
     margin: 0;
+    margin-bottom: 25px;
 
     text-align: left;
-
-    & > br {
-      display: none;
-    }
   }
+
 
   .before-after__amount {
     display: inline-block;

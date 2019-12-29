@@ -1,14 +1,17 @@
 <!DOCTYPE html>
 <html lang="ru">
 
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width,initial-scale=1">
-    <title>HTML Academy: Кэт энерджи</title>
-    <script src="js/picturefill.min.js" async></script>
-    <script src="https://api-maps.yandex.ru/2.1/?apikey=a953ea8e-e7af-4178-b11c-1dd8a12cc718&lang=ru_RU"></script>
-    <link rel="stylesheet" href="css/style.min.css">
-  </head>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>HTML Academy: Кэт энерджи</title>
+  <script src="js/picturefill.min.js" async="async"></script>
+  <script src="https://api-maps.yandex.ru/2.1/?apikey=a953ea8e-e7af-4178-b11c-1dd8a12cc718&lang=ru_RU"></script>
+
+  <link rel="preload" href="fonts/oswaldregular.woff2" as="font" crossorigin="anonymous">
+  <link rel="preload" href="fonts/oswaldmedium.woff2" as="font" crossorigin="anonymous">
+  <link rel="stylesheet" href="css/style.min.css">
+</head>
 
   <body class="body-index">
 
@@ -26,7 +29,7 @@
             <picture>
               <source media="(min-width: 1300px)" srcset="img/logo-desktop.svg">
               <source media="(min-width: 768px)" srcset="img/logo-tablet.svg">
-              <img class="nav-logo__img" src="img/logo-mobile.svg" alt="Логотип 'Кэт энерджи'.">
+              <img class="nav-logo__img" src="img/logo-mobile.svg" width="191" height="39" alt="Логотип 'Кэт энерджи'.">
             </picture>
           </a>
 
@@ -128,9 +131,8 @@
       </section>
 
       <section class="before-after">
-        <div class="before-after__info">
-
-          <div class="before-after__wrapper">
+        <div class="before-after__wrapper">
+          <div class="before-after__info">
 
             <h2 class="before-after__header">Живой пример</h2>
 
@@ -158,48 +160,48 @@
 
         <div class="before-after__slider slider">
 
-          <div class="slider__wrapper">
+          <input id="before-toggle" class="slider__input slider__input--before visually-hidden" type="radio" name="status" value="before" checked="checked">
+          <input id="after-toggle" class="slider__input slider__input--after visually-hidden" type="radio" name="status" value="after">
 
-            <input id="before-toggle" class="slider__input slider__input--before visually-hidden" type="radio" name="status" value="before" checked="checked">
-            <input id="after-toggle" class="slider__input slider__input--after visually-hidden" type="radio" name="status" value="after">
+          <div class="slider__list">
+            <div class="slider__box slider__box--before">
+              <picture>
+                <source type="image/webp" media="(min-width: 1300px)" srcset="img/before-desktop@1x.webp 1x, img/before-desktop@2x.webp 2x">
+                <source type="image/webp" media="(min-width: 768px)" srcset="img/before-tablet@1x.webp 1x, img/before-tablet@2x.webp 2x">
+                <source type="image/webp" srcset="img/before-mobile@1x.webp 1x, img/before-mobile@2x.webp 2x">
 
-            <div class="slider__list">
-              <div class="slider__box slider__box--before">
-                <picture>
-                  <source type="image/webp" media="(min-width: 1300px)" srcset="img/before-desktop@1x.webp 1x, img/before-desktop@2x.webp 2x">
-                  <source type="image/webp" media="(min-width: 768px)" srcset="img/before-tablet@1x.webp 1x, img/before-tablet@2x.webp 2x">
-                  <source type="image/webp" srcset="img/before-mobile@1x.webp 1x, img/before-mobile@2x.webp 2x">
+                <source media="(min-width: 1300px)" srcset="img/before-desktop@1x.png 1x, img/before-desktop@2x.png 2x">
+                <source media="(min-width: 768px)" srcset="img/before-tablet@1x.png 1x, img/before-tablet@2x.png 2x">
+                <img class="slider__img slider__img--before" src="img/before-mobile@1x.png" srcset="img/before-mobile@2x.png 2x" width="320" height="240" alt="Толстый кот до начала применения программы функционального питания.">
+              </picture>
+            </div>
+            <div class="slider__box slider__box--after">
+              <picture>
+                <source type="image/webp" media="(min-width: 1300px)" srcset="img/after-desktop@1x.webp 1x, img/after-desktop@2x.webp 2x">
+                <source type="image/webp" media="(min-width: 768px)" srcset="img/after-tablet@1x.webp 1x, img/after-tablet@2x.webp 2x">
+                <source type="image/webp" srcset="img/after-mobile@1x.webp 1x, img/after-mobile@2x.webp 2x">
 
-                  <source media="(min-width: 1300px)" srcset="img/before-desktop@1x.png 1x, img/before-desktop@2x.png 2x">
-                  <source media="(min-width: 768px)" srcset="img/before-tablet@1x.png 1x, img/before-tablet@2x.png 2x">
-                  <img class="slider__img slider__img--before" src="img/before-mobile@1x.png" srcset="img/before-mobile@2x.png 2x" width="320" height="240" alt="Толстый кот до начала применения программы функционального питания.">
-                </picture>
-              </div>
-              <div class="slider__box slider__box--after">
-                <picture>
-                  <source type="image/webp" media="(min-width: 1300px)" srcset="img/after-desktop@1x.webp 1x, img/after-desktop@2x.webp 2x">
-                  <source type="image/webp" media="(min-width: 768px)" srcset="img/after-tablet@1x.webp 1x, img/after-tablet@2x.webp 2x">
-                  <source type="image/webp" srcset="img/after-mobile@1x.webp 1x, img/after-mobile@2x.webp 2x">
+                <source media="(min-width: 1300px)" srcset="img/after-desktop@1x.png 1x, img/after-desktop@2x.png 2x">
+                <source media="(min-width: 768px)" srcset="img/after-tablet@1x.png 1x, img/after-tablet@2x.png 2x">
+                <img class="slider__img slider__img--after" src="img/after-mobile@1x.png" srcset="img/after-mobile@2x.png 2x" width="320" height="240" alt="Стройный кот после применения программы функцинального питания.">
+              </picture>
+            </div>
+          </div>
 
-                  <source media="(min-width: 1300px)" srcset="img/after-desktop@1x.png 1x, img/after-desktop@2x.png 2x">
-                  <source media="(min-width: 768px)" srcset="img/after-tablet@1x.png 1x, img/after-tablet@2x.png 2x">
-                  <img class="slider__img slider__img--after" src="img/after-mobile@1x.png" srcset="img/after-mobile@2x.png 2x" width="320" height="240" alt="Стройный кот после применения программы функцинального питания.">
-                </picture>
-              </div>
+          <div class="slider__controls">
+            <label class="slider__label" for="before-toggle">
+              Было
+              <span class="slider__toggle slider__toggle--before"></span>
+            </label>
+
+            <div class="slider__range">
+              <button class="slider__button"></button>
             </div>
 
-            <div class="slider__controls">
-              <label class="slider__label" for="before-toggle">
-                Было
-                <span class="slider__button slider__button--before"></span>
-              </label>
-
-              <label class="slider__label" for="after-toggle">
-                Стало
-                <span class="slider__button slider__button--after"></span>
-              </label>
-            </div>
-
+            <label class="slider__label" for="after-toggle">
+              Стало
+              <span class="slider__toggle slider__toggle--after"></span>
+            </label>
           </div>
 
         </div>
@@ -236,9 +238,9 @@
 
               <source media="(min-width: 1300px)" srcset="img/bg-map-desktop@1x.png 1x, img/bg-map-desktop@2x.png 2x">
               <source media="(min-width: 768px)" srcset="img/bg-map-tablet@1x.png 1x, img/bg-map-tablet@2x.png 2x">
-              <img class="map__img" src="img/bg-map-mobile@1x.png" srcset="img/bg-map-mobile@2x.png 2x" width="320" height="362"
-                alt="ул. Большая Конюшенная, д. 19/8, Санкт-Петербург.">
+              <img class="map__img" src="img/bg-map-mobile@1x.png" srcset="img/bg-map-mobile@2x.png 2x" width="320" height="362" alt="ул. Большая Конюшенная, д. 19/8, Санкт-Петербург.">
             </picture>
+
           </div>
 
         </div>
@@ -253,7 +255,7 @@
 
         <div class="page-footer__logo page-footer-logo">
           <a href="index.html">
-            <img class="page-footer-logo__img" src="../img/logo-footer.svg" width="128" height="24" alt="CAT ENERGY">
+            <img class="page-footer-logo__img" src="img/logo-footer.svg" width="128" height="24" alt="CAT ENERGY">
           </a>
         </div>
 
