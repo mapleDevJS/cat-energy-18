@@ -122,16 +122,25 @@ gulp.task("clean", function () {
   return del("build");
 });
 
-gulp.task("build", gulp.series(
+gulp.task("quick-build", gulp.series(
   "clean",
   "copy",
   "css",
   "js",
-  "raster images",
-  "webp",
-  "vector images",
-  "sprite",
   "html"
 ));
 
-gulp.task("start", gulp.series("build", "server"));
+gulp.task("optimize", gulp.series(
+  "raster images",
+  "webp",
+  "vector images",
+  "sprite"
+));
+
+gulp.task("build", gulp.series(
+  "quick-build",
+  "optimize",
+  "server"
+));
+
+gulp.task("start", gulp.series("quick-build", "server"));
