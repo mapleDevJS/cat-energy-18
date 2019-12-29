@@ -127,14 +127,14 @@ gulp.task("quick-build", gulp.series(
   "copy",
   "css",
   "js",
+  "vector images",
+  "sprite",
   "html"
 ));
 
 gulp.task("optimize", gulp.series(
   "raster images",
-  "webp",
-  "vector images",
-  "sprite"
+  "webp"
 ));
 
 gulp.task("build", gulp.series(
