@@ -6,7 +6,7 @@
   position: relative;
 
   display: block;
-  padding: 22px 0 21px 0;
+  padding: 24px 0 21px 0;
 
   text-align: center;
 
@@ -55,6 +55,7 @@
 
   .menu-list__item {
     margin-right: 36px;
+    padding-top: 22px;
 
     border-top: none;
 
@@ -72,7 +73,7 @@
   }
 
   .menu-list__link {
-    padding-bottom: 5px;
+    padding-bottom: 7px;
 
     @include font(400, 18px, 25px, $font-family, $color-text-link--alt);
   }

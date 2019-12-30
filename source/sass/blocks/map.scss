@@ -2,24 +2,26 @@
   position: relative;
 
   display: block;
-  width: 100%;
+  width: auto;
   height: 362px;
 
   background-color: $color-bg--alt;
 }
 
 .map__wrapper {
-  position: absolute;
+  position: relative;
   top: 0;
   left: 0;
 
   margin: 0 auto;
+  overflow: hidden;
 
   &::before {
     content: "";
     position: absolute;
-    top: calc(50% - 45px);
+    top: 137px;
     left: calc(50% - 31px);
+    z-index: 1;
 
     display: block;
     width: 55px;
@@ -35,8 +37,10 @@
 .map__img {
   display: block;
   width: 320px;
-  height: 362px;
+  height: auto;
   margin: 0 auto;
+
+  transform: translateY(-40px);
 }
 
 @media (min-width: $tablet-width) {
@@ -52,18 +56,32 @@
     }
   }
 
+  .map__wrapper {
+    &::before {
+      top: 143px;
+      left: calc(50% - 63px);
+
+      width: 113px;
+      height: 106px;
+    }
+  }
+
   .map__img {
     width: 767px;
+
+    transform: translateY(-8px);
   }
 }
 
 @media (min-width: $desktop-width) {
   .map {
     background-color: $color-bg--alt;
+  }
 
+  .map__wrapper {
     &::before {
       top: 150px;
-      right: 328px;
+      right: 330px;
       left: auto;
     }
   }
@@ -71,5 +89,7 @@
   .map__img {
     width: 1440px;
     height: 400px;
+
+    transform: translateX(2px);
   }
 }

@@ -24,18 +24,21 @@
       <div class="page-header__wrapper">
 
         <nav class="page-header__nav nav nav--closed" aria-label="Меню сайта">
+          <div class="nav__wrapper">
+            <a class="nav__logo nav-logo" href="index.html">
+              <picture>
+                <source media="(min-width: 1300px)" srcset="img/logo-desktop.svg">
+                <source media="(min-width: 768px)" srcset="img/logo-tablet.svg">
+                <img class="nav-logo__img" src="img/logo-mobile.svg" width="191" height="39" alt="Логотип 'Кэт энерджи'.">
+              </picture>
+            </a>
 
-          <a class="nav__logo nav-logo" href="index.html">
-            <picture>
-              <source media="(min-width: 1300px)" srcset="img/logo-desktop.svg">
-              <source media="(min-width: 768px)" srcset="img/logo-tablet.svg">
-              <img class="nav-logo__img" src="img/logo-mobile.svg" width="191" height="39" alt="Логотип 'Кэт энерджи'.">
-            </picture>
-          </a>
+            <button class="nav__toggle" type="button">
+              <span class="visually-hidden">Открыть меню</span>
+            </button>
+          </div>
 
-          <button class="nav__toggle" type="button">
-            <span class="visually-hidden">Открыть меню</span>
-          </button>
+
 
           <ul class="nav__list menu-list">
 

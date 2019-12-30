@@ -12,6 +12,42 @@
 
   @include font(400, 14px, 14px, $font-family, $color-bg);
 
+
+  &--select {
+    padding: 10px 16px 12px 14px;
+
+    font-size: 14px;
+    line-height: 18px;
+  }
+
+  &--order {
+    padding: 9px 13px 10px 13px;
+
+    font-size: 16px;
+    line-height: 20px;
+  }
+
+  &--send {
+    font-size: 16px;
+    line-height: 20px;
+  }
+
+  &--show {
+    padding: 8px 10px 9px 10px;
+
+    background-color: #f2f2f2;
+
+    @include font(400, 16px, 20px, $font-family, $color-text);
+
+    &:hover {
+      background-color: #ebebeb;
+    }
+
+    &:active {
+      color: rgba(68, 68, 68, 0.3);
+    }
+  }
+
   &:hover {
     background-color: #5eaa2f;
   }
@@ -19,33 +55,14 @@
   &:active {
     color: rgba(255, 255, 255, 0.3);
   }
-
-  &--select {
-    width: 245px;
-    padding: 15px 16px 16px 14px;
-
-    font-size: 14px;
-    line-height: 18px;
-  }
-
-  &--order,
-  &--send {
-    font-size: 16px;
-    line-height: 20px;
-  }
-
-  &--show {
-    color: #444444;
-    background-color: #f2f2f2;
-  }
 }
 
 @media (min-width: $tablet-width) {
   .button {
     &--select {
+      width: 245px;
+      padding: 15px 16px 16px 14px;
 
-
-      padding: 15px 16px 14px 14px;
       font-size: 20px;
       line-height: 20px;
     }
