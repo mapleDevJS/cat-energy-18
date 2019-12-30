@@ -7,10 +7,10 @@
   text-transform: uppercase;
   text-decoration: none;
 
-  background-color: $color-brand;
+  background-color: #68b738;
   border: none;
 
-  @include font(400, 14px, 14px, $font-family, $color-text-header--rev);
+  @include font(400, 14px, 14px, $font-family, $color-bg);
 
   &:hover {
     background-color: #5eaa2f;
@@ -18,5 +18,41 @@
 
   &:active {
     color: rgba(255, 255, 255, 0.3);
+  }
+
+  &--select {
+    width: 245px;
+    padding: 15px 16px 16px 14px;
+
+    font-size: 14px;
+    line-height: 18px;
+  }
+
+  &--order,
+  &--send {
+    font-size: 16px;
+    line-height: 20px;
+  }
+
+  &--show {
+    color: #444444;
+    background-color: #f2f2f2;
+  }
+}
+
+@media (min-width: $tablet-width) {
+  .button {
+    &--select {
+
+
+      padding: 15px 16px 14px 14px;
+      font-size: 20px;
+      line-height: 20px;
+    }
+
+    &--send {
+      font-size: 20px;
+      line-height: 20px;
+    }
   }
 }

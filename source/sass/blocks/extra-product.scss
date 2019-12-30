@@ -1,6 +1,6 @@
 .extra-product {
   padding-top: 12px;
-  padding-bottom: 16px;
+  padding-bottom: 18px;
 
   border-bottom: 1px solid $color-border;
 
@@ -24,7 +24,7 @@
 .extra-product__order {
   margin: 0 auto;
 
-  @include button(100%, 9px, 12px, 11px, 10px, $color-brand);
+  @include button(100%, 9px, 14px, 11px, 14px, $color-brand);
   @include font(400, 16px, 20px, $font-family, $color-text--rev);
 
   &:hover {
@@ -59,8 +59,6 @@
 
 @media (min-width: $desktop-width) {
   .extra-product {
-    display: flex;
-    align-items: flex-start;
     width: 895px;
     padding: 14px 0 17px 0;
 
@@ -76,7 +74,7 @@
 
   .extra-product__link {
     width: 323px;
-    margin-right: 122px;
+    margin-right: 132px;
     padding-top: 10px;
   }
 

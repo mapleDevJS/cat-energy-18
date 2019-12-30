@@ -1,5 +1,5 @@
 .extra {
-  padding-top: 54px;
+  padding-top: 28px;
   padding-bottom: 35px;
 }
 
@@ -19,7 +19,7 @@
 
   display: inline-block;
   margin: 0 0 34px 0;
-  padding: 0 35px 0 0;
+  padding: 0 22px 0 0;
 
   vertical-align: baseline;
 
@@ -62,12 +62,17 @@
     min-width: 895px;
   }
 
+
   .extra-product {
     justify-content: space-between;
+    padding: 25px 0 6px 0;
   }
 
+
   .extra__header {
+    margin-bottom: 78px;
     margin-left: -40px;
+    padding-right: 40px;
 
     border: none;
   }

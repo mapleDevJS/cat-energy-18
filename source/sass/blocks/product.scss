@@ -1,14 +1,25 @@
 .product {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  align-items: flex-start;
+  width: 100%;
   padding-bottom: 24px;
 
   border-bottom: 1px solid $color-border;
 }
 
+.product__wrapper {
+  width: 100%;
+
+  @include wrapper;
+}
+
+.product__info {
+  display: flex;
+  justify-content: center;
+}
+
 .product__link {
+  display: block;
+  width: 140px;
+
   text-decoration: none;
 
   @include font(400, 16px, 20px, $font-family, $color-text);
@@ -22,13 +33,15 @@
 }
 
 .product__description {
+  width: 140px;
   min-height: 144px;
   padding-top: 20px;
 }
 
 .product__header {
-  width: 74px;
-  margin: 0;
+  width: 64%;
+  margin-top: 0;
+  margin-bottom: 13px;
 
   text-transform: uppercase;
 
@@ -36,7 +49,29 @@
 }
 
 .product__facts {
+  width: 140px;
+  margin: 0;
+  padding: 12px 0 0 0;
+
+  border-collapse: collapse;
+
   @include font(400, 12px, 16px, $font-family--alt, $color-text-header);
+}
+
+.product__facts__item {
+  padding: 0;
+}
+
+.product__facts__detail {
+  width: 50%;
+  padding: 0;
+}
+
+.product__facts__value {
+  width: 50%;
+  padding: 0;
+
+  text-align: right;
 }
 
 .product__order {
@@ -58,20 +93,24 @@
   .product {
     position: relative;
 
-    flex-direction: column;
-    align-items: center;
     width: 324px;
-    margin-bottom: 140px;
-    padding-top: 165px;
-    padding-right: 37px;
-    padding-bottom: 40px;
-    padding-left: 39px;
+    margin: 0 30px 140px 30px;
+    padding: 165px 35px 40px 37px;
 
     background-color: $color-bg--alt;
 
     &:nth-last-child(-n+2) {
       margin-bottom: 0;
     }
+  }
+
+  .product__wrapper {
+    min-width: auto;
+    padding: 0;
+  }
+
+  .product__info {
+    display: block;
   }
 
   .product__img {
@@ -93,10 +132,14 @@
     padding-top: 0;
   }
 
+  .product__link {
+    width: 100%;
+  }
+
   .product__header {
-    width: auto;
-    padding-right: 55px;
-    padding-left: 55px;
+    width: 100%;
+    margin: 0 auto 19px auto;
+    padding: 0 61px;
 
     text-align: center;
 
@@ -104,14 +147,33 @@
   }
 
   .product__facts {
+    width: 100%;
+    padding-top: 18px;
+
     @include font(400, 16px, 16px, $font-family--alt, $color-text-header);
+  }
+
+  .product__facts__item {
+    border-bottom: 1px solid #cdcdcd;
+  }
+
+  .product__facts__detail {
+    padding: 7px 0 8px 0;
+  }
+
+  .product__facts__value {
+    padding: 7px 0 8px 0;
   }
 }
 
 @media (min-width: $desktop-width) {
   .product {
     width: 246px;
-    margin-bottom: 143px;
+    margin: 0 78px 143px 0;
+
+    &:nth-child(4n) {
+      margin-right: 0;
+    }
 
     &:nth-last-child(-n+4) {
       margin-bottom: 0;
