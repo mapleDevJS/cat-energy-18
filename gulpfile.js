@@ -67,7 +67,7 @@ gulp.task("refresh", function (done) {
 
 
 gulp.task("raster images", function () {
-  return gulp.src("build/img/**/*.{png,jpg,jpeg}")
+  return gulp.src("build/img/*.{png,jpg,jpeg}")
     .pipe(imagemin([
       imagemin.optipng({optimizationLevel: 2}),
       imagemin.jpegtran({progressive: true})
@@ -76,7 +76,7 @@ gulp.task("raster images", function () {
 });
 
 gulp.task("webp", function () {
-  return gulp.src("build/img/**/*.{png,jpg,jpeg}")
+  return gulp.src("build/img/*.{png,jpg,jpeg}")
     .pipe(webp({quality: 90}))
     .pipe(gulp.dest("build/img"));
 });
@@ -129,12 +129,12 @@ gulp.task("quick-build", gulp.series(
   "js",
   "vector images",
   "sprite",
+  "webp",
   "html"
 ));
 
 gulp.task("optimize", gulp.series(
-  "raster images",
-  "webp"
+  "raster images"
 ));
 
 gulp.task("build", gulp.series(

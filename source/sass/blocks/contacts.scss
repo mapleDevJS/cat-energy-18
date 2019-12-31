@@ -74,9 +74,9 @@
   .contacts__address {
     position: absolute;
     top: 95px;
-    left: 7.6%;
 
     min-width: 570px;
+    margin-left: calc(100vw / 2 - 1300px / 2 + 40px);
     padding-right: 55px;
     padding-left: 76px;
 
