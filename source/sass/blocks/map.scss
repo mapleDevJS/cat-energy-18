@@ -6,6 +6,10 @@
   height: 362px;
 
   background-color: $color-bg--alt;
+
+  &:nth-child(2) {
+    outline: 1px solid red;
+  }
 }
 
 .map__wrapper {
@@ -16,12 +20,16 @@
   margin: 0 auto;
   overflow: hidden;
 
+  & ~ .ymaps-2-1-75-map {
+    z-index: 1;
+  }
+
   &::before {
     content: "";
     position: absolute;
     top: 137px;
     left: calc(50% - 31px);
-    z-index: 0;
+    z-index: 1;
 
     display: block;
     width: 55px;
