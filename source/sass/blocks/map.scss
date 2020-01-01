@@ -3,13 +3,11 @@
 
   display: block;
   width: auto;
+  max-width: $mobile-width;
   height: 362px;
+  margin: 0 auto;
 
   background-color: $color-bg--alt;
-
-  &:nth-child(2) {
-    outline: 1px solid red;
-  }
 }
 
 .map__wrapper {
@@ -17,7 +15,6 @@
   top: 0;
   left: 0;
 
-  margin: 0 auto;
   overflow: hidden;
 
   & ~ .ymaps-2-1-75-map {
@@ -46,13 +43,13 @@
   display: block;
   width: 320px;
   height: 362;
-  margin: 0 auto;
 
   transform: translateY(-40px);
 }
 
 @media (min-width: $tablet-width) {
   .map {
+    max-width: $tablet-width;
     height: 400px;
 
     &::before {
@@ -83,6 +80,8 @@
 
 @media (min-width: $desktop-width) {
   .map {
+    max-width: $desktop-width;
+
     background-color: $color-bg--alt;
   }
 
