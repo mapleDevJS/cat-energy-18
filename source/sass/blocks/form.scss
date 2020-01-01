@@ -123,6 +123,7 @@
 .form__button {
   margin-bottom: 21px;
 
+  background-color: $color-brand;
   cursor: pointer;
 
   @include font(400, 16px, 20px, $font-family, $color-text--rev);
