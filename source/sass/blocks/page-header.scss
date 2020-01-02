@@ -36,6 +36,8 @@
 
         @media (min-resolution: $retina-dppx) {
           background: url("../img/index-background-desktop@2x.jpg") #64a83b;
+          background-repeat: no-repeat;
+          background-size: 720px 100%;
         }
       }
     }
