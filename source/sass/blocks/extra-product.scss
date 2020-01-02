@@ -23,16 +23,6 @@
 
 .extra-product__order {
   margin: 0 auto;
-
-  @include font(400, 16px, 20px, $font-family, $color-text--rev);
-
-  &:hover {
-    background-color: #5eaa2f;
-  }
-
-  &:active {
-    color: rgba(255, 255, 255, 0.3);
-  }
 }
 
 @media (min-width: $tablet-width) {
