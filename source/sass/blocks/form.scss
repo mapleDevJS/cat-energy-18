@@ -94,8 +94,9 @@
   border: 1px solid #cdcdcd;
   outline: none;
 
+  resize: none;
+
   @include font(400, 16px, 20px, $font-family, $color-text);
-  rsize: none;
 
   &::-moz-placeholder,
   &::placeholder {
