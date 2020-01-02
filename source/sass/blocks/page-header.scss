@@ -30,12 +30,12 @@
         width: 50%;
         height: 696px;
 
-        background: url("../img/index-background-desktop@1x.jpg") #64a83b;
+        background: url("../img/index-background-desktop@1x.jpg") $color-bg--image;
         background-repeat: no-repeat;
         background-size: 720px 100%;
 
         @media (min-resolution: $retina-dppx) {
-          background: url("../img/index-background-desktop@2x.jpg") #64a83b;
+          background: url("../img/index-background-desktop@2x.jpg") $color-bg--image;
           background-repeat: no-repeat;
           background-size: 720px 100%;
         }

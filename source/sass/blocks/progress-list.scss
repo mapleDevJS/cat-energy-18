@@ -24,7 +24,7 @@
   border: 1px solid #cdcdcd;
   border-radius: 3px;
 
-  @include font(400, 24px, 24px, $font-family, $color-text-header);
+  @include font(400, 24px, 24px, $font-family, $color-text--other);
 }
 
 .progress-list__description {
@@ -35,7 +35,7 @@
 
   text-transform: lowercase;
 
-  background-color: $color-bg--alt;
+  background-color: $color-bg--dark;
   transform: translateY(-50%);
 
   @include font(400, 12px, 12px, $font-family--alt, $color-text);
@@ -54,7 +54,7 @@
   }
 
   .progress-list__measure {
-    @include font(400, 30px, 37px, $font-family, $color-text-header);
+    @include font(400, 30px, 37px, $font-family, $color-text--other);
   }
 
   .progress-list__description {
@@ -63,7 +63,7 @@
     width: 137px;
     padding: 0;
 
-    background-color: $color-bg;
+    background-color: $color-bg--light;
 
     @include font(400, 14px, 14px, $font-family--alt, $color-text);
   }
@@ -75,6 +75,6 @@
   }
 
   .progress-list__description {
-    background-color: $color-bg--alt;
+    background-color: $color-bg--dark;
   }
 }

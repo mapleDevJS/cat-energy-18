@@ -2,7 +2,7 @@
   margin: 0 auto;
   padding: 16px 0 32px 0;
 
-  background-color: $color-bg--alt;
+  background-color: $color-bg--dark;
 }
 
 .before-after__wrapper {
@@ -12,7 +12,7 @@
 .before-after__header {
   margin: 0 0 24px 0;
 
-  @include font(400, 36px, 60px, $font-family, $color-text-header);
+  @include font(400, 36px, 60px, $font-family, $color-header);
 }
 
 .before-after__text {
@@ -32,7 +32,7 @@
   text-align: center;
   text-transform: uppercase;
 
-  @include font(400, 14px, 20px, $font-family, $color-text);
+  @include font(400, 14px, 20px, $font-family, $color-text--other);
 
   & > br {
     display: none;
@@ -51,7 +51,7 @@
     padding-top: 43px;
     padding-bottom: 0;
 
-    background-color: $color-bg;
+    background-color: $color-bg--light;
   }
 
   .before-after__info {
@@ -63,7 +63,7 @@
     margin: 0 0 65px 0;
     padding: 0;
 
-    @include font(400, 60px, 60px, $font-family, $color-text-header);
+    @include font(400, 60px, 60px, $font-family, $color-header);
   }
 
   .before-after__text {

@@ -23,9 +23,9 @@
 
   vertical-align: baseline;
 
-  background-color: $color-bg;
+  background-color: $color-bg--light;
 
-  @include font(400, 24px, 24px, $font-family, $color-text-header);
+  @include font(400, 24px, 24px, $font-family, $color-header);
   @include header-decor;
 }
 
@@ -44,7 +44,7 @@
     margin-bottom: 81px;
     padding-left: 38px;
 
-    @include font(400,  36px, 36px, $font-family, $color-text-header--alt);
+    @include font(400,  36px, 36px, $font-family, $color-header--alt);
   }
 }
 

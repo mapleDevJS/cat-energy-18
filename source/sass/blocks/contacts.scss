@@ -1,11 +1,11 @@
 .contacts {
-  background-color: $color-bg--alt;
+  background-color: $color-bg--dark;
 }
 
 .contacts__address {
   padding: 28px 0;
 
-  background-color: $color-bg--alt;
+  background-color: $color-bg--dark;
 }
 
 .contacts__wrapper {
@@ -21,7 +21,7 @@
 
   text-transform: uppercase;
 
-  @include font(400, 16px, 20px, $font-family, $color-text-header);
+  @include font(400, 16px, 20px, $font-family, $color-text--other);
 }
 
 .contacts__street {
@@ -42,14 +42,14 @@
 
     padding: 65px 40px 62px 40px;
 
-    background-color: $color-bg;
+    background-color: $color-bg--dark;
   }
 
 
   .contacts__text {
     width: 154px;
 
-    @include font(400, 20px, 25px, $font-family, $color-text-header);
+    @include font(400, 20px, 25px, $font-family, $color-text--other);
   }
 
   .contacts__street {
@@ -84,7 +84,7 @@
     padding-right: 55px;
     padding-left: 76px;
 
-    background-color: $color-bg;
+    background-color: $color-bg--light;
   }
 
   .contacts__street {

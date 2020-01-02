@@ -18,7 +18,7 @@
 
   text-transform: uppercase;
 
-  @include font(400, 16px, 18px, $font-family, $color-text-label);
+  @include font(400, 16px, 18px, $font-family, $color-label);
 }
 
 .field__input {
@@ -42,7 +42,7 @@
 
     text-transform: uppercase;
 
-    @include font(400, 16px, 18px, $font-family, $color-text);
+    @include font(400, 16px, 18px, $font-family, $color-placeholder);
   }
 
   .field__icon {
@@ -121,7 +121,7 @@
   }
 
   .field__label {
-    @include font(400, 20px, 20px, $font-family, $color-text-label);
+    @include font(400, 20px, 20px, $font-family, $color-label);
   }
 
   .field__input {

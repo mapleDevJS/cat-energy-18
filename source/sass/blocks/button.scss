@@ -7,10 +7,10 @@
   text-transform: uppercase;
   text-decoration: none;
 
-  background-color: #68b738;
+  background-color: $color-btn;
   border: none;
 
-  @include font(400, 14px, 14px, $font-family, $color-bg);
+  @include font(400, 14px, 14px, $font-family, $color-btn-text);
 
 
   &--select {
@@ -20,11 +20,11 @@
     line-height: 18px;
 
     &:hover {
-      background-color: #5eaa2f;
+      background-color: $color-btn--hover;
     }
 
     &:active {
-      color: rgba(255, 255, 255, 0.3);
+      color: $color-btn-text--active;
     }
   }
 
@@ -34,7 +34,7 @@
     font-size: 16px;
     line-height: 20px;
 
-    @include font(400, 16px, 20px, $font-family, $color-text--other);
+    @include font(400, 16px, 20px, $font-family, $color-text--rev);
 
     &:hover {
       background-color: $color-btn--hover;
@@ -49,12 +49,14 @@
     font-size: 16px;
     line-height: 20px;
 
+    @include font(400, 16px, 20px, $font-family, $color-text--rev);
+
     &:hover {
-      background-color: #5eaa2f;
+      background-color: $color-btn--hover;
     }
 
     &:active {
-      color: rgba(255, 255, 255, 0.3);
+      color: $color-btn-text--active;
     }
   }
 
@@ -63,7 +65,7 @@
 
     background-color: #f2f2f2;
 
-    @include font(400, 16px, 20px, $font-family, $color-text);
+    @include font(400, 16px, 20px, $font-family, #444444);
 
     &:hover {
       background-color: #ebebeb;
@@ -86,6 +88,8 @@
     }
 
     &--send {
+      width: 283px;
+
       font-size: 20px;
       line-height: 20px;
     }

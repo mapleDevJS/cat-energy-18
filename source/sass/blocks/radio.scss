@@ -8,7 +8,7 @@
 
   cursor: pointer;
 
-  @include font(400, 16px, 18px, $font-family, $color-text-label);
+  @include font(400, 16px, 18px, $font-family, $color-label);
 
   &:hover > .radio__button {
     border-color: #bababa;
@@ -52,7 +52,7 @@
   .radio__label {
     padding-left: 87px;
 
-    @include font(400, 20px, 20px, $font-family, $color-text-label);
+    @include font(400, 20px, 20px, $font-family, $color-label);
   }
 }
 
