@@ -58,6 +58,10 @@
     display: block;
   }
 
+  .map__wrapper {
+    height: 400px;
+  }
+
   .map__static {
     &::before {
       top: 143px;
