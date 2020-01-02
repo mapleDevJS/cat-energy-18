@@ -158,6 +158,8 @@
     width: 340px;
     margin: 0 0 32px 0;
 
+    border-bottom: none;
+
     @include font(400, 16px, 24px, $font-family--alt, $color-text);
   }
 
