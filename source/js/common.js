@@ -1,5 +1,8 @@
 var navMain = document.querySelector('.nav');
 var navToggle = navMain.querySelector('.nav__toggle');
+var mapStatic = document.querySelector('.map__static');
+
+mapStatic.classList.remove('map__static--nojs');
 
 navMain.classList.remove('nav--nojs');
 navMain.classList.add('nav--closed');
