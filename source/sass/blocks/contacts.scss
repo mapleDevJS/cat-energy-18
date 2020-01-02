@@ -5,6 +5,10 @@
 .contacts__address {
   padding: 28px 0;
 
+  background-color: $color-bg--dark;
+}
+
+.body-index .contacts__address {
   background-color: $color-bg--light;
 }
 
@@ -43,6 +47,10 @@
     padding: 65px 40px 62px 40px;
 
     background-color: $color-bg--dark;
+  }
+
+  .body-index .contacts__address {
+    background-color: $color-bg--light;
   }
 
 
