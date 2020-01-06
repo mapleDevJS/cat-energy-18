@@ -10,7 +10,7 @@
 }
 
 .extra-product-fact__detail {
-  @include font(400,  14px, 14px, $font-family--alt, $color-text-header--alt);
+  @include font(400,  14px, 14px, $font-family--alt, $color-text);
 }
 
 .extra-product-fact__value {
@@ -19,7 +19,7 @@
 
   text-align: right;
 
-  @include font(400, 14px, 14px, $font-family--alt, $color-text-header--alt);
+  @include font(400, 14px, 14px, $font-family--alt, $color-text);
 }
 
 @media (min-width: $tablet-width) {
@@ -46,7 +46,7 @@
     vertical-align: top;
     text-align: right;
 
-    @include font(400,  16px, 20px, $font-family--alt, $color-text-header--alt);
+    @include font(400,  16px, 20px, $font-family--alt, $color-header--alt);
   }
 
   .extra-product-fact__value {
@@ -56,7 +56,7 @@
     vertical-align: top;
     text-align: right;
 
-    @include font(400,  16px, 20px, $font-family--alt, $color-text-header--alt);
+    @include font(400,  16px, 20px, $font-family--alt, $color-header--alt);
   }
 }
 

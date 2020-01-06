@@ -27,7 +27,7 @@
   border-bottom: 1px dotted rgba(34, 34, 34, 0.23);
   cursor: pointer;
 
-  @include font(400, 16px, 18px, $font-family, $color-text-label);
+  @include font(400, 16px, 18px, $font-family, $color-label);
 
 
   &:hover {
@@ -99,7 +99,7 @@
 
 @media (min-width: $tablet-width) {
   .slider {
-    padding: 50px 0 65px;
+    padding: 50px 0 68px;
 
     background-image: linear-gradient(to bottom, #ffffff 190px, rgba(255, 255, 255, 0) 190px), linear-gradient(to right, #f2f2f2 50%, #eaeaea 50%);
   }
@@ -152,7 +152,7 @@
   .slider__label {
     padding-bottom: 7px;
 
-    @include font(400, 20px, 20px, $font-family, #111111);
+    @include font(400, 20px, 20px, $font-family, $color-label);
   }
 
   .slider__toggle {
@@ -214,7 +214,7 @@
 @media (min-width: $desktop-width) {
   .slider {
     width: 690px;
-    padding: 24px 0 44px 0;
+    padding: 24px 0 69px 0;
 
     background-image: linear-gradient(to bottom, #ffffff 215px, rgba(255, 255, 255, 0) 215px), linear-gradient(to right, #f2f2f2 53%, #eaeaea 53%);
   }

@@ -2,7 +2,7 @@
   padding-top: 17px;
   padding-bottom: 42px;
 
-  background-color: $color-bg;
+  background-color: $color-bg--light;
   border-bottom: 1px solid $color-border;
 }
 
@@ -13,7 +13,7 @@
 .advantages__header {
   margin: 0 0 28px 0;
 
-  @include font(400, 36px, 60px, $font-family, $color-text-header);
+  @include font(400, 36px, 60px, $font-family, $color-header);
 }
 
 .advantages__list {
@@ -40,7 +40,7 @@
     width: 60px;
     height: 60px;
 
-    background-color: $color-brand;
+    background-color: $color-bg;
     background-repeat: no-repeat;
     background-position: 5px;
     background-size: 50px 50px;
@@ -105,7 +105,7 @@
   .advantages__header {
     margin: 0 0 71px 0;
 
-    @include font(400, 60px, 60px, $font-family, $color-text-header);
+    @include font(400, 60px, 60px, $font-family, $color-header);
   }
 
   .advantages__list {

@@ -1,6 +1,6 @@
 .product {
   width: 100%;
-  padding-bottom: 24px;
+  padding-bottom: 25px;
 
   border-bottom: 1px solid $color-border;
 }
@@ -45,7 +45,7 @@
 
   text-transform: uppercase;
 
-  @include font(400, 16px, 20px, $font-family, $color-text-header);
+  @include font(400, 16px, 20px, $font-family, $color-header);
 }
 
 .product__facts {
@@ -55,19 +55,19 @@
 
   border-collapse: collapse;
 
-  @include font(400, 12px, 16px, $font-family--alt, $color-text-header);
+  @include font(400, 12px, 16px, $font-family--alt, $color-header);
 }
 
-.product__facts__item {
+.product__item {
   padding: 0;
 }
 
-.product__facts__detail {
+.product__detail {
   width: 50%;
   padding: 0;
 }
 
-.product__facts__value {
+.product__value {
   width: 50%;
   padding: 0;
 
@@ -76,17 +76,6 @@
 
 .product__order {
   margin: 0 auto;
-
-  @include button(100%, 9px, 12px, 11px, 13px, $color-brand);
-  @include font(400, 16px, 20px, $font-family, $color-text--rev);
-
-  &:hover {
-    background-color: #5eaa2f;
-  }
-
-  &:active {
-    color: rgba(255, 255, 255, 0.3);
-  }
 }
 
 @media (min-width: $tablet-width) {
@@ -95,9 +84,9 @@
 
     width: 324px;
     margin: 0 30px 140px 30px;
-    padding: 165px 35px 40px 37px;
+    padding: 165px 37px 40px 37px;
 
-    background-color: $color-bg--alt;
+    background-color: $color-bg--dark;
 
     &:nth-last-child(-n+2) {
       margin-bottom: 0;
@@ -115,7 +104,7 @@
 
   .product__img {
     position: absolute;
-    top: -45px;
+    top: -48px;
     left: 0;
 
     width: 100%;
@@ -128,7 +117,7 @@
 
   .product__description {
     width: auto;
-    margin-bottom: 30px;
+    margin-bottom: 32px;
     padding-top: 0;
   }
 
@@ -139,29 +128,29 @@
   .product__header {
     width: 100%;
     margin: 0 auto 19px auto;
-    padding: 0 61px;
+    padding: 0 60px;
 
     text-align: center;
 
-    @include font(400, 20px, 20px, $font-family, $color-text-header);
+    @include font(400, 20px, 20px, $font-family, $color-header);
   }
 
   .product__facts {
     width: 100%;
     padding-top: 18px;
 
-    @include font(400, 16px, 16px, $font-family--alt, $color-text-header);
+    @include font(400, 16px, 16px, $font-family--alt, $color-header);
   }
 
-  .product__facts__item {
+  .product__item {
     border-bottom: 1px solid #cdcdcd;
   }
 
-  .product__facts__detail {
+  .product__detail {
     padding: 7px 0 8px 0;
   }
 
-  .product__facts__value {
+  .product__value {
     padding: 7px 0 8px 0;
   }
 }

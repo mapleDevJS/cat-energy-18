@@ -3,7 +3,7 @@
 
   padding: 30px 34px 20px 20px;
 
-  background-color: $color-bg--alt;
+  background-color: $color-bg--dark;
 
   &::before {
     content: "";
@@ -14,7 +14,7 @@
     width: 50px;
     height: 50px;
 
-    background-color: $color-brand;
+    background-color: $color-bg;
     border-radius: 50%;
   }
 
@@ -54,7 +54,7 @@
 
   text-transform: uppercase;
 
-  @include font(400, 24px, 37px, $font-family, $color-text-header);
+  @include font(400, 24px, 37px, $font-family, $color-header);
 }
 
 .category__text {
@@ -72,7 +72,7 @@
   text-transform: uppercase;
   text-decoration: none;
 
-  @include font(400, 16px, 16px, $font-family, $color-text-header);
+  @include font(400, 16px, 16px, $font-family, $color-header);
 
   &::before {
     content: "";
@@ -121,7 +121,7 @@
       width: 200px;
       height: 200px;
 
-      background-color: $color-brand;
+      background-color: $color-bg;
       border-radius: 50%;
     }
 
@@ -151,18 +151,20 @@
   .category__header {
     margin: 0 0 25px 0;
 
-    @include font(400, 36px, 37px, $font-family, $color-text-header);
+    @include font(400, 36px, 37px, $font-family, $color-header);
   }
 
   .category__text {
     width: 340px;
     margin: 0 0 32px 0;
 
+    border-bottom: none;
+
     @include font(400, 16px, 24px, $font-family--alt, $color-text);
   }
 
   .category__link {
-    @include font(400, 20px, 20px, $font-family, $color-text-header);
+    @include font(400, 20px, 20px, $font-family, $color-header);
 
     &--losing {
       &::before {

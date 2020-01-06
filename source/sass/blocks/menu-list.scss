@@ -6,7 +6,7 @@
   position: relative;
 
   display: block;
-  padding: 22px 0 21px 0;
+  padding: 24px 0 21px 0;
 
   text-align: center;
 
@@ -31,20 +31,20 @@
   word-wrap: normal;
   word-break: keep-all;
 
-  @include font(400, 20px, 20px, $font-family, $color-text-link);
+  @include font(400, 20px, 20px, $font-family, $color-menu);
 
   &--active {
-    border-bottom: 2px solid $color-brand;
+    border-bottom: 2px solid $color-bg;
   }
 }
 
 .menu-list__link[href] {
   &:hover {
-    color: rgba(17, 17, 17, 0.6);
+    color: $color-menu--hover;
   }
 
   &:active {
-    color: rgba(17, 17, 17, 0.3);
+    color: $color-menu--active;
   }
 }
 
@@ -55,6 +55,7 @@
 
   .menu-list__item {
     margin-right: 36px;
+    padding-top: 22px;
 
     border-top: none;
 
@@ -72,13 +73,13 @@
   }
 
   .menu-list__link {
-    padding-bottom: 5px;
+    padding-bottom: 7px;
 
-    @include font(400, 18px, 25px, $font-family, $color-text-link--alt);
+    @include font(400, 18px, 25px, $font-family, $color-menu-alt);
   }
 
   .body-index .menu-list__link {
-    color: $color-text-link;
+    color: $color-menu;
   }
 }
 
@@ -88,24 +89,24 @@
   }
 
   .menu-list__link {
-    @include font(400, 20px, 25px, $font-family, $color-text-link);
+    @include font(400, 20px, 25px, $font-family, $color-menu);
   }
 
   .page-header--index .menu-list__link[href] {
     &:hover {
-      color: rgba(255, 255, 255, 0.6);
+      color: $color-menu-alt--hover;
     }
 
     &:active {
-      color: rgba(255, 255, 255, 0.3);
+      color: $color-menu-alt--active;
     }
   }
 
   .body-index .menu-list__link {
-    @include font(400, 20px, 25px, $font-family, $color-text-link--rev);
+    @include font(400, 20px, 25px, $font-family, $color-menu-alt);
 
     &--active {
-      border-bottom: 2px solid #ffffff;
+      border-bottom: 2px solid $color-menu-alt;
     }
   }
 }

@@ -19,11 +19,11 @@
   z-index: 2;
 
   display: block;
-  width: auto;
-  height: auto;
+  width: 25px;
+  height: 19px;
   padding: 0;
 
-  background-color: $color-bg;
+  background-color: $color-bg--light;
   border: none;
   cursor: pointer;
 
@@ -59,7 +59,7 @@
   }
 }
 
-.nav--nojs .nav__toggle {
+.nav--nojs .nav__wrapper .nav__toggle {
   display: none;
 }
 

@@ -33,7 +33,7 @@
   text-align: center;
   text-transform: uppercase;
 
-  @include font(400, 16px, 20px, $font-family, $color-text-header);
+  @include font(400, 16px, 20px, $font-family, $color-header);
 }
 
 .show-more__text {
@@ -42,19 +42,6 @@
   text-align: center;
 
   @include font(400, 12px, 16px, $font-family--alt, $color-text);
-}
-
-.show-more__link {
-  @include button (100%, 8px, 10px, 9px, 10px, $color-bg--alt);
-  @include font(400, 16px, 20px, $font-family, $color-text);
-
-  &:hover {
-    background-color: #ebebeb;
-  }
-
-  &:active {
-    color: rgba(68, 68, 68, 0.3);
-  }
 }
 
 @media (min-width: $tablet-width) {
@@ -87,7 +74,7 @@
     padding-right: 56px;
     padding-left: 58px;
 
-    @include font(400, 20px, 20px, $font-family, $color-text-header);
+    @include font(400, 20px, 20px, $font-family, $color-header);
   }
 
   .show-more__text {

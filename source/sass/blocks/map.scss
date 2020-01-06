@@ -1,25 +1,38 @@
 .map {
-  position: relative;
-
-  display: block;
-  width: 100%;
-  height: 362px;
-
-  background-color: $color-bg--alt;
+  background-color: $color-bg--dark;
 }
 
 .map__wrapper {
-  position: absolute;
-  top: 0;
-  left: 0;
+  display: block;
+  width: 100%;
+  height: 362px;
+}
 
+.ymaps-2-1-75-map {
+  z-index: 1;
+
+  width: 100%;
+}
+
+.map__static {
+  position: relative;
+
+  display: none;
+  max-width: $mobile-width;
+  height: 362px;
   margin: 0 auto;
+  overflow: hidden;
+
+  &--nojs {
+    display: block;
+  }
 
   &::before {
     content: "";
     position: absolute;
-    top: calc(50% - 45px);
+    top: 137px;
     left: calc(50% - 31px);
+    z-index: 1;
 
     display: block;
     width: 55px;
@@ -35,17 +48,24 @@
 .map__img {
   display: block;
   width: 320px;
-  height: 362px;
-  margin: 0 auto;
+  height: 400px;
+
+  transform: translateY(-40px);
 }
 
 @media (min-width: $tablet-width) {
   .map {
-    height: 400px;
+    display: block;
+  }
 
+  .map__wrapper {
+    height: 400px;
+  }
+
+  .map__static {
     &::before {
       top: 143px;
-      left: 323px;
+      left: calc(50% - 63px);
 
       width: 113px;
       height: 106px;
@@ -54,16 +74,20 @@
 
   .map__img {
     width: 767px;
+
+    transform: translateY(-8px);
   }
 }
 
 @media (min-width: $desktop-width) {
   .map {
-    background-color: $color-bg--alt;
+    background-color: $color-bg--dark;
+  }
 
+  .map__static {
     &::before {
       top: 150px;
-      right: 328px;
+      right: 330px;
       left: auto;
     }
   }
@@ -71,5 +95,7 @@
   .map__img {
     width: 1440px;
     height: 400px;
+
+    transform: translateX(2px);
   }
 }

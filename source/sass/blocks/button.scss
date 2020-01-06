@@ -7,50 +7,89 @@
   text-transform: uppercase;
   text-decoration: none;
 
-  background-color: #68b738;
+  background-color: $color-btn;
   border: none;
 
-  @include font(400, 14px, 14px, $font-family, $color-bg);
+  @include font(400, 14px, 14px, $font-family, $color-btn-text);
 
-  &:hover {
-    background-color: #5eaa2f;
-  }
-
-  &:active {
-    color: rgba(255, 255, 255, 0.3);
-  }
 
   &--select {
-    width: 245px;
-    padding: 15px 16px 16px 14px;
+    padding: 10px 16px 12px 14px;
 
     font-size: 14px;
     line-height: 18px;
+
+    &:hover {
+      background-color: $color-btn--hover;
+    }
+
+    &:active {
+      color: $color-btn-text--active;
+    }
   }
 
-  &--order,
+  &--order {
+    padding: 9px 13px 10px 13px;
+
+    font-size: 16px;
+    line-height: 20px;
+
+    @include font(400, 16px, 20px, $font-family, $color-text--rev);
+
+    &:hover {
+      background-color: $color-btn--hover;
+    }
+
+    &:active {
+      color: $color-btn-text--active;
+    }
+  }
+
   &--send {
     font-size: 16px;
     line-height: 20px;
+
+    @include font(400, 16px, 20px, $font-family, $color-text--rev);
+
+    &:hover {
+      background-color: $color-btn--hover;
+    }
+
+    &:active {
+      color: $color-btn-text--active;
+    }
   }
 
   &--show {
-    color: #444444;
+    padding: 8px 10px 9px 10px;
+
     background-color: #f2f2f2;
+
+    @include font(400, 16px, 20px, $font-family, #444444);
+
+    &:hover {
+      background-color: #ebebeb;
+    }
+
+    &:active {
+      color: rgba(68, 68, 68, 0.3);
+    }
   }
 }
 
 @media (min-width: $tablet-width) {
   .button {
     &--select {
+      width: 245px;
+      padding: 15px 16px 16px 14px;
 
-
-      padding: 15px 16px 14px 14px;
       font-size: 20px;
       line-height: 20px;
     }
 
     &--send {
+      width: 283px;
+
       font-size: 20px;
       line-height: 20px;
     }

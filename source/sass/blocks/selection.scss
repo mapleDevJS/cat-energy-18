@@ -9,7 +9,7 @@
 .selection__header {
   margin: 0 0 24px 0;
 
-  @include font(400, 36px, 60px, $font-family, $color-text-header);
+  @include font(400, 36px, 60px, $font-family, $color-header);
 }
 
 .selection__text {
@@ -18,7 +18,7 @@
 
   text-transform: uppercase;
 
-  @include font(400, 14px, 18px, $font-family, $color-text-header);
+  @include font(400, 14px, 18px, $font-family, $color-header);
 }
 
 @media (min-width: $tablet-width) {
@@ -29,14 +29,14 @@
   .selection__header {
     margin: 0 0 56px 0;
 
-    @include font(400, 60px, 60px, $font-family, $color-text-header);
+    @include font(400, 60px, 60px, $font-family, $color-header);
   }
 
   .selection__text {
     margin: 0 0 65px 0;
     padding: 0 282px 0 40px;
 
-    @include font(400, 20px, 30px, $font-family, $color-text-header);
+    @include font(400, 20px, 30px, $font-family, $color-header);
   }
 }
 

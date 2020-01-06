@@ -24,7 +24,7 @@
 
   text-align: center;
 
-  @include font(400, 36px, 36px, $font-family, $color-text-header--rev);
+  @include font(400, 36px, 36px, $font-family, $color-header--rev);
 }
 
 .main-product__text {
@@ -33,7 +33,7 @@
   text-align: center;
   text-transform: uppercase;
 
-  @include font(400, 14px, 14px, $font-family, $color-text-header--rev);
+  @include font(400, 14px, 14px, $font-family, $color-text--rev);
 }
 
 .main-product__img {
@@ -51,8 +51,8 @@
     padding-top: 38px;
     padding-bottom: 0;
 
-    background: none $color-bg;
-    background-color: #ffffff;
+    background: none $color-bg--image;
+    background-color: $color-bg--light;
   }
 
   .main-product__header {
@@ -61,7 +61,7 @@
 
     text-align: left;
 
-    @include font(400, 60px, 60px, $font-family, $color-text-header);
+    @include font(400, 60px, 60px, $font-family, $color-header);
   }
 
   .main-product__text {
@@ -69,7 +69,7 @@
 
     text-align: left;
 
-    @include font(400, 20px, 20px, $font-family, $color-text-header);
+    @include font(400, 20px, 20px, $font-family, $color-text);
   }
 
   .main-product__img {
@@ -126,7 +126,7 @@
   }
 
   .main-product__link {
-    top: 234px;
+    top: 232px;
     left: 120px;
 
     margin-left: 0;
