@@ -139,8 +139,7 @@ gulp.task("optimize", gulp.series(
 
 gulp.task("build", gulp.series(
   "quick-build",
-  "optimize",
-  "server"
+  "optimize"
 ));
 
 gulp.task("start", gulp.series("quick-build", "server"));

@@ -57,14 +57,6 @@
     padding-right: 43px;
   }
 
-  &[required]:invalid {
-    outline: 2px solid #ff8282;
-
-    & + .field__icon {
-      fill: #ff8282;
-    }
-  }
-
   &:hover,
   &[required]:hover {
     outline: 1px solid #cdcdcd;
@@ -76,8 +68,10 @@
 
   &:focus,
   &[required]:focus,
+  &[required]:invalid:focus,
   &:active,
-  &[required]:active {
+  &[required]:active,
+  &[required]:invalid:active {
     outline: 2px solid #444444;
 
     &::-moz-placeholder,
@@ -87,6 +81,17 @@
 
     & + .field__icon {
       fill: #68b738;
+    }
+  }
+
+  &[required] {
+    &:invalid:focus,
+    &:invalid:active {
+      outline: 2px solid #ff8282;
+
+      & + .field__icon {
+        fill: #ff8282;
+      }
     }
   }
 }

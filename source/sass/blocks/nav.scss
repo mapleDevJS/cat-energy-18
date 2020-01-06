@@ -44,9 +44,11 @@
 .nav--closed .nav__toggle {
   &::before {
     width: 25px;
-    height: 19px;
+    height: 20px;
 
     background-image: url("../img/icon-mobile-menu.svg");
+    background-repeat: no-repeat;
+    background-position: center;
   }
 }
 
