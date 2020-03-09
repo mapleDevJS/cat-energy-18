@@ -70,7 +70,7 @@ gulp.task("raster images", function () {
   return gulp.src("docs/img/*.{png,jpg,jpeg}")
     .pipe(imagemin([
       imagemin.optipng({optimizationLevel: 2}),
-      imagemin.jpegtran({progressive: true})
+      imagemin.mozjpeg({quality: 75, progressive: true})
     ]))
     .pipe(gulp.dest("docs/img"));
 });
@@ -122,7 +122,7 @@ gulp.task("clean", function () {
   return del("docs");
 });
 
-gulp.task("quick-build", gulp.series(
+gulp.task("build", gulp.series(
   "clean",
   "copy",
   "css",
@@ -130,16 +130,9 @@ gulp.task("quick-build", gulp.series(
   "vector images",
   "sprite",
   "webp",
-  "html"
-));
-
-gulp.task("optimize", gulp.series(
+  "html",
   "raster images"
+
 ));
 
-gulp.task("build", gulp.series(
-  "quick-build",
-  "optimize"
-));
-
-gulp.task("start", gulp.series("quick-build", "server"));
+gulp.task("start", gulp.series("server"));
