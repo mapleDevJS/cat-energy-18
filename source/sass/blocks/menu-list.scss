@@ -75,7 +75,7 @@
   .menu-list__link {
     padding-bottom: 7px;
 
-    @include font(400, 18px, 25px, $font-family, $color-menu-alt);
+    @include font(400, 18px, 25px, $font-family, $color-menu);
   }
 
   .body-index .menu-list__link {
