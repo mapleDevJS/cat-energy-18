@@ -25,10 +25,10 @@ gulp.task("css", function () {
     .pipe(sass())
     .pipe(postcss([ autoprefixer() ]))
     .pipe(csso())
-    .pipe(gulp.dest("docs/css"))
+    .pipe(gulp.dest("build/css"))
     .pipe(rename("style.min.css"))
     .pipe(sourcemap.write("."))
-    .pipe(gulp.dest("docs/css"))
+    .pipe(gulp.dest("build/css"))
     .pipe(server.stream());
 });
 
@@ -37,17 +37,17 @@ gulp.task("js", function () {
     .pipe(plumber())
     .pipe(sourcemap.init())
     .pipe(uglify())
-    .pipe(gulp.dest("docs/js"))
+    .pipe(gulp.dest("build/js"))
     .pipe(rename(function (path) {
       path.extname = ".min.js";
     }))
     .pipe(sourcemap.write("."))
-    .pipe(gulp.dest("docs/js"))
+    .pipe(gulp.dest("build/js"))
 });
 
 gulp.task("server", function () {
   server.init({
-    server: "docs/",
+    server: "build/",
     notify: false,
     open: true,
     cors: true,
@@ -67,26 +67,26 @@ gulp.task("refresh", function (done) {
 
 
 gulp.task("raster images", function () {
-  return gulp.src("docs/img/*.{png,jpg,jpeg}")
+  return gulp.src("build/img/*.{png,jpg,jpeg}")
     .pipe(imagemin([
       imagemin.optipng({optimizationLevel: 2}),
       imagemin.mozjpeg({quality: 75, progressive: true})
     ]))
-    .pipe(gulp.dest("docs/img"));
+    .pipe(gulp.dest("build/img"));
 });
 
 gulp.task("webp", function () {
-  return gulp.src("docs/img/*.{png,jpg,jpeg}")
+  return gulp.src("build/img/*.{png,jpg,jpeg}")
     .pipe(webp({quality: 90}))
-    .pipe(gulp.dest("docs/img"));
+    .pipe(gulp.dest("build/img"));
 });
 
 gulp.task("vector images", function () {
-  return gulp.src("docs/img/**/*.svg")
+  return gulp.src("build/img/**/*.svg")
     .pipe(imagemin([
       imagemin.svgo()
     ]))
-    .pipe(gulp.dest("docs/img"));
+    .pipe(gulp.dest("build/img"));
 });
 
 gulp.task("sprite", function () {
@@ -95,7 +95,7 @@ gulp.task("sprite", function () {
       inlineSvg: true
     }))
     .pipe(rename("sprite.svg"))
-    .pipe(gulp.dest("docs/img"));
+    .pipe(gulp.dest("build/img"));
 });
 
 gulp.task("html", function () {
@@ -104,7 +104,7 @@ gulp.task("html", function () {
       include()
     ]))
     .pipe(htmlmin({ collapseWhitespace: true }))
-    .pipe(gulp.dest("docs"));
+    .pipe(gulp.dest("build"));
 });
 
 gulp.task("copy", function () {
@@ -115,11 +115,11 @@ gulp.task("copy", function () {
     ], {
       base: "source"
     })
-    .pipe(gulp.dest("docs"));
+    .pipe(gulp.dest("build"));
 });
 
 gulp.task("clean", function () {
-  return del("docs");
+  return del("build");
 });
 
 gulp.task("build", gulp.series(
