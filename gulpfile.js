@@ -1,24 +1,24 @@
 "use strict";
-var gulp = require("gulp");
-var plumber = require("gulp-plumber");
-var sourcemap = require("gulp-sourcemaps");
-var sass = require("gulp-sass");
-var postcss = require("gulp-postcss");
-var autoprefixer = require("autoprefixer");
-var server = require("browser-sync").create();
+const gulp = require("gulp");
+const plumber = require("gulp-plumber");
+const sourcemap = require("gulp-sourcemaps");
+const sass = require("gulp-sass");
+const postcss = require("gulp-postcss");
+const autoprefixer = require("autoprefixer");
+const server = require("browser-sync").create();
 
-var imagemin = require("gulp-imagemin");
-var webp = require("gulp-webp");
-var csso = require("gulp-csso");
-var rename = require("gulp-rename");
-var svgstore = require("gulp-svgstore");
-var posthtml = require("gulp-posthtml");
-var include = require("posthtml-include");
-var del = require("del");
-var uglify = require("gulp-uglify");
-var htmlmin = require("gulp-htmlmin");
+const imagemin = require("gulp-imagemin");
+const webp = require("gulp-webp");
+const csso = require("gulp-csso");
+const rename = require("gulp-rename");
+const svgstore = require("gulp-svgstore");
+const posthtml = require("gulp-posthtml");
+const include = require("posthtml-include");
+const del = require("del");
+const uglify = require("gulp-uglify");
+const htmlmin = require("gulp-htmlmin");
 
-gulp.task("css", function () {
+gulp.task("css", () => {
   return gulp.src("source/sass/style.scss")
     .pipe(plumber())
     .pipe(sourcemap.init())
@@ -32,7 +32,7 @@ gulp.task("css", function () {
     .pipe(server.stream());
 });
 
-gulp.task("js", function () {
+gulp.task("js", () => {
   return gulp.src("source/js/**/*.js")
     .pipe(plumber())
     .pipe(sourcemap.init())
@@ -45,7 +45,7 @@ gulp.task("js", function () {
     .pipe(gulp.dest("build/js"))
 });
 
-gulp.task("server", function () {
+gulp.task("server", () => {
   server.init({
     server: "build/",
     notify: false,
@@ -60,13 +60,13 @@ gulp.task("server", function () {
   gulp.watch("source/*.html", gulp.series("html", "refresh"));
 });
 
-gulp.task("refresh", function (done) {
+gulp.task("refresh", (done) => {
   server.reload();
   done();
 });
 
 
-gulp.task("raster images", function () {
+gulp.task("raster images", () => {
   return gulp.src("build/img/*.{png,jpg,jpeg}")
     .pipe(imagemin([
       imagemin.optipng({optimizationLevel: 2}),
@@ -75,13 +75,13 @@ gulp.task("raster images", function () {
     .pipe(gulp.dest("build/img"));
 });
 
-gulp.task("webp", function () {
+gulp.task("webp", () => {
   return gulp.src("build/img/*.{png,jpg,jpeg}")
     .pipe(webp({quality: 90}))
     .pipe(gulp.dest("build/img"));
 });
 
-gulp.task("vector images", function () {
+gulp.task("vector images", () => {
   return gulp.src("build/img/**/*.svg")
     .pipe(imagemin([
       imagemin.svgo()
@@ -89,7 +89,7 @@ gulp.task("vector images", function () {
     .pipe(gulp.dest("build/img"));
 });
 
-gulp.task("sprite", function () {
+gulp.task("sprite", () => {
   return gulp.src("source/img/{icon-*,htmlacademy}.svg")
     .pipe(svgstore({
       inlineSvg: true
@@ -98,7 +98,7 @@ gulp.task("sprite", function () {
     .pipe(gulp.dest("build/img"));
 });
 
-gulp.task("html", function () {
+gulp.task("html", () => {
   return gulp.src("source/*.html")
     .pipe(posthtml([
       include()
@@ -107,7 +107,7 @@ gulp.task("html", function () {
     .pipe(gulp.dest("build"));
 });
 
-gulp.task("copy", function () {
+gulp.task("copy", () => {
   return gulp.src([
       "source/fonts/**/*.{woff,woff2}",
       "source/img/**/*.{png,jpg,jpeg,svg}",
@@ -118,9 +118,11 @@ gulp.task("copy", function () {
     .pipe(gulp.dest("build"));
 });
 
-gulp.task("clean", function () {
-  return del("build");
-});
+// gulp.task("clean", function () {
+//   return del("build");
+// });
+
+gulp.task("clean", () => del("build"));
 
 gulp.task("build", gulp.series(
   "clean",
@@ -132,7 +134,6 @@ gulp.task("build", gulp.series(
   "webp",
   "html",
   "raster images"
-
 ));
 
 gulp.task("start", gulp.series("server"));
