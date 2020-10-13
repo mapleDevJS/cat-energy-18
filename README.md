@@ -10,4 +10,4 @@
 * Grids and layouts / flexbox
 * Decorative and content elements
 * Accessibility
-* Introduction tp JsvaScript
+* Introduction to JsvaScript
