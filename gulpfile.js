@@ -118,10 +118,6 @@ gulp.task("copy", () => {
     .pipe(gulp.dest("build"));
 });
 
-// gulp.task("clean", function () {
-//   return del("build");
-// });
-
 gulp.task("clean", () => del("build"));
 
 gulp.task("build", gulp.series(
