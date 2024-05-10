@@ -40,7 +40,7 @@
     "source/sass/**/*.{sass,scss}"
   ],
   "engines": {
-    "node": "12"
+    "node": "12.22.12"
   },
   "dependencies": {
     "@gulp-sourcemaps/identity-map": "^2.0.1",
