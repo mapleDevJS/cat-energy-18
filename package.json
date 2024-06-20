@@ -51,7 +51,7 @@
     "deep-extend": "^0.6.0",
     "del": "^6.0.0",
     "editorconfig": "^0.15.3",
-    "gulp": "^4.0.2",
+    "gulp": "^5.0.0",
     "gulp-htmlmin": "^5.0.1",
     "gulp-rename": "^2.0.0",
     "gulp-sourcemaps": "^2.6.5",
