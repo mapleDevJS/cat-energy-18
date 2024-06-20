@@ -14,7 +14,7 @@
 }
 
 .extra-product__header {
-  margin: 0 0 14px 0;
+  margin: 0 0 14px;
 
   text-transform: uppercase;
 
@@ -38,7 +38,7 @@
 
   .extra-product__header {
     display: inline-block;
-    margin: 0 0 25px 0;
+    margin: 0 0 25px;
 
     vertical-align: top;
 
@@ -49,7 +49,7 @@
 @media (min-width: $desktop-width) {
   .extra-product {
     width: 895px;
-    padding: 14px 0 17px 0;
+    padding: 14px 0 17px;
 
     border-top: none;
     border-right: none;

@@ -11,7 +11,7 @@
 }
 
 .advantages__header {
-  margin: 0 0 28px 0;
+  margin: 0 0 28px;
 
   @include font(400, 36px, 60px, $font-family, $color-header);
 }
@@ -103,7 +103,7 @@
   }
 
   .advantages__header {
-    margin: 0 0 71px 0;
+    margin: 0 0 71px;
 
     @include font(400, 60px, 60px, $font-family, $color-header);
   }

@@ -7,14 +7,14 @@
 }
 
 .selection__header {
-  margin: 0 0 24px 0;
+  margin: 0 0 24px;
 
   @include font(400, 36px, 60px, $font-family, $color-header);
 }
 
 .selection__text {
   display: block;
-  margin: 0 0 40px 0;
+  margin: 0 0 40px;
 
   text-transform: uppercase;
 
@@ -27,13 +27,13 @@
   }
 
   .selection__header {
-    margin: 0 0 56px 0;
+    margin: 0 0 56px;
 
     @include font(400, 60px, 60px, $font-family, $color-header);
   }
 
   .selection__text {
-    margin: 0 0 65px 0;
+    margin: 0 0 65px;
     padding: 0 282px 0 40px;
 
     @include font(400, 20px, 30px, $font-family, $color-header);

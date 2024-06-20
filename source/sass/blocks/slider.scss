@@ -1,6 +1,6 @@
 .slider__list {
   max-width: $mobile-width;
-  margin: 0 auto 30px auto;
+  margin: 0 auto 30px;
 }
 
 .slider__box {
@@ -214,7 +214,7 @@
 @media (min-width: $desktop-width) {
   .slider {
     width: 690px;
-    padding: 24px 0 69px 0;
+    padding: 24px 0 69px;
 
     background-image: linear-gradient(to bottom, #ffffff 215px, rgba(255, 255, 255, 0) 215px), linear-gradient(to right, #f2f2f2 53%, #eaeaea 53%);
   }

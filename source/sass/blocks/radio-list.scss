@@ -1,12 +1,12 @@
 .radio-list {
   margin: 0 0 0 20px;
-  padding: 25px 0 0 0;
+  padding: 25px 0 0;
 
   list-style: none;
 }
 
 .radio-list__item {
-  margin: 0 0 24px 0;
+  margin: 0 0 24px;
 }
 
 @media (min-width: $tablet-width) {
@@ -17,7 +17,7 @@
   }
 
   .radio-list__item {
-    margin: 0 0 32px 0;
+    margin: 0 0 32px;
 
     &:last-child {
       margin-bottom: 0;

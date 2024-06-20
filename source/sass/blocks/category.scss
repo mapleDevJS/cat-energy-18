@@ -58,7 +58,7 @@
 }
 
 .category__text {
-  margin: 0 0 18px 0;
+  margin: 0 0 18px;
   padding-bottom: 23px;
 
   border-bottom: 1px solid $color-border;
@@ -149,14 +149,14 @@
   }
 
   .category__header {
-    margin: 0 0 25px 0;
+    margin: 0 0 25px;
 
     @include font(400, 36px, 37px, $font-family, $color-header);
   }
 
   .category__text {
     width: 340px;
-    margin: 0 0 32px 0;
+    margin: 0 0 32px;
 
     border-bottom: none;
 
@@ -232,6 +232,6 @@
   .category__text {
     width: 100%;
     min-height: 95px;
-    margin: 0 0 8px 0;
+    margin: 0 0 8px;
   }
 }
