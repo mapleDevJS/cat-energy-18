@@ -100,6 +100,7 @@ gulp.task("sprite", () => {
 
 gulp.task("html", () => {
   return gulp.src("source/*.html")
+    .pipe(plumber())
     .pipe(posthtml([
       include()
     ]))
