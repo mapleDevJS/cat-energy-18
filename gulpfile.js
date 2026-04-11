@@ -2,7 +2,7 @@
 const gulp = require("gulp");
 const plumber = require("gulp-plumber");
 const sourcemap = require("gulp-sourcemaps");
-const sass = require("gulp-sass");
+const sass = require("gulp-sass")(require("sass"));
 const postcss = require("gulp-postcss");
 const autoprefixer = require("autoprefixer");
 const server = require("browser-sync").create();
@@ -100,6 +100,7 @@ gulp.task("sprite", () => {
 
 gulp.task("html", () => {
   return gulp.src("source/*.html")
+    .pipe(plumber())
     .pipe(posthtml([
       include()
     ]))
@@ -111,7 +112,9 @@ gulp.task("copy", () => {
   return gulp.src([
       "source/fonts/**/*.{woff,woff2}",
       "source/img/**/*.{png,jpg,jpeg,svg}",
-      "source/*.ico"
+      "source/*.ico",
+      "source/_headers",
+      "source/_redirects"
     ], {
       base: "source"
     })

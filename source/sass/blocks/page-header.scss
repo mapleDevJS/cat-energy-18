@@ -18,27 +18,25 @@
 
     padding-top: 30px;
 
-    &--index {
-      &::before {
-        content: "";
-        position: absolute;
-        top: 0;
-        right: 0;
-        z-index: -1;
+    &--index::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      right: 0;
+      z-index: -1;
 
-        display: block;
-        width: 50%;
-        height: 696px;
+      display: block;
+      width: 50%;
+      height: 696px;
 
-        background: url("../img/index-background-desktop@1x.jpg") $color-bg--image;
+      background: url("../img/index-background-desktop@1x.jpg") $color-bg--image;
+      background-repeat: no-repeat;
+      background-size: 720px 100%;
+
+      @media (min-resolution: $retina-dppx) {
+        background: url("../img/index-background-desktop@2x.jpg") $color-bg--image;
         background-repeat: no-repeat;
         background-size: 720px 100%;
-
-        @media (min-resolution: $retina-dppx) {
-          background: url("../img/index-background-desktop@2x.jpg") $color-bg--image;
-          background-repeat: no-repeat;
-          background-size: 720px 100%;
-        }
       }
     }
   }
